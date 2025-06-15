@@ -1,172 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="description" content="Portfolio of Nilesh Mishra - Machine Learning Engineer and AI Developer">
-  <meta name="author" content="Nilesh Mishra">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio of Nilesh Mishra - AI Engineer and ML Developer" />
+  <meta name="author" content="Nilesh Mishra" />
+  <title>Nilesh Mishra | AI Engineer Portfolio</title>
 
-  <title>ML Portfolio</title>
-
-  <!-- Bootstrap CSS -->
+  <!-- Bootstrap & External CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-
-  <!-- AOS CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="../assets/style.css">
-
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #f9f9f9;
-    }
-    .contact-button {
-      min-width: 120px;
-    }
-    .carousel-item {
-      min-height: 200px;
-    }
-    @media (max-width: 576px) {
-      h1.display-4 {
-        font-size: 2rem;
-      }
-    }
-    .dark-mode {
-      background-color: #111 !important;
-      color: #eee;
-    }
-    .dark-mode header,
-    .dark-mode footer {
-      background-color: #222 !important;
-    }
-  </style>
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 
 <body>
-  <!-- Header -->
-  <header class="bg-primary text-white text-center py-5" data-aos="fade-down">
-    <h1 class="display-4"> 3 SecTech by Nilesh Mishra</h1>
-    <p class="lead">Showcasing Machine Learning Projects</p>
-    <button id="theme-toggle" onclick="toggleDarkMode()" class="btn btn-light mt-3">
-      🌙 Dark Mode
-    </button>
+  
+  <header class="text-white text-center py-5" data-aos="fade-down">
+    <h1 class="display-5 fw-bold">Nilesh Mishra</h1>
+    <p class="lead">AI Engineer | Deep Learning Specialist | MLOps Enthusiast</p>
+    <button id="theme-toggle" onclick="toggleDarkMode()" class="btn btn-outline-light mt-3">Dark Mode</button>
   </header>
 
-  <!-- Navbar -->
-  <nav class="bg-light py-3">
-    <div class="container d-flex flex-wrap justify-content-center gap-3">
-      <a href="#about" class="text-decoration-none fw-semibold text-dark">About</a>
-      <a href="#projects" class="text-decoration-none fw-semibold text-dark">Projects</a>
-      <a href="#skills" class="text-decoration-none fw-semibold text-dark">Skills</a>
-      <a href="#contact" class="text-decoration-none fw-semibold text-dark">Contact</a>
+  <nav class="bg-light py-3 shadow-sm">
+    <div class="container d-flex flex-wrap justify-content-center gap-4 fw-semibold">
+      <a href="#about">Who I Am</a>
+      <a href="#projects">Featured Work</a>
+      <a href="#skills">Technical Arsenal</a>
+      <a href="#contact">Let’s Connect</a>
     </div>
   </nav>
 
-  <!-- About Section -->
-  <section id="about" class="container my-5" data-aos="fade-up">
-    <h2 class="mb-4">About Me 🚀</h2>
+  <!-- About -->
+  <section id="about" class="container" data-aos="fade-up">
+    <h2 class="text-center mb-5">👨‍💻 Who I Am</h2>
     <p>
-      I'm a Machine Learning Engineer focused on solving real-world problems through intelligent, scalable, and production-ready AI solutions.
-      I specialize in NLP, Deep Learning, and Computer Vision. I'm also passionate about API integration, MLOps practices, and seamless deployment workflows.
+      I'm an AI Engineer passionate about building intelligent systems that scale. I specialize in Deep Learning, NLP, Computer Vision, and end-to-end model deployment using MLOps.
     </p>
-    <h4 class="mt-4">🔍 Skills & Expertise:</h4>
+    <div class="custom-quote mt-4">
+      <p>"AI isn't just automation — it's augmentation with intelligence."</p>
+      <footer class="blockquote-footer mt-2">Nilesh Mishra</footer>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="container" data-aos="zoom-in">
+    <h2 class="text-center mb-5">🚀 Featured Work</h2>
+    <div class="row g-4">
+      
+      <div class="col-md-6">
+        <div class="card p-4 shadow-sm h-100">
+          <h5 class="card-title"><b>Breast Cancer Prediction</b></h5>
+          <p>Deployed Streamlit app for early cancer detection using ML. Achieved 95%+ accuracy on test data.</p>
+          <button onclick="openProject('projects/project1.html')" class="btn btn-outline-primary">🔍 View Project</button>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card p-4 shadow-sm h-100">
+          <h5 class="card-title"><b>Stock Price Forecasting</b></h5>
+          <p>Time Series model with LSTM to forecast stock movements. Improved RMSE by 18%.</p>
+          <button onclick="openProject('projects/project2.html')" class="btn btn-outline-primary">📈 View Project</button>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card p-4 shadow-sm h-100">
+          <h5 class="card-title"><b>Medical ChatBot</b></h5>
+          <p>Conversational AI for basic health triage using NLP + Generative AI. Built with FastAPI backend.</p>
+          <button onclick="openProject('projects/project3.html')" class="btn btn-outline-primary">💬 View Project</button>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card p-4 shadow-sm h-100">
+          <h5 class="card-title"><b>CV Health App</b></h5>
+          <p>Real-time vitals and posture monitor using OpenCV + Flutter. Great for telemedicine use cases.</p>
+          <button onclick="openProject('projects/project4.html')" class="btn btn-outline-primary">📹 View Project</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="container" data-aos="fade-up">
+    <h2 class="text-center mb-4">🧠 Technical Arsenal</h2>
     <ul>
-      <li><strong>Languages & Tools:</strong> Python, TensorFlow, Scikit-learn, PyTorch, OpenCV, HuggingFace</li>
-      <li><strong>Tech Focus:</strong> Machine Learning, NLP, Time Series Forecasting, MLOps, Model Deployment</li>
-      <li><strong>Experience with:</strong> Streamlit, FastAPI, GitHub Actions, AWS S3/EC2</li>
-      <li><strong>Soft Skills:</strong> Problem Solving, Team Collaboration, Continuous Learning</li>
+      <li><strong>Languages & Tools:</strong> Python, TensorFlow, PyTorch, OpenCV, HuggingFace, FastAPI, Streamlit</li>
+      <li><strong>Core Areas:</strong> Deep Learning, NLP, Time Series, Computer Vision, Model Deployment</li>
+      <li><strong>DevOps Stack:</strong> Docker, GitHub Actions, AWS (S3, EC2), GCP, Linux, Shell scripting</li>
+      <li><strong>Soft Skills:</strong> Communication, Rapid Learning, Problem Solving, Documentation</li>
     </ul>
   </section>
 
-  <!-- Projects Carousel -->
-  <section id="projects" class="bg-light py-5">
-    <div class="container" data-aos="zoom-in">
-      <h2 class="mb-5 text-center">Projects</h2>
-      <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner text-center">
-          <div class="carousel-item active">
-            <h5>Breast Cancer Prediction</h5>
-            <p>Streamlit app to diagnose breast cancer using ML algorithms and patient data.</p>
-            <button onclick="openProject('projects/project1.html')" class="btn btn-outline-primary">View Project</button>
-          </div>
-          <div class="carousel-item">
-            <h5>Stock Price Forecasting</h5>
-            <p>Time Series model using LSTM to predict stock prices with visualizations.</p>
-            <button onclick="openProject('projects/project2.html')" class="btn btn-outline-primary">View Project</button>
-          </div>
-          <div class="carousel-item">
-            <h5>Medical ChatBot</h5>
-            <p>Conversational AI assistant for preliminary medical advice using GenAI.</p>
-            <button onclick="openProject('projects/project3.html')" class="btn btn-outline-primary">View Project</button>
-          </div>
-          <div class="carousel-item">
-            <h5>CV Health App</h5>
-            <p>Computer Vision app for real-time vitals and skin condition monitoring.</p>
-            <button onclick="openProject('projects/project4.html')" class="btn btn-outline-primary">View Project</button>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </button>
-      </div>
-    </div>
-  </section>
+  <section id="experience" class="container py-5" data-aos="fade-up">
+  <h2 class="text-center mb-5">💼 Work Experience</h2>
 
-  <!-- Skills Progress -->
-  <section id="skills" class="container py-5" data-aos="fade-up">
-    <h2 class="text-center mb-4">Skills Progress</h2>
-    <div class="mb-3">
-      <label class="form-label">Python</label>
-      <div class="progress">
-        <div class="progress-bar bg-success" role="progressbar" style="width: 90%">90%</div>
-      </div>
-    </div>
-    <div class="mb-3">
-      <label class="form-label">Machine Learning</label>
-      <div class="progress">
-        <div class="progress-bar bg-info" role="progressbar" style="width: 85%">85%</div>
-      </div>
-    </div>
-    <div class="mb-3">
-      <label class="form-label">Deep Learning</label>
-      <div class="progress">
-        <div class="progress-bar bg-warning" role="progressbar" style="width: 80%">80%</div>
-      </div>
-    </div>
-    <div class="mb-3">
-      <label class="form-label">Computer Vision</label>
-      <div class="progress">
-        <div class="progress-bar bg-danger" role="progressbar" style="width: 75%">75%</div>
-      </div>
-    </div>
-  </section>
+  <div class="experience-list">
 
-  <!-- Contact Section -->
-  <section id="contact" class="container my-5" data-aos="fade-up">
-    <h2>Contact</h2>
-    <p><strong>Let's Connect</strong></p>
+    <div class="experience-card">
+      <div class="experience-header">
+        <h3>Junior Software Developer</h3>
+        <a href="https://www.linkedin.com/company/enirmaan-techsolutions/" target="_blank">
+          Enirmaan Techsolutions Private Limited · Full-time
+        </a>
+      </div>
+      <div class="experience-meta">
+        <span>📍 Kurla, Maharashtra, India</span> | 
+        <span>📅 May 2025 – Present</span>
+      </div>
+      <ul class="experience-tasks">
+        <li>🧠 Working on computer vision projects using AI and ML.</li>
+        <li>🔬 Engaged in R&D for intelligent visual systems.</li>
+        <li>🤝 Collaborated with teams to deploy ML models.</li>
+      </ul>
+      <p class="experience-skills">
+        <strong>Skills:</strong> Machine Learning · Computer Vision · Python · R&D · AI Systems
+      </p>
+    </div>
+
+    <div class="experience-card">
+      <div class="experience-header">
+        <h3>Market Research Intern</h3>
+        <a href="https://www.linkedin.com/company/network-techlab-india-pvt-ltd/" target="_blank">
+          Network Techlab India Limited · Internship
+        </a>
+      </div>
+      <div class="experience-meta">
+        <span>📍 Mumbai, Maharashtra, India</span> | 
+        <span>📅 Mar 2025 – Apr 2025</span>
+      </div>
+      <ul class="experience-tasks">
+        <li>📊 Researched market trends, competitors, and consumer behavior.</li>
+        <li>📈 Supported data analysis and insight presentations.</li>
+        <li>📝 Contributed to data-driven marketing strategies.</li>
+      </ul>
+      <p class="experience-skills">
+        <strong>Skills:</strong> Market Research · Competitive Analysis · Consumer Insights · Data Interpretation · Marketing Analytics
+      </p>
+    </div>
+
+    <div class="experience-card">
+      <div class="experience-header">
+        <h3>Tech Support Intern – Operations</h3>
+        <a href="https://www.linkedin.com/company/livingthingsai/" target="_blank">
+          Living Things · Internship
+        </a>
+      </div>
+      <div class="experience-meta">
+        <span>📍 Mumbai, Maharashtra, India</span> | 
+        <span>📅 Oct 2024 – Jan 2025</span>
+      </div>
+      <ul class="experience-tasks">
+        <li>💡 Analyzed smart AC data for energy optimization.</li>
+        <li>📉 Identified usage patterns for actionable insights.</li>
+        <li>🌱 Supported sustainable energy strategy.</li>
+      </ul>
+      <p class="experience-skills">
+        <strong>Skills:</strong> Data Analysis · Energy Optimization · IoT Devices · Technical Support · Sustainability
+      </p>
+    </div>
+
+  </div>
+</section>
+
+  <section id="contact" class="container" data-aos="fade-up">
+    <h2 class="mb-4">📬 Let’s Connect</h2>
+    <p>Feel free to reach out for collaborations, freelance work, or just a good tech talk.</p>
     <div class="d-flex flex-wrap gap-3">
-      <a href="mailto:mishranilesh968@gmail.com">
-        <button class="btn btn-danger contact-button">E-mail</button>
-      </a>
-      <a href="https://www.linkedin.com/in/nilesh-mishra-064a861b3/" target="_blank">
-        <button class="btn btn-primary contact-button">LinkedIn</button>
-      </a>
-      <a href="https://github.com/nilesh5911" target="_blank">
-        <button class="btn btn-dark contact-button">GitHub</button>
-      </a>
+      <a href="mailto:mishranilesh968@gmail.com"><button class="btn btn-danger contact-button">Email</button></a>
+      <a href="https://www.linkedin.com/in/nilesh-mishra-064a861b3/" target="_blank"><button class="btn btn-primary contact-button">LinkedIn</button></a>
+      <a href="https://github.com/nilesh5911" target="_blank"><button class="btn btn-dark contact-button">GitHub</button></a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="text-center py-3">
-    &copy; 2025 3 SecTech by Nilesh Mishra. All Rights Reserved.
+  <footer class="text-center mt-5">
+    &copy; 2025 Nilesh Mishra | My Portfolio
   </footer>
 
   <!-- Scripts -->
@@ -177,10 +187,8 @@
     function openProject(url) {
       window.location.href = url;
     }
-      
     function toggleDarkMode() {
       document.body.classList.toggle('dark-mode');
-
       localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
     }
     window.onload = () => {
@@ -188,6 +196,6 @@
         document.body.classList.add('dark-mode');
       }
     };
-</script>
+  </script>
 </body>
 </html>
