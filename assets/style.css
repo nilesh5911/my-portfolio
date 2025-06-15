@@ -1,0 +1,121 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  background-color: #d6e9d8;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode {
+  background-color: #282424;
+  color: #e5cccc;
+}
+
+.dark-mode .bg-light {
+  background-color: #333c36 !important;
+}
+
+.dark-mode .text-dark {
+  color: #ede6e6 !important;
+}
+
+.dark-mode footer {
+  background-color: #353333;
+}
+
+header {
+  padding: 20px 0;
+  background-color: #fafafa;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+  background-color: #fff;
+}
+
+nav a {
+  font-size: 1rem;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #d3bbb6;
+}
+
+section {
+  padding: 30px 0;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+button,
+.btn {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn.contact-button {
+  min-width: 110px;
+}
+
+.btn-outline-success {
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-weight: 500;
+}
+
+/* Dark Mode Toggle Button */
+.toggle-dark-mode {
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.carousel-item {
+  padding: 35px;
+}
+
+footer {
+  background-color: #131212;
+  color: #f7f7f7;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  section {
+    padding: 20px 0;
+  }
+
+  .carousel-item {
+    padding: 20px;
+  }
+
+  .btn.contact-button {
+    width: 100%;
+    text-align: center;
+  }
+}
