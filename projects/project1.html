@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Breast Cancer Detection - Project 1</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      background-color: #f4f4f4;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    section {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      margin-top: 30px;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    header, footer {
+      background-color: #e76e96;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    a {
+      color: #cc3366;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      margin-top: 10px;
+    }
+
+    /* DARK MODE */
+    .dark-mode {
+      background-color: #111 !important;
+      color: #eee !important;
+    }
+
+    .dark-mode section {
+      background-color: #1c1c1c !important;
+      color: #eee !important;
+    }
+
+    .dark-mode header,
+    .dark-mode footer {
+      background-color: #222 !important;
+    }
+
+    .dark-mode a {
+      color: #ffc107 !important;
+    }
+  </style>
+</head>
+<body>
+  <header class="text-center">
+    <h1>🧬 Breast Cancer Detection using ML</h1>
+    <button onclick="toggleDarkMode()" class="btn btn-light mt-3">Dark Mode</button>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>🔍 Project Overview</h2>
+      <p>
+        This machine learning project focuses on predicting whether a breast tumor is benign or malignant using 
+        diagnostic features from medical data. It demonstrates the power of predictive analytics in healthcare 
+        and supports early detection efforts through an intuitive, ML-powered interface.
+      </p>
+
+      <h3>🔧 Technologies Used</h3>
+      <ul>
+        <li>Python (Jupyter/Colab)</li>
+        <li>Scikit-learn (SVM, Random Forest, etc.)</li>
+        <li>Pandas & NumPy</li>
+        <li>Matplotlib, Seaborn for data visualization</li>
+        <li>Streamlit for web-based UI (optional)</li>
+      </ul>
+
+      <h3>✨ Features</h3>
+      <ul>
+        <li>Preprocessed breast cancer dataset (from scikit-learn or UCI)</li>
+        <li>Multiple classification models tested and compared</li>
+        <li>Evaluation using confusion matrix, accuracy, precision, recall</li>
+        <li>Interactive Streamlit web app (optional) for user input & prediction</li>
+      </ul>
+
+      <p>
+        📂 <strong>Code Repository:</strong> 
+        <a href="https://github.com/nilesh5911" target="_blank">View on GitHub</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>📈 Model Evaluation Metrics</h2>
+      <p>Below are sample outputs showing the model's performance:</p>
+      <ul>
+        <li><strong>Accuracy:</strong> 97.3%</li>
+        <li><strong>Precision:</strong> 96.8%</li>
+        <li><strong>Recall:</strong> 97.9%</li>
+        <li><strong>F1 Score:</strong> 97.3%</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="text-center mt-5">
+    <a href="../index.html" class="btn btn-light mt-3">← Back to Portfolio</a>
+    <p class="mt-3">&copy; 2025 Nilesh Mishra</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+    }
+
+    // Load theme on page load
+    window.onload = () => {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-mode');
+      }
+    };
+  </script>
+</body>
+</html>
