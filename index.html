@@ -9,193 +9,435 @@
 
   <!-- Bootstrap & External CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 
 <body>
-  
-  <header class="text-white text-center py-5" data-aos="fade-down">
-    <h1 class="display-5 fw-bold">Nilesh Mishra</h1>
-    <p class="lead">AI Engineer | Deep Learning Specialist | MLOps Enthusiast</p>
-    <button id="theme-toggle" onclick="toggleDarkMode()" class="btn btn-outline-light mt-3">Dark Mode</button>
+  <header class="text-white text-center" data-aos="fade-down" data-aos-duration="1200">
+    <div id="particles-js"></div>
+    <div class="container">
+      <h1 data-aos="zoom-in" data-aos-delay="200">Nilesh Mishra</h1>
+      <p id="typed-text" data-aos="fade-up" data-aos-delay="400"></p>
+      <button class="toggle-dark-mode" onclick="toggleDarkMode()" data-aos="fade-up" data-aos-delay="600">🌓Dark Mode</button>
+    </div>
   </header>
 
-  <nav class="bg-light py-3 shadow-sm">
-    <div class="container d-flex flex-wrap justify-content-center gap-4 fw-semibold">
-      <a href="#about">Who I Am</a>
-      <a href="#projects">Featured Work</a>
-      <a href="#skills">Technical Arsenal</a>
-      <a href="#contact">Let’s Connect</a>
+  <nav data-aos="fade-down" data-aos-duration="800">
+    <div class="container d-flex flex-wrap justify-content-center gap-3">
+      <a href="#about" data-aos="fade-up" data-aos-delay="100">About</a>
+      <a href="#projects" data-aos="fade-up" data-aos-delay="200">Projects</a>
+      <a href="#skills" data-aos="fade-up" data-aos-delay="300">Skills</a>
+      <a href="#experience" data-aos="fade-up" data-aos-delay="400">Experience</a>
+      <a href="#contact" data-aos="fade-up" data-aos-delay="500">Contact</a>
     </div>
   </nav>
 
   <!-- About -->
-  <section id="about" class="container" data-aos="fade-up">
-    <h2 class="text-center mb-5">👨‍💻 Who I Am</h2>
-    <p>
-      I'm an AI Engineer passionate about building intelligent systems that scale. I specialize in Deep Learning, NLP, Computer Vision, and end-to-end model deployment using MLOps.
+  <section id="about" class="container" data-aos="slide-up" data-aos-duration="1200">
+    <h2 data-aos="fade-right" data-aos-delay="200">About Me</h2>
+    <p class="lead" data-aos="fade-left" data-aos-delay="400">
+      I'm an AI Engineer passionate about building intelligent, scalable systems. My expertise lies in Deep Learning, NLP, Computer Vision, and MLOps, inspired by cutting-edge AI solutions.
     </p>
-    <div class="custom-quote mt-4">
-      <p>"AI isn't just automation — it's augmentation with intelligence."</p>
-      <footer class="blockquote-footer mt-2">Nilesh Mishra</footer>
-    </div>
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="container" data-aos="zoom-in">
-    <h2 class="text-center mb-5">🚀 Featured Work</h2>
-    <div class="row g-4">
-      
-      <div class="col-md-6">
-        <div class="card p-4 shadow-sm h-100">
-          <h5 class="card-title"><b>Breast Cancer Prediction</b></h5>
-          <p>Deployed Streamlit app for early cancer detection using ML. Achieved 95%+ accuracy on test data.</p>
-          <button onclick="openProject('projects/project1.html')" class="btn btn-outline-primary">🔍 View Project</button>
+  <section id="projects" class="container" data-aos="zoom-in" data-aos-duration="1200">
+    <h2 data-aos="fade-right" data-aos-delay="200">Projects</h2>
+    <div class="project-filters" data-aos="fade-up" data-aos-delay="400">
+      <button class="project-filter active" data-filter="all">All</button>
+      <button class="project-filter" data-filter="nlp">NLP</button>
+      <button class="project-filter" data-filter="computer-vision">Computer Vision</button>
+      <button class="project-filter" data-filter="time-series">Time Series</button>
+    </div>
+    <div class="row g-4" id="project-list">
+      <div class="col-md-6 col-lg-4 project-item" data-category="computer-vision" data-aos="fade-up" data-aos-delay="200">
+        <div class="project-card">
+          <img src="https://via.placeholder.com/400x280?text=Breast+Cancer+Prediction" alt="Breast Cancer Prediction" loading="lazy" />
+          <div class="project-content">
+            <h5>Breast Cancer Prediction</h5>
+            <p>Streamlit app for early cancer detection using ML. Achieved 95%+ accuracy.</p>
+            <div class="project-tags">
+              <span class="project-tag">Streamlit</span>
+              <span class="project-tag">Machine Learning</span>
+              <span class="project-tag">Python</span>
+            </div>
+            <a href="projects/project1.html" class="btn btn-outline-success">🔍 View Project</a>
+          </div>
         </div>
       </div>
-
-      <div class="col-md-6">
-        <div class="card p-4 shadow-sm h-100">
-          <h5 class="card-title"><b>Stock Price Forecasting</b></h5>
-          <p>Time Series model with LSTM to forecast stock movements. Improved RMSE by 18%.</p>
-          <button onclick="openProject('projects/project2.html')" class="btn btn-outline-primary">📈 View Project</button>
+      <div class="col-md-6 col-lg-4 project-item" data-category="time-series" data-aos="fade-up" data-aos-delay="300">
+        <div class="project-card">
+          <img src="https://via.placeholder.com/400x280?text=Stock+Price+Forecasting" alt="Stock Price Forecasting" loading="lazy" />
+          <div class="project-content">
+            <h5>Stock Price Forecasting</h5>
+            <p>LSTM-based time series model for stock predictions. Improved RMSE by 18%.</p>
+            <div class="project-tags">
+              <span class="project-tag">LSTM</span>
+              <span class="project-tag">Time Series</span>
+              <span class="project-tag">Python</span>
+            </div>
+            <a href="projects/project2.html" class="btn btn-outline-success">📈 View Project</a>
+          </div>
         </div>
       </div>
-
-      <div class="col-md-6">
-        <div class="card p-4 shadow-sm h-100">
-          <h5 class="card-title"><b>Medical ChatBot</b></h5>
-          <p>Conversational AI for basic health triage using NLP + Generative AI. Built with FastAPI backend.</p>
-          <button onclick="openProject('projects/project3.html')" class="btn btn-outline-primary">💬 View Project</button>
+      <div class="col-md-6 col-lg-4 project-item" data-category="nlp" data-aos="fade-up" data-aos-delay="400">
+        <div class="project-card">
+          <img src="https://via.placeholder.com/400x280?text=Medical+ChatBot" alt="Medical ChatBot" loading="lazy" />
+          <div class="project-content">
+            <h5>Medical ChatBot</h5>
+            <p>NLP-powered conversational AI for health triage, built with FastAPI.</p>
+            <div class="project-tags">
+              <span class="project-tag">NLP</span>
+              <span class="project-tag">FastAPI</span>
+              <span class="project-tag">Generative AI</span>
+            </div>
+            <a href="projects/project3.html" class="btn btn-outline-success">💬 View Project</a>
+          </div>
         </div>
       </div>
-
-      <div class="col-md-6">
-        <div class="card p-4 shadow-sm h-100">
-          <h5 class="card-title"><b>CV Health App</b></h5>
-          <p>Real-time vitals and posture monitor using OpenCV + Flutter. Great for telemedicine use cases.</p>
-          <button onclick="openProject('projects/project4.html')" class="btn btn-outline-primary">📹 View Project</button>
+      <div class="col-md-6 col-lg-4 project-item" data-category="computer-vision" data-aos="fade-up" data-aos-delay="500">
+        <div class="project-card">
+          <img src="https://via.placeholder.com/400x280?text=CV+Health+App" alt="CV Health App" loading="lazy" />
+          <div class="project-content">
+            <h5>CV Health App</h5>
+            <p>Real-time vitals and posture monitoring with OpenCV and Flutter.</p>
+            <div class="project-tags">
+              <span class="project-tag">OpenCV</span>
+              <span class="project-tag">Flutter</span>
+              <span class="project-tag">Computer Vision</span>
+            </div>
+            <a href="projects/project4.html" class="btn btn-outline-success">📹 View Project</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Skills -->
-  <section id="skills" class="container" data-aos="fade-up">
-    <h2 class="text-center mb-4">🧠 Technical Arsenal</h2>
-    <ul>
-      <li><strong>Languages & Tools:</strong> Python, TensorFlow, PyTorch, OpenCV, HuggingFace, FastAPI, Streamlit</li>
-      <li><strong>Core Areas:</strong> Deep Learning, NLP, Time Series, Computer Vision, Model Deployment</li>
-      <li><strong>DevOps Stack:</strong> Docker, GitHub Actions, AWS (S3, EC2), GCP, Linux, Shell scripting</li>
-      <li><strong>Soft Skills:</strong> Communication, Rapid Learning, Problem Solving, Documentation</li>
+  <section id="skills" class="container" data-aos="slide-up" data-aos-duration="1200">
+    <h2 data-aos="fade-right" data-aos-delay="200">Skills</h2>
+    <ul data-aos="fade-left" data-aos-delay="400">
+      <li>Languages & Tools: Python, TensorFlow, PyTorch, OpenCV, HuggingFace, FastAPI, Streamlit</li>
+      <li>Core Areas: Deep Learning, NLP, Time Series, Computer Vision, Model Deployment</li>
+      <li>DevOps Stack: Docker, GitHub Actions, AWS (S3, EC2), GCP, Linux, Shell scripting</li>
+      <li>Soft Skills: Communication, Rapid Learning, Problem Solving, Documentation</li>
     </ul>
   </section>
 
-  <section id="experience" class="container py-5" data-aos="fade-up">
-  <h2 class="text-center mb-5">💼 Work Experience</h2>
-
-  <div class="experience-list">
-
-    <div class="experience-card">
-      <div class="experience-header">
-        <h3>Junior Software Developer</h3>
-        <a href="https://enirmaan.com/" target="_blank">
-          Enirmaan Techsolutions Private Limited · Full-time
-        </a>
+  <!-- Experience -->
+  <section id="experience" class="container" data-aos="zoom-in" data-aos-duration="1200">
+    <h2 data-aos="fade-right" data-aos-delay="200">Experience</h2>
+    <span class="section__subtitle" data-aos="fade-left" data-aos-delay="400">My journey in the academic & professional front</span>
+    <div class="qualification__tabs" data-aos="fade-up" data-aos-delay="600">
+      <div class="qualification__button button--flex" data-target="#education">
+        <i class="ion-icon qualification__icon" name="school"></i>
+        Academic
       </div>
-      <div class="experience-meta">
-        <span>📍 Kurla, Maharashtra, India</span> | 
-        <span>📅 May 2025 – Present</span>
+      <div class="qualification__button button--flex qualification__active" data-target="#work">
+        <i class="ion-icon qualification__icon" name="briefcase"></i>
+        Professional
       </div>
-      <ul class="experience-tasks">
-        <li>🧠 Working on computer vision projects using AI and ML.</li>
-        <li>🔬 Engaged in R&D for intelligent visual systems.</li>
-        <li>🤝 Collaborated with teams to deploy ML models.</li>
-      </ul>
-      <p class="experience-skills">
-        <strong>Skills:</strong> Machine Learning · Computer Vision · Python · R&D · AI Systems
-      </p>
     </div>
-
-    <div class="experience-card">
-      <div class="experience-header">
-        <h3>Market Research Intern</h3>
-        <a href="https://www.netlabindia.com/" target="_blank">
-          Network Techlab India Limited · Internship
-        </a>
+    <div class="qualification__sections">
+      <div class="qualification__content" data-content id="education">
+        <div class="experience-list">
+          <div class="experience-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="experience-header">
+              <h3>M.Sc. - Information Technology</h3>
+              <span class="experience-meta">S.M. Shetty College- Degree Section (Autonomous), India | 2023 - 2025</span>
+            </div>
+          </div>
+            <div class="experience-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="experience-header">
+                <h3>B.Sc. - Information Technology</h3>
+                <span class="experience-meta">S.M. Shetty College - Degree Section (Autonomous), India | 2020 - 2023</span>
+              </div>
+            </div>
+          <div class="experience-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="experience-header">
+              <h3>Class XII</h3>
+              <span class="experience-meta">Higher Secondary Certificate | Ramniranjan Jhunjhunwala College (Autonomous), India | 2020</span>
+            </div>
+          </div>
+          <div class="experience-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="experience-header">
+              <h3>Class X</h3>
+              <span class="experience-meta">Secondary School Certificate | Sharma Shikshan Sanstha High School, India | 2018</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="experience-meta">
-        <span>📍 Mumbai, Maharashtra, India</span> | 
-        <span>📅 Mar 2025 – Apr 2025</span>
+      <div class="qualification__content active" data-content id="work">
+        <div class="experience-list">
+          <div class="experience-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="experience-header">
+              <h3>Junior Software Developer</h3>
+              <a href="https://enirmaan.com/" target="_blank">Enirmaan Techsolutions</a>
+            </div>
+            <div class="experience-meta">
+              <span>Kurla, Maharashtra, India</span> | <span>May 2025 – Present</span>
+            </div>
+            <ul class="experience-tasks">
+              <li>Working on computer vision projects using AI and ML.</li>
+              <li>Engaged in R&D for intelligent visual systems.</li>
+              <li>Collaborated with teams to deploy ML models.</li>
+            </ul>
+            <div class="experience-skills">
+              <strong>Skills:</strong>
+              <span class="skill-badge">Machine Learning</span>
+              <span class="skill-badge">Computer Vision</span>
+              <span class="skill-badge">Python</span>
+              <span class="skill-badge">R&D</span>
+            </div>
+          </div>
+          <div class="experience-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="experience-header">
+              <h3>Market Research Intern</h3>
+              <a href="https://www.netlabindia.com/" target="_blank">Network Techlab India</a>
+            </div>
+            <div class="experience-meta">
+              <span>Mumbai, Maharashtra, India</span> | <span>Mar 2025 – Apr 2025</span>
+            </div>
+            <ul class="experience-tasks">
+              <li>Researched market trends and competitors.</li>
+              <li>Supported data analysis and presentations.</li>
+              <li>Contributed to data-driven marketing strategies.</li>
+            </ul>
+            <div class="experience-skills">
+              <strong>Skills:</strong>
+              <span class="skill-badge">Market Research</span>
+              <span class="skill-badge">Data Analysis</span>
+              <span class="skill-badge">Marketing</span>
+            </div>
+          </div>
+          <div class="experience-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="experience-header">
+              <h3>Tech Support Intern</h3>
+              <a href="https://livingthings.ai/" target="_blank">Living Things</a>
+            </div>
+            <div class="experience-meta">
+              <span>Powai, IIT Bombay, India</span> | <span>Oct 2024 – Jan 2025</span>
+            </div>
+            <ul class="experience-tasks">
+              <li>Analyzed smart AC data for energy optimization.</li>
+              <li>Identified usage patterns for insights.</li>
+              <li>Supported sustainable energy strategies.</li>
+            </ul>
+            <div class="experience-skills">
+              <strong>Skills:</strong>
+              <span class="skill-badge">Data Analysis</span>
+              <span class="skill-badge">IoT</span>
+              <span class="skill-badge">Sustainability</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <ul class="experience-tasks">
-        <li>📊 Researched market trends, competitors, and consumer behavior.</li>
-        <li>📈 Supported data analysis and insight presentations.</li>
-        <li>📝 Contributed to data-driven marketing strategies.</li>
-      </ul>
-      <p class="experience-skills">
-        <strong>Skills:</strong> Market Research · Competitive Analysis · Consumer Insights · Data Interpretation · Marketing Analytics
-      </p>
-    </div>
-
-    <div class="experience-card">
-      <div class="experience-header">
-        <h3>Tech Support Intern – Operations</h3>
-        <a href="https://livingthings.ai/" target="_blank">
-          Living Things · Internship
-        </a>
-      </div>
-      <div class="experience-meta">
-        <span>📍 Powai, IIT BOMBAY, India</span> | 
-        <span>📅 Oct 2024 – Jan 2025</span>
-      </div>
-      <ul class="experience-tasks">
-        <li>💡 Analyzed smart AC data for energy optimization.</li>
-        <li>📉 Identified usage patterns for actionable insights.</li>
-        <li>🌱 Supported sustainable energy strategy.</li>
-      </ul>
-      <p class="experience-skills">
-        <strong>Skills:</strong> Data Analysis · Energy Optimization · IoT Devices · Technical Support · Sustainability
-      </p>
-    </div>
-
-  </div>
-</section>
-
-  <section id="contact" class="container" data-aos="fade-up">
-    <h2 class="mb-4">📬 Let’s Connect</h2>
-    <p>Feel free to reach out for collaborations, freelance work, or just a good tech talk.</p>
-    <div class="d-flex flex-wrap gap-3">
-      <a href="mailto:mishranilesh968@gmail.com"><button class="btn btn-danger contact-button">Email</button></a>
-      <a href="https://www.linkedin.com/in/nilesh-mishra-064a861b3/" target="_blank"><button class="btn btn-primary contact-button">LinkedIn</button></a>
-      <a href="https://github.com/nilesh5911" target="_blank"><button class="btn btn-dark contact-button">GitHub</button></a>
     </div>
   </section>
 
+  <!-- Contact -->
+  <section id="contact" class="container" data-aos="slide-up" data-aos-duration="1200">
+    <h2 data-aos="fade-right" data-aos-delay="200">Contact</h2>
+    <p class="lead text-center" data-aos="fade-left" data-aos-delay="400">Let's collaborate on AI-driven projects or discuss tech over coffee!</p>
+    <div class="d-flex flex-wrap justify-content-center gap-3 mb-4" data-aos="fade-up" data-aos-delay="600">
+      <a href="mailto:mishranilesh968@gmail.com"><button class="btn btn-outline-success contact-button">Email</button></a>
+      <a href="https://www.linkedin.com/in/nilesh-mishra-064a861b3/" target="_blank"><button class="btn btn-outline-success contact-button">LinkedIn</button></a>
+      <a href="https://github.com/nilesh5911" target="_blank"><button class="btn btn-outline-success contact-button">GitHub</button></a>
+    </div>
+    <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST" data-aos="fade-up" data-aos-delay="800">
+      <div class="mb-3">
+        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required />
+      </div>
+      <div class="mb-3">
+        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required />
+      </div>
+      <div class="mb-3">
+        <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-outline-success contact-button w-100">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Chatbot -->
+  <div id="chatbot" data-aos="fade-left" data-aos-delay="1000">
+    <button id="chatbot-toggle" onclick="toggleChatbot()">💬</button>
+    <div id="chatbot-window">
+      <div id="chatbot-messages"></div>
+      <input id="chatbot-input" type="text" placeholder="Ask about my projects..." />
+    </div>
+  </div>
+
   <!-- Footer -->
-  <footer class="text-center mt-5">
-    &copy; 2025 Nilesh Mishra | My Portfolio
+  <footer class="text-center" data-aos="fade-up" data-aos-duration="1200">
+    <div class="container">
+      <p>© 2025 Nilesh Mishra</p>
+      <div class="d-flex justify-content-center gap-3">
+        <a href="https://www.linkedin.com/in/nilesh-mishra-064a861b3/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/nilesh5911" target="_blank">GitHub</a>
+        <a href="mailto:mishranilesh968@gmail.com">Email</a>
+      </div>
+    </div>
   </footer>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script>
-    AOS.init();
-    function openProject(url) {
-      window.location.href = url;
+    // Initialize AOS
+    AOS.init({
+      duration: 1200,
+      easing: 'ease-out-quart',
+      once: false,
+      mirror: true
+    });
+
+    // Typed.js for header text
+    new Typed('#typed-text', {
+      strings: ['AI Engineer', 'Deep Learning Specialist', 'MLOps Enthusiast'],
+      typeSpeed: 60,
+      backSpeed: 30,
+      backDelay: 1200,
+      loop: true
+    });
+
+    // Project Filter
+    document.querySelectorAll('.project-filter').forEach(button => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('.project-filter').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        const filter = button.getAttribute('data-filter');
+        document.querySelectorAll('.project-item').forEach(item => {
+          item.style.display = filter === 'all' || item.getAttribute('data-category') === filter ? 'block' : 'none';
+        });
+      });
+    });
+
+    // Experience Tabs
+    document.querySelectorAll('.qualification__button').forEach(button => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('.qualification__button').forEach(btn => btn.classList.remove('qualification__active'));
+        button.classList.add('qualification__active');
+        const target = button.getAttribute('data-target');
+        document.querySelectorAll('.qualification__content').forEach(content => {
+          content.classList.remove('active');
+          if (content.getAttribute('id') === target.substring(1)) {
+            content.classList.add('active');
+          }
+        });
+      });
+    });
+
+    // Counter Animation for Achievements
+    function animateCounter() {
+      const counters = document.querySelectorAll('.counter');
+      counters.forEach(counter => {
+        const updateCount = () => {
+          const target = +counter.getAttribute('data-target');
+          const count = +counter.innerText;
+          const speed = 200; // Animation speed (lower is faster)
+          const increment = target / speed;
+          if (count < target) {
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(updateCount, 10);
+          } else {
+            counter.innerText = target;
+          }
+        };
+        // Trigger animation when section is in view
+        const observer = new IntersectionObserver(entries => {
+          if (entries[0].isIntersecting) {
+            updateCount();
+            observer.disconnect(); // Run animation only once
+          }
+        }, { threshold: 0.5 });
+        observer.observe(counter);
+      });
     }
+
+    // Open Project
+    function openProject(url) {
+      fetch(url)
+        .then(response => {
+          if (response.ok) window.open(url, '_blank');
+          else alert('Project page not found.');
+        })
+        .catch(() => alert('Unable to access project page.'));
+    }
+
+    // Toggle Dark Mode
     function toggleDarkMode() {
       document.body.classList.toggle('dark-mode');
       localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+      document.querySelector('.toggle-dark-mode').textContent = document.body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
     }
+
+    // Load Theme and Initialize
     window.onload = () => {
       if (localStorage.getItem('theme') === 'dark') {
         document.body.classList.add('dark-mode');
+        document.querySelector('.toggle-dark-mode').textContent = 'Light Mode';
       }
+      particlesJS('particles-js', {
+        particles: {
+          number: { value: 80, density: { enable: true, value_area: 1200 } },
+          color: { value: ['#ffffff', '#a855f7', '#3b82f6'] },
+          shape: { type: ['circle', 'triangle', 'star'] },
+          opacity: { value: 0.6, random: true },
+          size: { value: 4, random: true },
+          line_linked: { enable: true, distance: 150, color: '#a855f7', opacity: 0.4, width: 1.5 },
+          move: { enable: true, speed: 3, direction: 'none', random: true }
+        },
+        interactivity: {
+          detect_on: 'canvas',
+          events: { onhover: { enable: true, mode: 'grab' }, onclick: { enable: true, mode: 'push' } },
+          modes: { grab: { distance: 140 }, push: { particles_nb: 4 } }
+        },
+        retina_detect: true
+      });
+      animateCounter(); // Initialize counter animation
     };
+
+    // Chatbot
+    function toggleChatbot() {
+      const chatbotWindow = document.getElementById('chatbot-window');
+      chatbotWindow.classList.toggle('active');
+    }
+
+    document.getElementById('chatbot-input').addEventListener('keypress', function (e) {
+      if (e.key === 'Enter' && this.value.trim()) {
+        const messages = document.getElementById('chatbot-messages');
+        const userMessage = document.createElement('div');
+        userMessage.textContent = `You: ${this.value}`;
+        messages.appendChild(userMessage);
+        const botMessage = document.createElement('div');
+        botMessage.textContent = `Bot: Thanks for your interest! Ask me about my AI projects or skills.`;
+        messages.appendChild(botMessage);
+        messages.scrollTop = messages.scrollHeight;
+        this.value = '';
+      }
+    });
+
+    // Form Validation
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+      const email = document.getElementById('email').value;
+      const name = document.getElementById('name').value;
+      const message = document.getElementById('message').value;
+      if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+        e.preventDefault();
+        alert('Please enter a valid email address.');
+      } else if (name.trim().length < 2) {
+        e.preventDefault();
+        alert('Please enter a valid name.');
+      } else if (message.trim().length < 10) {
+        e.preventDefault();
+        alert('Please enter a message with at least 10 characters.');
+      }
+    });
   </script>
 </body>
 </html>

@@ -1,118 +1,101 @@
-<!-- project3.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>🤖 Medical ChatBot - Project 3</title>
-    <link rel="stylesheet" href="../assets/style.css">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      background-color: #f4f4f4;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    section {
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      margin-top: 30px;
-      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-    }
-
-    header, footer {
-      background-color: #e76e96;
-      color: white;
-      padding: 20px;
-      border-radius: 8px;
-    }
-
-    a {
-      color: #cc3366;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    ul {
-      margin-top: 10px;
-    }
-
-    /* DARK MODE */
-    .dark-mode {
-      background-color: #111 !important;
-      color: #eee !important;
-    }
-
-    .dark-mode section {
-      background-color: #1c1c1c !important;
-      color: #eee !important;
-    }
-
-    .dark-mode header,
-    .dark-mode footer {
-      background-color: #222 !important;
-    }
-
-    .dark-mode a {
-      color: #ffc107 !important;
-    }
-  </style></head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Medical ChatBot Project by Nilesh Mishra" />
+  <meta name="author" content="Nilesh Mishra" />
+  <title>Medical ChatBot | Nilesh Mishra</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
 <body>
+  <header class="text-white text-center" data-aos="fade-down" data-aos-duration="1200">
+    <div id="particles-js"></div>
+    <div class="container">
+      <h1 data-aos="zoom-in" data-aos-delay="200">Medical ChatBot</h1>
+      <p data-aos="fade-up" data-aos-delay="400">NLP-powered conversational AI for health triage</p>
+      <a href="../index.html" class="btn btn-outline-success" data-aos="fade-up" data-aos-delay="600">Back to Portfolio</a>
+    </div>
+  </header>
 
-<header class="text-center">
-    <h1>🤖 GenAI-based Medical ChatBot</h1>
-    <button onclick="toggleDarkMode()" class="btn btn-light mt-3">Dark Mode</button>
-</header>
-
-<section>
-    <h2>Project Overview</h2>
-    <p>This chatbot provides basic medical guidance using generative AI models. It mimics human conversation and assists users with preliminary health-related questions.</p>
-
-    <h3>🔧 Technologies Used</h3>
-    <ul>
-        <li>Python, Transformers (HuggingFace)</li>
-        <li>LangChain / LLaMA / ChatGPT API</li>
-        <li>FastAPI for backend</li>
-        <li>Deployed via Streamlit / Gradio UI</li>
-    </ul>
-
-    <h3>✨ Features</h3>
-    <ul>
-        <li>Interactive question-answering on symptoms</li>
-        <li>Context-based conversation memory</li>
-        <li>Deployable via cloud or local server</li>
-        <li>Future scope: multilingual support</li>
-    </ul>
-
-    <p>
-        📂 <strong>Code Repository:</strong> 
-        <a href="https://github.com/nilesh5911" target="_blank">View on GitHub</a>
+  <section id="project-details" class="container" data-aos="slide-up" data-aos-duration="1200">
+    <h2 data-aos="fade-right" data-aos-delay="200">Project Overview</h2>
+    <p class="lead" data-aos="fade-left" data-aos-delay="400">
+      This project is an NLP-powered chatbot built with FastAPI, designed to assist with health triage by providing preliminary medical advice based on user inputs. It uses advanced language models to understand and respond to health-related queries effectively.
     </p>
-</section>
- </main>
 
-  <footer class="text-center mt-5">
-    <a href="../index.html" class="btn btn-light mt-3">← Back to Portfolio</a>
-    <p class="mt-3">&copy; 2025 Nilesh Mishra</p>
+    <h3 data-aos="fade-right" data-aos-delay="200">Technologies Used</h3>
+    <ul data-aos="fade-left" data-aos-delay="400">
+      <li><strong>FastAPI:</strong> For building a high-performance API for the chatbot.</li>
+      <li><strong>HuggingFace Transformers:</strong> For implementing NLP models.</li>
+      <li><strong>Python:</strong> Core language for backend logic and integration.</li>
+      <li><strong>Spacy:</strong> For natural language processing and entity recognition.</li>
+    </ul>
+
+    <h3 data-aos="fade-right" data-aos-delay="200">Key Features</h3>
+    <ul data-aos="fade-left" data-aos-delay="400">
+      <li>Conversational AI with context-aware responses.</li>
+      <li>Integration with medical knowledge bases for accurate advice.</li>
+      <li>Scalable API design for real-time interactions.</li>
+      <li>Multilingual support for broader accessibility.</li>
+    </ul>
+
+    <h3 data-aos="fade-right" data-aos-delay="200">Impact</h3>
+    <p data-aos="fade-left" data-aos-delay="400">
+      The chatbot improves access to preliminary healthcare advice, especially in underserved areas, by providing instant responses and guiding users to appropriate care.
+    </p>
+
+    <div class="text-center" data-aos="fade-up" data-aos-delay="600">
+      <a href="https://github.com/nilesh5911/Medicalchatbot" target="_blank" class="btn btn-outline-success">View Code on GitHub</a>
+    </div>
+  </section>
+
+  <footer class="text-center" data-aos="fade-up" data-aos-duration="1200">
+    <div class="container">
+      <p>© 2025 Nilesh Mishra</p>
+      <div class="d-flex justify-content-center gap-3">
+        <a href="https://www.linkedin.com/in/nilesh-mishra-064a861b3/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/nilesh5911" target="_blank">GitHub</a>
+        <a href="mailto:mishranilesh968@gmail.com">Email</a>
+      </div>
+    </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
   <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
-      localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-    }
+    AOS.init({
+      duration: 1200,
+      easing: 'ease-out-quart',
+      once: false,
+      mirror: true
+    });
 
-    // Load theme on page load
-    window.onload = () => {
-      if (localStorage.getItem('theme') === 'dark') {
-        document.body.classList.add('dark-mode');
-      }
-    };
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 80, density: { enable: true, value_area: 1200 } },
+        color: { value: ['#ffffff', '#a855f7', '#3b82f6'] },
+        shape: { type: ['circle', 'triangle', 'star'] },
+        opacity: { value: 0.6, random: true },
+        size: { value: 4, random: true },
+        line_linked: { enable: true, distance: 150, color: '#a855f7', opacity: 0.4, width: 1.5 },
+        move: { enable: true, speed: 3, direction: 'none', random: true }
+      },
+      interactivity: {
+        detect_on: 'canvas',
+        events: { onhover: { enable: true, mode: 'grab' }, onclick: { enable: true, mode: 'push' } },
+        modes: { grab: { distance: 140 }, push: { particles_nb: 4 } }
+      },
+      retina_detect: true
+    });
+
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
   </script>
 </body>
 </html>
