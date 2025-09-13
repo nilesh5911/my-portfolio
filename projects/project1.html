@@ -1,95 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Breast Cancer Prediction Project by Nilesh Mishra" />
-  <meta name="author" content="Nilesh Mishra" />
-  <title>Breast Cancer Prediction | Nilesh Mishra</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../assets/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Breast Cancer Detection Project - Nilesh Mishra Portfolio">
+    <meta name="keywords" content="Breast Cancer, Machine Learning, Streamlit, Scikit-learn">
+    <title>Breast Cancer Detection | Nilesh Mishra</title>
+    <!-- Google Fonts: Poppins for headings, Inter for body -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body data-theme="dark">
+<a href="#main-content" class="skip-link">Skip to main content</a>
     <!-- Fixed Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li>
-                <button class="theme-toggle" id="themeToggle">
-                    <i class="fas fa-moon"></i>
-                </button>
-            </li>
-        </ul>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html#hero">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#ongoing-projects">Ongoing Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#education">Education</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+                <li>
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
     </nav>
-  <header class="text-white text-center">
-    <div id="particles-js"></div>
-    <div class="container">
-      <h1 data-aos="zoom-in" data-aos-delay="200">Breast Cancer Prediction</h1>
-      <p data-aos="fade-up" data-aos-delay="400">A Streamlit app for early cancer detection using Machine Learning</p>
-      <a href="../index.html" class="btn btn-outline-light" data-aos="fade-up" data-aos-delay="600">Back to Portfolio</a>
-    </div>
-  </header>
 
-  <section id="project-details" class="container" data-aos="slide-up" data-aos-duration="1200">
-    <h2 data-aos="fade-right" data-aos-delay="200">Project Overview</h2>
-    <p class="lead" data-aos="fade-left" data-aos-delay="400">
-      This project leverages Machine Learning to predict breast cancer using medical imaging and patient data. Built with Streamlit, it provides an intuitive interface for healthcare professionals to input data and receive predictions with over 95% accuracy. The model uses advanced classification algorithms to identify malignant cases early, improving patient outcomes.
-    </p>
+    <!-- Hero Section -->
+    <section id="project-hero" class="fade-in" id="main-content">
+        <div class="hero-content">
+            <h1>Breast Cancer Detection</h1>
+            <p>Designed a machine learning pipeline with tuned KNN and SVM classifiers, achieving high precision in breast cancer classification.</p>
+            <button class="cta-button" onclick="window.location.href='../index.html#projects'">Back to Projects</button>
+        </div>
+    </section>
 
-    <h3 data-aos="fade-right" data-aos-delay="200">Technologies Used</h3>
-    <ul data-aos="fade-left" data-aos-delay="400">
-      <li><strong>Streamlit:</strong> For building the interactive web application.</li>
-      <li><strong>Scikit-learn:</strong> For implementing ML classification models.</li>
-      <li><strong>Python:</strong> Core programming language for data processing and model training.</li>
-      <li><strong>Pandas & NumPy:</strong> For data manipulation and preprocessing.</li>
-    </ul>
+    <!-- Project Details Section -->
+    <section id="project-details" class="fade-in">
+        <div class="container">
+            <h2>Project Overview</h2>
+            <div class="about-container">
+                <div class="about-text">
+                    <p>This project leverages Machine Learning to predict breast cancer using medical imaging and patient data. Built with Streamlit, it provides an intuitive interface for healthcare professionals to input data and receive predictions with over 95% accuracy. The model uses advanced classification algorithms to identify malignant cases early, improving patient outcomes.</p>
+                </div>
+            </div>
 
-    <h3 data-aos="fade-right" data-aos-delay="200">Key Features</h3>
-    <ul data-aos="fade-left" data-aos-delay="400">
-      <li>Real-time predictions with high accuracy.</li>
-      <li>User-friendly interface for non-technical users.</li>
-      <li>Data visualization for model performance and patient data.</li>
-      <li>Scalable deployment using cloud infrastructure.</li>
-    </ul>
+            <h3>Technologies Used</h3>
+            <div class="tech-badges">
+                <span class="tech-badge">Streamlit</span>
+                <span class="tech-badge">Scikit-learn</span>
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Pandas</span>
+                <span class="tech-badge">NumPy</span>
+            </div>
 
-    <h3 data-aos="fade-right" data-aos-delay="200">Impact</h3>
-    <p data-aos="fade-left" data-aos-delay="400">
-      The application has been tested with real-world datasets, achieving a 95%+ accuracy rate. It supports early detection, reducing diagnostic delays and aiding medical professionals in decision-making.
-    </p>
+            <h3>Key Features</h3>
+            <ul class="project-features">
+                <li><i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 0.5rem;"></i>Real-time predictions with high accuracy.</li>
+                <li><i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 0.5rem;"></i>User-friendly interface for non-technical users.</li>
+                <li><i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 0.5rem;"></i>Data visualization for model performance and patient data.</li>
+                <li><i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 0.5rem;"></i>Scalable deployment using cloud infrastructure.</li>
+            </ul>
 
-    <div class="text-center" data-aos="fade-up" data-aos-delay="600">
-      <a href="https://github.com/nilesh5911/breast-cancer-app" target="_blank" class="btn btn-outline-light me-2">View Code on GitHub</a>
-      <a href="https://breast-cancer-app-predict.streamlit.app/" target="_blank" class="btn btn-outline-light">🚀 View Live Demo</a>
-    </div>
-  </section>
+            <h3>Impact</h3>
+            <p>The application has been tested with real-world datasets, achieving a 95%+ accuracy rate. It supports early detection, reducing diagnostic delays and aiding medical professionals in decision-making.</p>
 
-  <footer class="text-center" data-aos="fade-up" data-aos-duration="1200">
-    <div class="container">
-      <p>&copy; 2025 Nilesh Mishra</p>
-      <div class="d-flex justify-content-center gap-3">
-        <a href="https://www.linkedin.com/in/nilesh-mishra-064a861b3/" target="_blank" class="text-light">LinkedIn</a>
-        <a href="https://github.com/nilesh5911" target="_blank" class="text-light">GitHub</a>
-        <a href="mailto:mishranilesh968@gmail.com" class="text-light">Email</a>
-      </div>
-    </div>
-  </footer>
+            <div class="project-links">
+                <a href="https://github.com/nilesh5911/breast-cancer-app" target="_blank">GitHub</a>
+                <a href="https://breast-cancer-app-predict.streamlit.app/" target="_blank">Demo</a>
+            </div>
+        </div>
+    </section>
 
-  <script>
-    // Theme Toggle
-    const themeToggle = document.getElementById('themeToggle');
-    const currentTheme = localStorage.getItem('theme');
-    if (currentTheme === 'light') {
-        document.body.setAttribute('data-theme', 'light');
-        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-    }
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Nilesh Mishra. All rights reserved.</p>
+    </footer>
 
-    themeToggle.addEventListener('click', () => {
-        const body = document.body;
-        const isDark = body.getAttribute('data-theme') === 'dark';
-        body.setAttribute('data-theme', isDark ? 'light' : 'dark');
-        themeToggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-        localStorage.setItem('theme', isDark ? 'light' : 'dark');
-    });
-  </script>
+    <script src="../assets/common.js" defer></script>
 </body>
 </html>

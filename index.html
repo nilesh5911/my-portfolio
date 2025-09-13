@@ -13,8 +13,9 @@
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body data-theme="dark">
+<a href="#main-content" class="skip-link">Skip to main content</a>
     <!-- Fixed Navigation Bar -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
             <button class="mobile-menu-toggle" id="mobileToggle">
                 <i class="fas fa-bars"></i>
@@ -23,21 +24,20 @@
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#ongoing-projects">Ongoing Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li>
-                    <button class="theme-toggle" id="themeToggle">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                </li>
             </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="fade-in">
+    <section id="hero" class="fade-in" role="main">
         <div class="hero-content">
             <!-- Profile Photo -->
             <img loading="lazy" src="assets/My photo.jpeg" alt="Nilesh Mishra Profile">
@@ -58,10 +58,12 @@
                 <p><strong>Extracurriculars:</strong> Football, cricket, singing, reading.</p>
             </div>
             <div class="about-image">
-                <img src="assets/My photo.jpeg" alt="About Nilesh Mishra" style="width: 100%; border-radius: 10px;">
+                <img loading="lazy" src="assets/My photo.jpeg" alt="About Nilesh Mishra">
             </div>
         </div>
     </section>
+
+    <div class="projects-container">
 
     <!-- Projects Section -->
     <section id="projects" class="fade-in">
@@ -118,12 +120,58 @@
                     <span class="tech-badge">Vercel</span>
                 </div>
                 <div class="project-links">
-                    <a href="projects/project5.html">Details</a>
+                    <a href="projects/project4.html">Details</a>
                     <a href="https://shivyuvamitramandal.vercel.app/" target="_blank">Demo</a>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Ongoing Projects Section -->
+    <section id="ongoing-projects" class="fade-in">
+        <h2>Ongoing Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Non-intrusive BP Estimation</h3>
+                <p>Edge-device r-PPG signal reconstruction and DL modeling. Expected: June 2025</p>
+                <p>Photoplethysmography signal reconstruction, healing, and de-noising techniques, time series data re-assembly with a mathematics-backed approach, and cloud integration. TS-based deep learning frameworks: MultiResUnet, UNetDS64.</p>
+                <div class="tech-badges">
+                    <span class="tech-badge">Deep Learning</span>
+                    <span class="tech-badge">Time Series</span>
+                    <span class="tech-badge">Cloud</span>
+                </div>
+                <div class="project-links">
+                    <span class="tech-badge in-progress">In Progress</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Contactless Heart Rate Monitoring</h3>
+                <p>RGB-based heart rate detection with signal filtering. Expected: June 2025</p>
+                <p>Feature extraction from the red channel of frames over a consistent period to generate time-varying data points, requiring a gated mechanism to refine redundant features.</p>
+                <div class="tech-badges">
+                    <span class="tech-badge">Computer Vision</span>
+                    <span class="tech-badge">Signal Processing</span>
+                </div>
+                <div class="project-links">
+                    <span class="tech-badge in-progress">In Progress</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Insurance Report Parser</h3>
+                <p>Expected: Jul 2025</p>
+                <p>Building an end-to-end pipeline to extract structured content (text blocks, tables, key terms) from insurance claim PDFs. Using PDF parsers, NLP, and layout-aware models to handle diverse document formats from various companies.</p>
+                <div class="tech-badges">
+                    <span class="tech-badge">NLP</span>
+                    <span class="tech-badge">PDF Parsing</span>
+                    <span class="tech-badge">OCR</span>
+                </div>
+                <div class="project-links">
+                    <span class="tech-badge in-progress">In Progress</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
 
     <!-- Skills Section -->
     <section id="skills" class="fade-in">
@@ -495,7 +543,6 @@
                     <h3>M.Sc. in Information Technology</h3>
                     <p>S.M. Shetty College, Mumbai (Autonomous)</p>
                     <p>2023 – 2025</p>
-                    <p>CGPA: 7.2 / 10</p>
                 </div>
             </div>
             <div class="timeline-item right">
@@ -503,7 +550,6 @@
                     <h3>B.Sc. in Information Technology</h3>
                     <p>S.M. Shetty College, Mumbai (Autonomous)</p>
                     <p>2020 – 2023</p>
-                    <p>CGPI: 8.18 / 10</p>
                 </div>
             </div>
         </div>
@@ -515,12 +561,15 @@
         <div class="contact-form">
             <form id="contactForm">
                 <div class="form-group">
+                    <label for="name">Your Name</label>
                     <input type="text" id="name" name="name" placeholder="Your Name" required>
                 </div>
                 <div class="form-group">
+                    <label for="email">Your Email</label>
                     <input type="email" id="email" name="email" placeholder="Your Email" required>
                 </div>
                 <div class="form-group">
+                    <label for="message">Your Message</label>
                     <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
                 </div>
                 <button type="submit" class="submit-btn">Send Message</button>
@@ -536,44 +585,10 @@
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Nilesh Mishra. All rights reserved.</p>
-        <ul>
-        </ul>
     </footer>
 
     <script>
-        // Theme Toggle
-        const themeToggle = document.getElementById('themeToggle');
-        const currentTheme = localStorage.getItem('theme');
-        if (currentTheme === 'light') {
-            document.body.setAttribute('data-theme', 'light');
-            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-        }
 
-        themeToggle.addEventListener('click', () => {
-            const body = document.body;
-            const isDark = body.getAttribute('data-theme') === 'dark';
-            body.setAttribute('data-theme', isDark ? 'light' : 'dark');
-            themeToggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-            localStorage.setItem('theme', isDark ? 'light' : 'dark');
-        });
-
-        // Fade-in Animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
 
         // Enhanced Skills Tab Switching and Animations
         document.querySelectorAll('.tab-btn').forEach(btn => {
@@ -640,41 +655,20 @@
             e.target.reset();
         });
 
-        // Mobile Menu Toggle
-        const mobileToggle = document.getElementById('mobileToggle');
-        const navMenu = document.getElementById('navMenu');
-        const body = document.body;
-
-        if (mobileToggle && navMenu) {
-            mobileToggle.addEventListener('click', () => {
-                navMenu.classList.toggle('active');
-                body.classList.toggle('menu-open');
-                const icon = mobileToggle.querySelector('i');
-                if (navMenu.classList.contains('active')) {
-                    icon.className = 'fas fa-times';
-                } else {
-                    icon.className = 'fas fa-bars';
+    
+        // Make project cards clickable
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.project-card')) {
+                const card = e.target.closest('.project-card');
+                const detailsLink = card.querySelector('a[href*="project"]');
+                if (detailsLink && !e.target.closest('.project-links a')) {
+                    e.preventDefault();
+                    window.location.href = detailsLink.href;
                 }
-            });
-
-            // Close menu when clicking on a link
-            navMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    navMenu.classList.remove('active');
-                    body.classList.remove('menu-open');
-                    mobileToggle.querySelector('i').className = 'fas fa-bars';
-                });
-            });
-
-            // Close menu on outside click
-            document.addEventListener('click', (e) => {
-                if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
-                    navMenu.classList.remove('active');
-                    body.classList.remove('menu-open');
-                    mobileToggle.querySelector('i').className = 'fas fa-bars';
-                }
-            });
-        }
+            }
+        });
     </script>
+    <script src="assets/common.js" defer></script>
 </body>
 </html>
+
