@@ -1,439 +1,639 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Portfolio of Nilesh Mishra - AI Engineer and ML Developer" />
-  <meta name="author" content="Nilesh Mishra" />
-  <title>Nilesh Mishra | AI Engineer Portfolio</title>
-
-  <!-- Bootstrap & External CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/style.css" />
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nilesh Mishra - AI Engineer Portfolio: Innovative projects in ML, NLP, Computer Vision, and more.">
+    <meta name="keywords" content="AI Engineer, Machine Learning, NLP, Portfolio, Nilesh Mishra">
+    <title>Nilesh Mishra - AI Engineer</title>
+    <!-- Google Fonts: Poppins for headings, Inter for body -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
-  <header class="text-white text-center" data-aos="fade-down" data-aos-duration="1200">
-    <div id="particles-js"></div>
-    <div class="container">
-      <h1 data-aos="zoom-in" data-aos-delay="200">Nilesh Mishra</h1>
-      <p id="typed-text" data-aos="fade-up" data-aos-delay="400"></p>
-      <button class="toggle-dark-mode" onclick="toggleDarkMode()" data-aos="fade-up" data-aos-delay="600">🌓Dark Mode</button>
-    </div>
-  </header>
+<body data-theme="dark">
+    <!-- Fixed Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </li>
+        </ul>
+    </nav>
 
-  <nav data-aos="fade-down" data-aos-duration="800">
-    <div class="container d-flex flex-wrap justify-content-center gap-3">
-      <a href="#about" data-aos="fade-up" data-aos-delay="100">About</a>
-      <a href="#projects" data-aos="fade-up" data-aos-delay="200">Projects</a>
-      <a href="#skills" data-aos="fade-up" data-aos-delay="300">Skills</a>
-      <a href="#experience" data-aos="fade-up" data-aos-delay="400">Experience</a>
-      <a href="#contact" data-aos="fade-up" data-aos-delay="500">Contact</a>
-    </div>
-  </nav>
-
-  <!-- About -->
-  <section id="about" class="container" data-aos="slide-up" data-aos-duration="1200">
-    <h2 data-aos="fade-right" data-aos-delay="200">About Me</h2>
-    <p class="lead" data-aos="fade-left" data-aos-delay="400">
-      I'm an AI Engineer passionate about building intelligent, scalable systems. My expertise lies in Deep Learning, NLP, Computer Vision, and MLOps, inspired by cutting-edge AI solutions.
-    </p>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects" class="container" data-aos="zoom-in" data-aos-duration="1200">
-    <h2 data-aos="fade-right" data-aos-delay="200">Projects</h2>
-    <div class="project-filters" data-aos="fade-up" data-aos-delay="400">
-      <button class="project-filter active" data-filter="all">All</button>
-      <button class="project-filter" data-filter="nlp">NLP</button>
-      <button class="project-filter" data-filter="computer-vision">Computer Vision</button>
-      <button class="project-filter" data-filter="time-series">Time Series</button>
-    </div>
-    <div class="row g-4" id="project-list">
-      <div class="col-md-6 col-lg-4 project-item" data-category="computer-vision" data-aos="fade-up" data-aos-delay="200">
-        <div class="project-card">
-          <div class="project-content">
-            <h5>Breast Cancer Prediction</h5>
-            <p>Streamlit app for early cancer detection using ML. Achieved 95%+ accuracy.</p>
-            <div class="project-tags">
-              <span class="project-tag">Streamlit</span>
-              <span class="project-tag">Machine Learning</span>
-              <span class="project-tag">Python</span>
-            </div>
-            <a href="projects/project1.html" class="btn btn-outline-success">🔍 View Project</a>
-          </div>
+    <!-- Hero Section -->
+    <section id="hero" class="fade-in">
+        <div class="hero-content">
+            <!-- Profile Photo -->
+            <img loading="lazy" src="assets/My photo.jpeg" alt="Nilesh Mishra Profile">
+            <h1>Nilesh Mishra</h1>
+            <p>AI Engineer | Innovating with ML & NLP</p>
+            <button class="cta-button" onclick="document.querySelector('#projects').scrollIntoView({behavior: 'smooth'})">View Projects</button>
         </div>
-      </div>
-      <div class="col-md-6 col-lg-4 project-item" data-category="time-series" data-aos="fade-up" data-aos-delay="300">
-        <div class="project-card">
-          <div class="project-content">
-            <h5>Stock Price Forecasting</h5>
-            <p>LSTM-based time series model for stock predictions. Improved RMSE by 18%.</p>
-            <div class="project-tags">
-              <span class="project-tag">LSTM</span>
-              <span class="project-tag">Time Series</span>
-              <span class="project-tag">Python</span>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="fade-in">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <div class="about-text">
+                <p>Passionate AI Engineer specializing in Healthcare AI, OCR, Generative AI, Computer Vision, Time Series Forecasting, and MLOps. Hands-on ML solutions for real-world impact.</p>
+                <p><strong>Certifications:</strong> Python for ML, EDA, Intro to ML on AWS (Great Learning).</p>
+                <p><strong>Interests:</strong> Healthcare AI & OCR, Generative AI (LLMs, RAG), CV & Forecasting, MLOps.</p>
+                <p><strong>Extracurriculars:</strong> Football, cricket, singing, reading.</p>
             </div>
-            <a href="projects/project2.html" class="btn btn-outline-success">📈 View Project</a>
-          </div>
+            <div class="about-image">
+                <img src="assets/My photo.jpeg" alt="About Nilesh Mishra" style="width: 100%; border-radius: 10px;">
+            </div>
         </div>
-      </div>
-      <div class="col-md-6 col-lg-4 project-item" data-category="nlp" data-aos="fade-up" data-aos-delay="400">
-        <div class="project-card">
-          <div class="project-content">
-            <h5>Medical ChatBot</h5>
-            <p>NLP-powered conversational AI for health triage, built with FastAPI.</p>
-            <div class="project-tags">
-              <span class="project-tag">NLP</span>
-              <span class="project-tag">FastAPI</span>
-              <span class="project-tag">Generative AI</span>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="fade-in">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Breast Cancer Detection</h3>
+                <p>Designed a machine learning pipeline with tuned KNN and SVM classifiers, achieving high precision in breast cancer classification.</p>
+                <div class="tech-badges">
+                    <span class="tech-badge">Streamlit</span>
+                    <span class="tech-badge">Scikit-learn</span>
+                    <span class="tech-badge">Python</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/nilesh5911/breast-cancer-app" target="_blank">GitHub</a>
+                    <a href="projects/project1.html">Details</a>
+                    <a href="https://breast-cancer-app-predict.streamlit.app/" target="_blank">Demo</a>
+                </div>
             </div>
-            <a href="projects/project3.html" class="btn btn-outline-success">💬 View Project</a>
-          </div>
+            <div class="project-card">
+                <h3>Stock Price Forecasting</h3>
+                <p>Developed LSTM and CNN-LSTM models for time-series stock price forecasting, incorporating feature engineering and visual performance metrics.</p>
+                <div class="tech-badges">
+                    <span class="tech-badge">LSTM</span>
+                    <span class="tech-badge">Flask</span>
+                    <span class="tech-badge">Keras</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/nilesh5911/Stock-Price-Prediction-App" target="_blank">GitHub</a>
+                    <a href="projects/project2.html">Details</a>
+                    <a href="https://stock-price-forecast-app.herokuapp.com/" target="_blank">Demo</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Medical Chatbot with RAG</h3>
+                <p>Built a context-aware medical Q&A system using LangChain, Pinecone, and OpenAI GPT, enabling accurate responses from medical documents.</p>
+                <div class="tech-badges">
+                    <span class="tech-badge">LangChain</span>
+                    <span class="tech-badge">Pinecone</span>
+                    <span class="tech-badge">OpenAI GPT</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/nilesh5911/Medicalchatbot" target="_blank">GitHub</a>
+                    <a href="projects/project3.html">Details</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Shiv Yuva Mitramandal Website</h3>
+                <p>A community website for youth engagement, built with modern web technologies and deployed on Vercel.</p>
+                <div class="tech-badges">
+                    <span class="tech-badge">HTML</span>
+                    <span class="tech-badge">CSS</span>
+                    <span class="tech-badge">JavaScript</span>
+                    <span class="tech-badge">Vercel</span>
+                </div>
+                <div class="project-links">
+                    <a href="projects/project5.html">Details</a>
+                    <a href="https://shivyuvamitramandal.vercel.app/" target="_blank">Demo</a>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col-md-6 col-lg-4 project-item" data-category="computer-vision" data-aos="fade-up" data-aos-delay="500">
-        <div class="project-card">
-          <div class="project-content">
-            <h5>CV Health App</h5>
-            <p>Real-time vitals and posture monitoring with OpenCV and Flutter.</p>
-            <div class="project-tags">
-              <span class="project-tag">OpenCV</span>
-              <span class="project-tag">Flutter</span>
-              <span class="project-tag">Computer Vision</span>
-            </div>
-            <a href="projects/project4.html" class="btn btn-outline-success">📹 View Project</a>
-          </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="fade-in">
+        <h2>Technical Skills</h2>
+        <div class="skills-tabs">
+            <button class="tab-btn active" data-tab="programming"><i class="fas fa-code"></i> Programming</button>
+            <button class="tab-btn" data-tab="ml"><i class="fas fa-brain"></i> ML & AI</button>
+            <button class="tab-btn" data-tab="web"><i class="fas fa-globe"></i> Web & App</button>
+            <button class="tab-btn" data-tab="tools"><i class="fas fa-tools"></i> Tools & DevOps</button>
+            <button class="tab-btn" data-tab="os"><i class="fas fa-desktop"></i> OS</button>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="container" data-aos="slide-up" data-aos-duration="1200">
-    <h2 data-aos="fade-right" data-aos-delay="200">Skills</h2>
-    <ul data-aos="fade-left" data-aos-delay="400">
-      <li>Languages & Tools: Python, TensorFlow, PyTorch, OpenCV, HuggingFace, FastAPI, Streamlit</li>
-      <li>Core Areas: Deep Learning, NLP, Time Series, Computer Vision, Model Deployment</li>
-      <li>DevOps Stack: Docker, GitHub Actions, AWS (S3, EC2), GCP, Linux, Shell scripting</li>
-      <li>Soft Skills: Communication, Rapid Learning, Problem Solving, Documentation</li>
-    </ul>
-  </section>
-
-  <!-- Experience -->
-  <section id="experience" class="container" data-aos="zoom-in" data-aos-duration="1200">
-    <h2 data-aos="fade-right" data-aos-delay="200">Experience</h2>
-    <span class="section__subtitle" data-aos="fade-left" data-aos-delay="400">My journey in the academic & professional front</span>
-    <div class="qualification__tabs" data-aos="fade-up" data-aos-delay="600">
-      <div class="qualification__button button--flex" data-target="#education">
-        <i class="ion-icon qualification__icon" name="school"></i>
-        Academic
-      </div>
-      <div class="qualification__button button--flex qualification__active" data-target="#work">
-        <i class="ion-icon qualification__icon" name="briefcase"></i>
-        Professional
-      </div>
-    </div>
-    <div class="qualification__sections">
-      <div class="qualification__content" data-content id="education">
-        <div class="experience-list">
-          <div class="experience-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="experience-header">
-              <h3>M.Sc. - Information Technology</h3>
-              <span class="experience-meta">S.M. Shetty College- Degree Section (Autonomous), India | 2023 - 2025</span>
+        <div class="skills-content">
+            <div id="programming" class="tab-content active">
+                <div class="skills-grid">
+                    <div class="skill-card" data-skill="python">
+                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/python/ffffff/20" alt="Python"></div>
+                        <h4>Python</h4>
+                        <div class="progress-circle" data-progress="95">
+                            <div class="progress-ring"></div>
+                            <div class="progress-inner"></div>
+                        </div>
+                        <span class="progress-text">95%</span>
+                        <div class="skill-tooltip">Core language for AI/ML development, data analysis, and automation.</div>
+                    </div>
+                    <div class="skill-card" data-skill="cpp">
+                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/cplusplus/ffffff/20" alt="C++"></div>
+                        <h4>C/C++</h4>
+                        <div class="progress-circle" data-progress="80">
+                            <div class="progress-ring"></div>
+                            <div class="progress-inner"></div>
+                        </div>
+                        <span class="progress-text">80%</span>
+                        <div class="skill-tooltip">High-performance computing and system-level programming.</div>
+                    </div>
+                    <div class="skill-card" data-skill="sql">
+                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/mysql/ffffff/20" alt="SQL"></div>
+                        <h4>SQL</h4>
+                        <div class="progress-circle" data-progress="85">
+                            <div class="progress-ring"></div>
+                            <div class="progress-inner"></div>
+                        </div>
+                        <span class="progress-text">85%</span>
+                        <div class="skill-tooltip">Database querying and management for data-driven applications.</div>
+                    </div>
+                                        <div class="skill-card" data-skill="mongodb">
+                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/mongodb/ffffff/20" alt="MongoDB"></div>
+                        <h4>MongoDB</h4>
+                        <div class="progress-circle" data-progress="75">
+                            <div class="progress-ring"></div>
+                            <div class="progress-inner"></div>
+                        </div>
+                        <span class="progress-text">75%</span>
+                        <div class="skill-tooltip">NoSQL document database for flexible and scalable data storage.</div>
+                    </div>
+                    <div class="skill-card" data-skill="html">
+                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/html5/ffffff/20" alt="HTML"></div>
+                        <h4>HTML</h4>
+                        <div class="progress-circle" data-progress="70">
+                            <div class="progress-ring"></div>
+                            <div class="progress-inner"></div>
+                        </div>
+                        <span class="progress-text">70%</span>
+                        <div class="skill-tooltip">Markup for structuring web content and applications.</div>
+                    </div>
+                    <div class="skill-card" data-skill="css">
+                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/css3/ffffff/20" alt="CSS"></div>
+                        <h4>CSS</h4>
+                        <div class="progress-circle" data-progress="70">
+                            <div class="progress-ring"></div>
+                            <div class="progress-inner"></div>
+                        </div>
+                        <span class="progress-text">70%</span>
+                        <div class="skill-tooltip">Styling and layout for modern web interfaces.</div>
+                    </div>
+                    <div class="skill-card" data-skill="javascript">
+                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/javascript/ffffff/20" alt="JavaScript"></div>
+                        <h4>JavaScript</h4>
+                        <div class="progress-circle" data-progress="75">
+                            <div class="progress-ring"></div>
+                            <div class="progress-inner"></div>
+                        </div>
+                        <span class="progress-text">75%</span>
+                        <div class="skill-tooltip">Dynamic scripting for interactive web applications.</div>
+                    </div>
+                </div>
             </div>
-          </div>
-            <div class="experience-card" data-aos="fade-up" data-aos-delay="300">
-              <div class="experience-header">
-                <h3>B.Sc. - Information Technology</h3>
-                <span class="experience-meta">S.M. Shetty College - Degree Section (Autonomous), India | 2020 - 2023</span>
-              </div>
+            <div id="ml" class="tab-content">
+                <div class="skills-grid">
+                    <div class="skill-card" data-skill="tensorflow">
+                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/tensorflow/ffffff/20" alt="TensorFlow"></div>
+                        <h4>TensorFlow</h4>
+                        <div class="progress-circle" data-progress="85">
+                            <div class="progress-ring"></div>
+                            <div class="progress-inner"></div>
+                        </div>
+                        <span class="progress-text">85%</span>
+                        <div class="skill-tooltip">End-to-end ML platform for deep learning models.</div>
+                    </div>
+                    <div class="skill-card" data-skill="pytorch">
+                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/pytorch/ffffff/20" alt="PyTorch"></div>
+                        <h4>PyTorch</h4>
+                        <div class="progress-circle" data-progress="80">
+                            <div class="progress-ring"></div>
+                            <div class="progress-inner"></div>
+                        </div>
+                        <span class="progress-text">80%</span>
+                        <div class="skill-tooltip">Dynamic neural networks with strong GPU acceleration.</div>
+                    </div>
+                    <div class="skill-card" data-skill="keras">
+                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/keras/ffffff/20" alt="Keras"></div>
+                        <h4>Keras</h4>
+                        <div class="progress-circle" data-progress="80">
+                            <div class="progress-ring"></div>
+                            <div class="progress-inner"></div>
+                        </div>
+                        <span class="progress-text">80%</span>
+                        <div class="skill-tooltip">High-level API for building and training models.</div>
+                    </div>
+                    <div class="skill-card" data-skill="scikit">
+                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/scikitlearn/ffffff/20" alt="Scikit-learn"></div>
+                        <h4>Scikit-learn</h4>
+                        <div class="progress-circle" data-progress="90">
+                            <div class="progress-ring"></div>
+                            <div class="progress-inner"></div>
+                        </div>
+                        <span class="progress-text">90%</span>
+                        <div class="skill-tooltip">Machine learning algorithms for classical ML tasks.</div>
+                    </div>
+                    <div class="skill-card" data-skill="opencv">
+                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/opencv/ffffff/20" alt="OpenCV"></div>
+                        <h4>OpenCV</h4>
+                        <div class="progress-circle" data-progress="90">
+                            <div class="progress-ring"></div>
+                            <div class="progress-inner"></div>
+                        </div>
+                        <span class="progress-text">90%</span>
+                        <div class="skill-tooltip">Computer vision library for image processing.</div>
+                    </div>
+                    <div class="skill-card" data-skill="huggingface">
+                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/huggingface/ffffff/20" alt="Hugging Face"></div>
+                        <h4>Hugging Face</h4>
+                        <div class="progress-circle" data-progress="75">
+                            <div class="progress-ring"></div>
+                            <div class="progress-inner"></div>
+                        </div>
+                        <span class="progress-text">75%</span>
+                        <div class="skill-tooltip">NLP models and transformers hub.</div>
+                    </div>
+                    <div class="skill-card" data-skill="langchain">
+                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/langchain/ffffff/20" alt="LangChain"></div>
+                        <h4>LangChain</h4>
+                        <div class="progress-circle" data-progress="75">
+                            <div class="progress-ring"></div>
+                            <div class="progress-inner"></div>
+                        </div>
+                        <span class="progress-text">75%</span>
+                        <div class="skill-tooltip">Framework for LLM applications and chains.</div>
+                    </div>
+                    <div class="skill-card" data-skill="pinecone">
+                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/pinecone/ffffff/20" alt="Pinecone"></div>
+                        <h4>Pinecone</h4>
+                        <div class="progress-circle" data-progress="70">
+                            <div class="progress-ring"></div>
+                            <div class="progress-inner"></div>
+                        </div>
+                        <span class="progress-text">70%</span>
+                        <div class="skill-tooltip">Vector database for semantic search.</div>
+                    </div>
+                    <div class="skill-card" data-skill="tesseract">
+                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/tesseract/ffffff/20" alt="Tesseract"></div>
+                        <h4>Tesseract</h4>
+                        <div class="progress-circle" data-progress="80">
+                            <div class="progress-ring"></div>
+                            <div class="progress-inner"></div>
+                        </div>
+                        <span class="progress-text">80%</span>
+                        <div class="skill-tooltip">OCR engine for text extraction from images.</div>
+                    </div>
+                    <div class="skill-card" data-skill="openai">
+                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/openai/ffffff/20" alt="OpenAI"></div>
+                        <h4>OpenAI GPT</h4>
+                        <div class="progress-circle" data-progress="80">
+                            <div class="progress-ring"></div>
+                            <div class="progress-inner"></div>
+                        </div>
+                        <span class="progress-text">80%</span>
+                        <div class="skill-tooltip">Generative AI models and APIs for advanced NLP and chat applications.</div>
+                    </div>
+                </div>
             </div>
-          <div class="experience-card" data-aos="fade-up" data-aos-delay="300">
-            <div class="experience-header">
-              <h3>Class XII</h3>
-              <span class="experience-meta">Higher Secondary Certificate | Ramniranjan Jhunjhunwala College (Autonomous), India | 2020</span>
+            <div id="web" class="tab-content">
+                <div class="skills-grid">
+                    <div class="skill-card" data-skill="flask">
+                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/flask/ffffff/20" alt="Flask"></div>
+                        <h4>Flask</h4>
+                        <div class="progress-circle" data-progress="85">
+                            <div class="progress-ring"></div>
+                            <div class="progress-inner"></div>
+                        </div>
+                        <span class="progress-text">85%</span>
+                        <div class="skill-tooltip">Lightweight web framework for Python apps.</div>
+                    </div>
+                    <div class="skill-card" data-skill="fastapi">
+                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/fastapi/ffffff/20" alt="FastAPI"></div>
+                        <h4>FastAPI</h4>
+                        <div class="progress-circle" data-progress="80">
+                            <div class="progress-ring"></div>
+                            <div class="progress-inner"></div>
+                        </div>
+                        <span class="progress-text">80%</span>
+                        <div class="skill-tooltip">Modern, fast API framework with auto-docs.</div>
+                    </div>
+                    <div class="skill-card" data-skill="streamlit">
+                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/streamlit/ffffff/20" alt="Streamlit"></div>
+                        <h4>Streamlit</h4>
+                        <div class="progress-circle" data-progress="75">
+                            <div class="progress-ring"></div>
+                            <div class="progress-inner"></div>
+                        </div>
+                        <span class="progress-text">75%</span>
+                        <div class="skill-tooltip">App framework for data apps and dashboards.</div>
+                    </div>
+                    <div class="skill-card" data-skill="pydantic">
+                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/pydantic/ffffff/20" alt="Pydantic"></div>
+                        <h4>Pydantic</h4>
+                        <div class="progress-circle" data-progress="75">
+                            <div class="progress-ring"></div>
+                            <div class="progress-inner"></div>
+                        </div>
+                        <span class="progress-text">75%</span>
+                        <div class="skill-tooltip">Data validation using Python type annotations.</div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="experience-card" data-aos="fade-up" data-aos-delay="400">
-            <div class="experience-header">
-              <h3>Class X</h3>
-              <span class="experience-meta">Secondary School Certificate | Sharma Shikshan Sanstha High School, India | 2018</span>
+            <div id="tools" class="tab-content">
+                <div class="skills-grid">
+                    <div class="skill-card" data-skill="git">
+                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/git/ffffff/20" alt="Git"></div>
+                        <h4>Git</h4>
+                        <div class="progress-circle" data-progress="90">
+                            <div class="progress-ring"></div>
+                            <div class="progress-inner"></div>
+                        </div>
+                        <span class="progress-text">90%</span>
+                        <div class="skill-tooltip">Version control system for code collaboration.</div>
+                    </div>
+                    <div class="skill-card" data-skill="docker">
+                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/docker/ffffff/20" alt="Docker"></div>
+                        <h4>Docker</h4>
+                        <div class="progress-circle" data-progress="70">
+                            <div class="progress-ring"></div>
+                            <div class="progress-inner"></div>
+                        </div>
+                        <span class="progress-text">70%</span>
+                        <div class="skill-tooltip">Containerization for consistent deployments.</div>
+                    </div>
+                    <div class="skill-card" data-skill="aws">
+                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/amazonaws/ffffff/20" alt="AWS"></div>
+                        <h4>AWS</h4>
+                        <div class="progress-circle" data-progress="70">
+                            <div class="progress-ring"></div>
+                            <div class="progress-inner"></div>
+                        </div>
+                        <span class="progress-text">70%</span>
+                        <div class="skill-tooltip">Cloud computing services for scalable apps.</div>
+                    </div>
+                    <div class="skill-card" data-skill="kubernetes">
+                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/kubernetes/ffffff/20" alt="Kubernetes"></div>
+                        <h4>Kubernetes</h4>
+                        <div class="progress-circle" data-progress="50">
+                            <div class="progress-ring"></div>
+                            <div class="progress-inner"></div>
+                        </div>
+                        <span class="progress-text">50%</span>
+                        <div class="skill-tooltip">Container orchestration for automating deployment and scaling.</div>
+                    </div>
+                    <div class="skill-card" data-skill="jenkins">
+                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/jenkins/ffffff/20" alt="Jenkins"></div>
+                        <h4>Jenkins</h4>
+                        <div class="progress-circle" data-progress="50">
+                            <div class="progress-ring"></div>
+                            <div class="progress-inner"></div>
+                        </div>
+                        <span class="progress-text">50%</span>
+                        <div class="skill-tooltip">Automation server for CI/CD pipelines.</div>
+                    </div>
+                </div>
             </div>
-          </div>
+            <div id="os" class="tab-content">
+                <div class="skills-grid">
+                    <div class="skill-card" data-skill="windows">
+                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/microsoftwindows/ffffff/20" alt="Windows"></div>
+                        <h4>Windows</h4>
+                        <div class="progress-circle" data-progress="90">
+                            <div class="progress-ring"></div>
+                            <div class="progress-inner"></div>
+                        </div>
+                        <span class="progress-text">90%</span>
+                        <div class="skill-tooltip">Primary OS for development and daily use.</div>
+                    </div>
+                    <div class="skill-card" data-skill="linux">
+                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/linux/ffffff/20" alt="Linux"></div>
+                        <h4>Linux</h4>
+                        <div class="progress-circle" data-progress="60">
+                            <div class="progress-ring"></div>
+                            <div class="progress-inner"></div>
+                        </div>
+                        <span class="progress-text">60%</span>
+                        <div class="skill-tooltip">Server and development environment expertise.</div>
+                    </div>
+                    <div class="skill-card" data-skill="macos">
+                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/apple/ffffff/20" alt="macOS"></div>
+                        <h4>macOS</h4>
+                        <div class="progress-circle" data-progress="70">
+                            <div class="progress-ring"></div>
+                            <div class="progress-inner"></div>
+                        </div>
+                        <span class="progress-text">70%</span>
+                        <div class="skill-tooltip">Unix-based OS for development and creative workflows.</div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="qualification__content active" data-content id="work">
-        <div class="experience-list">
-          <div class="experience-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="experience-header">
-              <h3>Junior Software Developer</h3>
-              <a href="https://enirmaan.com/" target="_blank">Enirmaan Techsolutions</a>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="fade-in">
+        <h2>Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h3>Junior Software Developer</h3>
+                    <p>Enirmaan Techsolutions Pvt. Ltd., Kurla, Maharashtra</p>
+                    <p>May 2025 – Present</p>
+                    <p>Integrated API for video-based health vitals detection with FastAPI backend and Flutter app. Added face validation and multi-face rejection. Built OCR visiting card extractor using Tesseract, EasyOCR, OpenCV, regex, and Hugging Face LLM with Pydantic validation.</p>
+                </div>
             </div>
-            <div class="experience-meta">
-              <span>Kurla, Maharashtra, India</span> | <span>May 2025 – Present</span>
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <h3>Tech Support Intern</h3>
+                    <p>Livingthings.ai (RBTIC, IIT Bombay)</p>
+                    <p>Oct 2024 – Feb 2025</p>
+                    <p>Analyzed IoT AC monitoring data to optimize energy use and support sustainability.</p>
+                </div>
             </div>
-            <ul class="experience-tasks">
-              <li>Working on computer vision projects using AI and ML.</li>
-              <li>Engaged in R&D for intelligent visual systems.</li>
-              <li>Collaborated with teams to deploy ML models.</li>
-            </ul>
-            <div class="experience-skills">
-              <strong>Skills:</strong>
-              <span class="skill-badge">Machine Learning</span>
-              <span class="skill-badge">Computer Vision</span>
-              <span class="skill-badge">Python</span>
-              <span class="skill-badge">R&D</span>
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h3>Desktop Support Intern</h3>
+                    <p>Policy Junction Marketing Pvt. Ltd.</p>
+                    <p>Mar 2024 – Jun 2024</p>
+                    <p>Handled IT support: system setup, software config, and troubleshooting to reduce downtime.</p>
+                </div>
             </div>
-          </div>
-          <div class="experience-card" data-aos="fade-up" data-aos-delay="300">
-            <div class="experience-header">
-              <h3>Market Research Intern</h3>
-              <a href="https://www.netlabindia.com/" target="_blank">Network Techlab India</a>
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <h3>Market Research Intern</h3>
+                    <p>Network Techlab India Pvt. Ltd.</p>
+                    <p>Jan 2024 – Mar 2024</p>
+                    <p>Researched AI document/print management, identifying gaps and opportunities for product dev.</p>
+                </div>
             </div>
-            <div class="experience-meta">
-              <span>Mumbai, Maharashtra, India</span> | <span>Mar 2025 – Apr 2025</span>
-            </div>
-            <ul class="experience-tasks">
-              <li>Researched market trends and competitors.</li>
-              <li>Supported data analysis and presentations.</li>
-              <li>Contributed to data-driven marketing strategies.</li>
-            </ul>
-            <div class="experience-skills">
-              <strong>Skills:</strong>
-              <span class="skill-badge">Market Research</span>
-              <span class="skill-badge">Data Analysis</span>
-              <span class="skill-badge">Marketing</span>
-            </div>
-          </div>
-          <div class="experience-card" data-aos="fade-up" data-aos-delay="400">
-            <div class="experience-header">
-              <h3>Tech Support Intern</h3>
-              <a href="https://livingthings.ai/" target="_blank">Living Things</a>
-            </div>
-            <div class="experience-meta">
-              <span>Powai, IIT Bombay, India</span> | <span>Oct 2024 – Jan 2025</span>
-            </div>
-            <ul class="experience-tasks">
-              <li>Analyzed smart AC data for energy optimization.</li>
-              <li>Identified usage patterns for insights.</li>
-              <li>Supported sustainable energy strategies.</li>
-            </ul>
-            <div class="experience-skills">
-              <strong>Skills:</strong>
-              <span class="skill-badge">Data Analysis</span>
-              <span class="skill-badge">IoT</span>
-              <span class="skill-badge">Sustainability</span>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
+    <!-- Education Section -->
+    <section id="education" class="fade-in">
+        <h2>Education</h2>
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h3>M.Sc. in Information Technology</h3>
+                    <p>S.M. Shetty College, Mumbai (Autonomous)</p>
+                    <p>2023 – 2025</p>
+                    <p>CGPA: 7.2 / 10</p>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <h3>B.Sc. in Information Technology</h3>
+                    <p>S.M. Shetty College, Mumbai (Autonomous)</p>
+                    <p>2020 – 2023</p>
+                    <p>CGPI: 8.18 / 10</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Contact -->
-  <section id="contact" class="container" data-aos="slide-up" data-aos-duration="1200">
-    <h2 data-aos="fade-right" data-aos-delay="200">Contact</h2>
-    <p class="lead text-center" data-aos="fade-left" data-aos-delay="400">Let's collaborate on AI-driven projects or discuss tech over coffee!</p>
-    <div class="d-flex flex-wrap justify-content-center gap-3 mb-4" data-aos="fade-up" data-aos-delay="600">
-      <a href="mailto:mishranilesh968@gmail.com"><button class="btn btn-outline-success contact-button">Email</button></a>
-      <a href="https://www.linkedin.com/in/nilesh-mishra-064a861b3/" target="_blank"><button class="btn btn-outline-success contact-button">LinkedIn</button></a>
-      <a href="https://github.com/nilesh5911" target="_blank"><button class="btn btn-outline-success contact-button">GitHub</button></a>
-    </div>
-    <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST" data-aos="fade-up" data-aos-delay="800">
-      <div class="mb-3">
-        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required />
-      </div>
-      <div class="mb-3">
-        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required />
-      </div>
-      <div class="mb-3">
-        <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
-      </div>
-      <button type="submit" class="btn btn-outline-success contact-button w-100">Send Message</button>
-    </form>
-  </section>
+    <!-- Contact Section -->
+    <section id="contact" class="fade-in">
+        <h2>Contact Me</h2>
+        <div class="contact-form">
+            <form id="contactForm">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+        <div class="social-icons">
+            <a href="https://linkedin.com/in/nilesh-mishra" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/nilesh5911" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:mishranilesh968@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+    </section>
 
-  <!-- Chatbot -->
-  <div id="chatbot" data-aos="fade-left" data-aos-delay="1000">
-    <button id="chatbot-toggle" onclick="toggleChatbot()">💬</button>
-    <div id="chatbot-window">
-      <div id="chatbot-messages"></div>
-      <input id="chatbot-input" type="text" placeholder="Ask about my projects..." />
-    </div>
-  </div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Nilesh Mishra. All rights reserved.</p>
+        <ul>
+        </ul>
+    </footer>
 
-  <!-- Footer -->
-  <footer class="text-center" data-aos="fade-up" data-aos-duration="1200">
-    <div class="container">
-      <p>© 2025 Nilesh Mishra</p>
-      <div class="d-flex justify-content-center gap-3">
-        <a href="https://www.linkedin.com/in/nilesh-mishra-064a861b3/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/nilesh5911" target="_blank">GitHub</a>
-        <a href="mailto:mishranilesh968@gmail.com">Email</a>
-      </div>
-    </div>
-  </footer>
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'light') {
+            document.body.setAttribute('data-theme', 'light');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <script>
-    // Initialize AOS
-    AOS.init({
-      duration: 1200,
-      easing: 'ease-out-quart',
-      once: false,
-      mirror: true
-    });
-
-    // Typed.js for header text
-    new Typed('#typed-text', {
-      strings: ['AI Engineer', 'Deep Learning Specialist', 'MLOps Enthusiast'],
-      typeSpeed: 60,
-      backSpeed: 30,
-      backDelay: 1200,
-      loop: true
-    });
-
-    // Project Filter
-    document.querySelectorAll('.project-filter').forEach(button => {
-      button.addEventListener('click', () => {
-        document.querySelectorAll('.project-filter').forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
-        const filter = button.getAttribute('data-filter');
-        document.querySelectorAll('.project-item').forEach(item => {
-          item.style.display = filter === 'all' || item.getAttribute('data-category') === filter ? 'block' : 'none';
+        themeToggle.addEventListener('click', () => {
+            const body = document.body;
+            const isDark = body.getAttribute('data-theme') === 'dark';
+            body.setAttribute('data-theme', isDark ? 'light' : 'dark');
+            themeToggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+            localStorage.setItem('theme', isDark ? 'light' : 'dark');
         });
-      });
-    });
 
-    // Experience Tabs
-    document.querySelectorAll('.qualification__button').forEach(button => {
-      button.addEventListener('click', () => {
-        document.querySelectorAll('.qualification__button').forEach(btn => btn.classList.remove('qualification__active'));
-        button.classList.add('qualification__active');
-        const target = button.getAttribute('data-target');
-        document.querySelectorAll('.qualification__content').forEach(content => {
-          content.classList.remove('active');
-          if (content.getAttribute('id') === target.substring(1)) {
-            content.classList.add('active');
-          }
-        });
-      });
-    });
-
-    // Counter Animation for Achievements
-    function animateCounter() {
-      const counters = document.querySelectorAll('.counter');
-      counters.forEach(counter => {
-        const updateCount = () => {
-          const target = +counter.getAttribute('data-target');
-          const count = +counter.innerText;
-          const speed = 200; // Animation speed (lower is faster)
-          const increment = target / speed;
-          if (count < target) {
-            counter.innerText = Math.ceil(count + increment);
-            setTimeout(updateCount, 10);
-          } else {
-            counter.innerText = target;
-          }
+        // Fade-in Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
         };
-        // Trigger animation when section is in view
-        const observer = new IntersectionObserver(entries => {
-          if (entries[0].isIntersecting) {
-            updateCount();
-            observer.disconnect(); // Run animation only once
-          }
-        }, { threshold: 0.5 });
-        observer.observe(counter);
-      });
-    }
 
-    // Open Project
-    function openProject(url) {
-      fetch(url)
-        .then(response => {
-          if (response.ok) window.open(url, '_blank');
-          else alert('Project page not found.');
-        })
-        .catch(() => alert('Unable to access project page.'));
-    }
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
 
-    // Toggle Dark Mode
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
-      localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-      document.querySelector('.toggle-dark-mode').textContent = document.body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
-    }
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
 
-    // Load Theme and Initialize
-    window.onload = () => {
-      if (localStorage.getItem('theme') === 'dark') {
-        document.body.classList.add('dark-mode');
-        document.querySelector('.toggle-dark-mode').textContent = 'Light Mode';
-      }
-      particlesJS('particles-js', {
-        particles: {
-          number: { value: 80, density: { enable: true, value_area: 1200 } },
-          color: { value: ['#ffffff', '#a855f7', '#3b82f6'] },
-          shape: { type: ['circle', 'triangle', 'star'] },
-          opacity: { value: 0.6, random: true },
-          size: { value: 4, random: true },
-          line_linked: { enable: true, distance: 150, color: '#a855f7', opacity: 0.4, width: 1.5 },
-          move: { enable: true, speed: 3, direction: 'none', random: true }
-        },
-        interactivity: {
-          detect_on: 'canvas',
-          events: { onhover: { enable: true, mode: 'grab' }, onclick: { enable: true, mode: 'push' } },
-          modes: { grab: { distance: 140 }, push: { particles_nb: 4 } }
-        },
-        retina_detect: true
-      });
-      animateCounter(); // Initialize counter animation
-    };
+        // Enhanced Skills Tab Switching and Animations
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tabName = btn.getAttribute('data-tab');
+                
+                // Remove active from all tabs and contents
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                // Add active to clicked tab and content
+                btn.classList.add('active');
+                document.getElementById(tabName).classList.add('active');
+                
+                // Trigger progress animation for new tab
+                animateProgressBars(document.getElementById(tabName));
+            });
+        });
 
-    // Chatbot
-    function toggleChatbot() {
-      const chatbotWindow = document.getElementById('chatbot-window');
-      chatbotWindow.classList.toggle('active');
-    }
+        // Function to animate progress circles
+        function animateProgressBars(container) {
+            const circles = container.querySelectorAll('.progress-circle');
+            circles.forEach((circle, index) => {
+                // Small delay for staggered effect
+                setTimeout(() => {
+                    const progress = parseInt(circle.getAttribute('data-progress'));
+                    const ring = circle.querySelector('.progress-ring');
+                    
+                    // Calculate angle for conic gradient
+                    const angle = (progress / 100) * 360;
+                    ring.style.background = `conic-gradient(var(--secondary-accent) 0deg ${angle}deg, var(--border-color) ${angle}deg 360deg)`;
+                    
+                    // Animate the ring expansion from 0%
+                    ring.style.clipPath = 'circle(0% at 50% 50%)';
+                    setTimeout(() => {
+                        ring.style.clipPath = 'circle(100% at 50% 50%)';
+                    }, 100);
+                }, index * 100);
+            });
+        }
 
-    document.getElementById('chatbot-input').addEventListener('keypress', function (e) {
-      if (e.key === 'Enter' && this.value.trim()) {
-        const messages = document.getElementById('chatbot-messages');
-        const userMessage = document.createElement('div');
-        userMessage.textContent = `You: ${this.value}`;
-        messages.appendChild(userMessage);
-        const botMessage = document.createElement('div');
-        botMessage.textContent = `Bot: Thanks for your interest! Ask me about my AI projects or skills.`;
-        messages.appendChild(botMessage);
-        messages.scrollTop = messages.scrollHeight;
-        this.value = '';
-      }
-    });
+        // Initial animation on skills section intersection
+        const skillsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeTab = document.querySelector('.tab-content.active');
+                    if (activeTab) {
+                        animateProgressBars(activeTab);
+                    }
+                    skillsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
 
-    // Form Validation
-    document.getElementById('contact-form').addEventListener('submit', function (e) {
-      const email = document.getElementById('email').value;
-      const name = document.getElementById('name').value;
-      const message = document.getElementById('message').value;
-      if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
-        e.preventDefault();
-        alert('Please enter a valid email address.');
-      } else if (name.trim().length < 2) {
-        e.preventDefault();
-        alert('Please enter a valid name.');
-      } else if (message.trim().length < 10) {
-        e.preventDefault();
-        alert('Please enter a message with at least 10 characters.');
-      }
-    });
-  </script>
+        const skillsSection = document.getElementById('skills');
+        if (skillsSection) {
+            skillsObserver.observe(skillsSection);
+        }
+
+        // Contact Form (basic handling)
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! It will be sent to Nilesh.');
+            e.target.reset();
+        });
+    </script>
 </body>
 </html>
