@@ -1,165 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Stock Price Forecasting Project - Nilesh Mishra Portfolio">
-    <meta name="keywords" content="Stock Price, LSTM, Flask, Keras">
-    <title>Stock Price Forecasting | Nilesh Mishra</title>
-    <!-- Google Fonts: Poppins for headings, Inter for body -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../assets/style.css">
-</head>
-<body data-theme="dark">
-<a href="#main-content" class="skip-link">Skip to main content</a>
-    <!-- Fixed Navigation Bar -->
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
-        <div class="nav-container">
-            <button class="mobile-menu-toggle" id="mobileToggle">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="../index.html#hero">Home</a></li>
-                <li><a href="../index.html#about">About</a></li>
-                <li><a href="../index.html#projects">Projects</a></li>
-                <li><a href="../index.html#ongoing-projects">Ongoing Projects</a></li>
-                <li><a href="../index.html#skills">Skills</a></li>
-                <li><a href="../index.html#experience">Experience</a></li>
-                <li><a href="../index.html#education">Education</a></li>
-                <li><a href="../index.html#contact">Contact</a></li>
-                <li>
-                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Stock Price Forecasting Project - Nilesh Mishra Portfolio" />
+        <meta name="keywords" content="Stock Price, LSTM, Flask, Keras" />
+        <title>Stock Price Forecasting | Nilesh Mishra</title>
+        <!-- Google Fonts: Poppins for headings, Inter for body -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap" />
+        <!-- Font Awesome for icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <link rel="stylesheet" href="../assets/style.css" />
+    </head>
+    <body data-theme="dark">
+        <!-- Fixed Navigation Bar -->
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="nav-container">
+                <button class="mobile-menu-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="../index.html#hero">Home</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                    <li><a href="../index.html#ongoing-projects">Ongoing Projects</a></li>
+                    <li><a href="../index.html#skills">Skills</a></li>
+                    <li><a href="../index.html#experience">Experience</a></li>
+                    <li><a href="../index.html#education">Education</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                    <li>
+                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
-    <!-- Hero Section -->
-    <section id="project-hero" class="fade-in" id="main-content">
-        <div class="hero-content">
-            <h1>Stock Price Forecasting</h1>
-            <p>Developed LSTM and CNN-LSTM models for time-series stock price forecasting, incorporating feature engineering and visual performance metrics.</p>
-            <button class="cta-button" onclick="window.location.href='../index.html#projects'">Back to Projects</button>
-        </div>
-    </section>
+        <!-- Hero Section -->
+        <section id="project-hero" class="fade-in" id="main-content">
+            <div class="hero-content">
+                <h1>Stock Price Forecasting</h1>
+                <p>Developed LSTM and CNN-LSTM models for time-series stock price forecasting, incorporating feature engineering and visual performance metrics.</p>
+                <button class="cta-button" onclick="window.location.href='../index.html#projects'">Back to Projects</button>
+            </div>
+        </section>
 
-    <!-- Project Details Section -->
-    <section id="project-details" class="fade-in">
-        <div class="container">
-            <h2>Project Overview</h2>
-            <div class="about-container">
-                <div class="about-text">
-                    <p>This project leverages Long Short-Term Memory (LSTM) neural networks to forecast stock prices based on historical data. The model analyzes time series data to predict future trends, achieving an 18% improvement in RMSE over baseline models. It is deployed via a Flask API for real-time predictions, providing actionable insights for traders and investors.</p>
+        <!-- Project Details Section -->
+        <section id="project-details" class="fade-in">
+            <div class="container">
+                <h2>Project Overview</h2>
+                <div class="about-container">
+                    <div class="about-text">
+                        <p>
+                            This project leverages Long Short-Term Memory (LSTM) neural networks to forecast stock prices based on historical data. The model analyzes time series data to predict future trends, achieving an 18% improvement
+                            in RMSE over baseline models. It is deployed via a Flask API for real-time predictions, providing actionable insights for traders and investors.
+                        </p>
+                    </div>
+                </div>
+
+                <h3>Technologies Used</h3>
+                <div class="tech-badges">
+                    <span class="tech-badge">LSTM</span>
+                    <span class="tech-badge">Flask</span>
+                    <span class="tech-badge">Keras</span>
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Pandas</span>
+                </div>
+
+                <h3>Key Features</h3>
+                <ul class="project-features">
+                    <li><i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 0.5rem;"></i>Advanced LSTM and CNN-LSTM models for accurate forecasting.</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 0.5rem;"></i>Real-time prediction API with Flask backend.</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 0.5rem;"></i>Interactive visualizations of predictions vs actual prices.</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 0.5rem;"></i>Feature engineering for improved model performance.</li>
+                </ul>
+
+                <h3>Impact</h3>
+                <p>
+                    The model demonstrates strong predictive capabilities, with RMSE reduced by 18% compared to traditional methods. It provides valuable insights for financial decision-making and can be integrated into trading platforms.
+                </p>
+
+                <div class="project-links">
+                    <a href="https://github.com/nilesh5911/Stock-Price-Prediction-App" target="_blank">GitHub</a>
+                    <a href="https://stock-price-forecast-app.herokuapp.com/" target="_blank">Demo</a>
                 </div>
             </div>
+        </section>
 
-            <h3>Technologies Used</h3>
-            <div class="tech-badges">
-                <span class="tech-badge">LSTM</span>
-                <span class="tech-badge">Flask</span>
-                <span class="tech-badge">Keras</span>
-                <span class="tech-badge">Python</span>
-                <span class="tech-badge">Pandas</span>
-            </div>
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 Nilesh Mishra. All rights reserved.</p>
+        </footer>
 
-            <h3>Key Features</h3>
-            <ul class="project-features">
-                <li><i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 0.5rem;"></i>Advanced LSTM and CNN-LSTM models for accurate forecasting.</li>
-                <li><i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 0.5rem;"></i>Real-time prediction API with Flask backend.</li>
-                <li><i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 0.5rem;"></i>Interactive visualizations of predictions vs actual prices.</li>
-                <li><i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 0.5rem;"></i>Feature engineering for improved model performance.</li>
-            </ul>
+        <script>
+            // Theme Toggle
+            const themeToggle = document.getElementById("themeToggle");
+            const currentTheme = localStorage.getItem("theme");
+            if (currentTheme === "light") {
+                document.body.setAttribute("data-theme", "light");
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            }
 
-            <h3>Impact</h3>
-            <p>The model demonstrates strong predictive capabilities, with RMSE reduced by 18% compared to traditional methods. It provides valuable insights for financial decision-making and can be integrated into trading platforms.</p>
-
-            <div class="project-links">
-                <a href="https://github.com/nilesh5911/Stock-Price-Prediction-App" target="_blank">GitHub</a>
-                <a href="https://stock-price-forecast-app.herokuapp.com/" target="_blank">Demo</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Nilesh Mishra. All rights reserved.</p>
-    </footer>
-
-    <script>
-        // Theme Toggle
-        const themeToggle = document.getElementById('themeToggle');
-        const currentTheme = localStorage.getItem('theme');
-        if (currentTheme === 'light') {
-            document.body.setAttribute('data-theme', 'light');
-            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-        }
-
-        themeToggle.addEventListener('click', () => {
-            const body = document.body;
-            const isDark = body.getAttribute('data-theme') === 'dark';
-            body.setAttribute('data-theme', isDark ? 'light' : 'dark');
-            themeToggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-            localStorage.setItem('theme', isDark ? 'light' : 'dark');
-        });
-
-        // Fade-in Animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Mobile Menu Toggle
-        const mobileToggle = document.getElementById('mobileToggle');
-        const navMenu = document.getElementById('navMenu');
-        const body = document.body;
-
-        if (mobileToggle && navMenu) {
-            mobileToggle.addEventListener('click', () => {
-                navMenu.classList.toggle('active');
-                body.classList.toggle('menu-open');
-                const icon = mobileToggle.querySelector('i');
-                if (navMenu.classList.contains('active')) {
-                    icon.className = 'fas fa-times';
-                } else {
-                    icon.className = 'fas fa-bars';
-                }
+            themeToggle.addEventListener("click", () => {
+                const body = document.body;
+                const isDark = body.getAttribute("data-theme") === "dark";
+                body.setAttribute("data-theme", isDark ? "light" : "dark");
+                themeToggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+                localStorage.setItem("theme", isDark ? "light" : "dark");
             });
 
-            // Close menu when clicking on a link
-            navMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    navMenu.classList.remove('active');
-                    body.classList.remove('menu-open');
-                    mobileToggle.querySelector('i').className = 'fas fa-bars';
+            // Fade-in Animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px",
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
                 });
+            }, observerOptions);
+
+            document.querySelectorAll(".fade-in").forEach((el) => {
+                observer.observe(el);
             });
 
-            // Close menu on outside click
-            document.addEventListener('click', (e) => {
-                if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
-                    navMenu.classList.remove('active');
-                    body.classList.remove('menu-open');
-                    mobileToggle.querySelector('i').className = 'fas fa-bars';
-                }
-            });
-        }
-    </script>
-    <script src="../assets/common.js" defer></script>
-</body>
+            // Mobile Menu Toggle
+            const mobileToggle = document.getElementById("mobileToggle");
+            const navMenu = document.getElementById("navMenu");
+            const body = document.body;
+
+            if (mobileToggle && navMenu) {
+                mobileToggle.addEventListener("click", () => {
+                    navMenu.classList.toggle("active");
+                    body.classList.toggle("menu-open");
+                    const icon = mobileToggle.querySelector("i");
+                    if (navMenu.classList.contains("active")) {
+                        icon.className = "fas fa-times";
+                    } else {
+                        icon.className = "fas fa-bars";
+                    }
+                });
+
+                // Close menu when clicking on a link
+                navMenu.querySelectorAll("a").forEach((link) => {
+                    link.addEventListener("click", () => {
+                        navMenu.classList.remove("active");
+                        body.classList.remove("menu-open");
+                        mobileToggle.querySelector("i").className = "fas fa-bars";
+                    });
+                });
+
+                // Close menu on outside click
+                document.addEventListener("click", (e) => {
+                    if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+                        navMenu.classList.remove("active");
+                        body.classList.remove("menu-open");
+                        mobileToggle.querySelector("i").className = "fas fa-bars";
+                    }
+                });
+            }
+        </script>
+        <script src="../assets/common.js" defer></script>
+    </body>
 </html>

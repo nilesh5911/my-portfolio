@@ -51,7 +51,7 @@ html {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.7;
@@ -59,8 +59,10 @@ body {
     padding-top: 80px; /* Account for sticky navbar height */
 }
 
-h1, h2, h3 {
-    font-family: 'Poppins', sans-serif;
+h1,
+h2,
+h3 {
+    font-family: "Poppins", sans-serif;
     font-weight: 700;
     line-height: 1.2;
 }
@@ -107,7 +109,7 @@ section {
 }
 
 #project-hero::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -128,7 +130,7 @@ section {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     color: var(--secondary-accent);
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 #project-hero p {
@@ -144,7 +146,7 @@ section {
 
 [data-theme="light"] #project-hero h1 {
     color: #ffd700;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #project-details {
@@ -315,7 +317,7 @@ section {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 .cta-button:hover,
@@ -341,7 +343,7 @@ section {
 }
 
 #about h2::after {
-    content: '';
+    content: "";
     display: block;
     width: 60px;
     height: 4px;
@@ -473,7 +475,7 @@ section {
 }
 
 #project-details h3::after {
-    content: '';
+    content: "";
     display: block;
     width: 40px;
     height: 3px;
@@ -526,7 +528,7 @@ section {
 }
 
 .project-card::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -671,7 +673,7 @@ section {
 }
 
 #experience h2::after {
-    content: '';
+    content: "";
     display: block;
     width: 60px;
     height: 4px;
@@ -681,7 +683,7 @@ section {
 }
 
 #ongoing-projects h2::after {
-    content: '';
+    content: "";
     display: block;
     width: 60px;
     height: 4px;
@@ -701,7 +703,7 @@ section {
 }
 
 .timeline::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 6px;
     background-color: var(--accent-color);
@@ -719,7 +721,7 @@ section {
 }
 
 .timeline-item::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 25px;
     height: 25px;
@@ -819,7 +821,7 @@ section {
     transition: all 0.3s ease;
     width: 100%;
     font-weight: 600;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 .submit-btn:hover,
@@ -1060,7 +1062,7 @@ footer ul {
     padding: 0.8rem 1.5rem;
     border-radius: 50px;
     cursor: pointer;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 500;
     transition: all 0.3s ease;
     display: flex;
@@ -1125,7 +1127,7 @@ footer ul {
 }
 
 .skill-card::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: -100%;
@@ -1158,7 +1160,7 @@ footer ul {
     font-size: 1.3rem;
     margin-bottom: 1rem;
     color: var(--secondary-accent);
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 .progress-circle {
@@ -1228,7 +1230,7 @@ footer ul {
 }
 
 .skill-tooltip::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 100%;
     left: 50%;
@@ -1252,24 +1254,24 @@ select:focus-visible {
     section {
         padding: var(--spacing-md) var(--spacing-xs);
     }
-    
+
     .hero-content h1 {
         font-size: var(--font-size-3xl);
     }
-    
+
     .hero-content img {
         width: 120px;
         height: 120px;
     }
-    
+
     .projects-grid {
         gap: var(--spacing-sm);
     }
-    
+
     .project-card {
         padding: var(--spacing-sm);
     }
-    
+
     .skills-grid {
         grid-template-columns: 1fr;
     }
@@ -1314,7 +1316,6 @@ select:focus-visible {
     text-align: center;
 }
 
-
 /* Project Links */
 .project-links {
     display: flex;
@@ -1352,25 +1353,25 @@ select:focus-visible {
     #project-hero h1 {
         font-size: 2.5rem;
     }
-    
+
     #project-hero p {
         font-size: 1.1rem;
     }
-    
+
     #project-details {
         padding: 40px 15px;
     }
-    
+
     #project-details .about-container {
         padding: 2rem;
     }
-    
+
     .project-features li {
         justify-content: flex-start;
         padding: 0.8rem 0;
         font-size: 1rem;
     }
-    
+
     .skip-link {
         position: absolute;
         left: -9999px;
@@ -1380,7 +1381,7 @@ select:focus-visible {
         overflow: hidden;
         z-index: -99;
     }
-    
+
     .skip-link:focus {
         left: 6px;
         top: 5px;
@@ -1392,24 +1393,24 @@ select:focus-visible {
         border-radius: 5px;
         z-index: 1000;
     }
-    
+
     #project-details .project-links {
         flex-direction: column;
         align-items: center;
     }
-    
+
     #project-details .project-links a {
         width: 100%;
         max-width: 250px;
         text-align: center;
     }
-    
+
     #project-details .tech-badges {
         flex-direction: column;
         align-items: center;
         gap: 0.8rem;
     }
-    
+
     #project-details .tech-badge {
         width: 100%;
         max-width: 200px;
