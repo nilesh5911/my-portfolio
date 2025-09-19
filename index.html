@@ -109,7 +109,7 @@
                 </div>
             </div>
             <div class="project-card">
-                <h3>Shiv Yuva Mitramandal Website</h3>
+                <h3>शिव युवा मित्र मंडल Website</h3>
                 <p>A community website for youth engagement, built with modern web technologies and deployed on Vercel.</p>
                 <div class="tech-badges">
                     <span class="tech-badge">HTML</span>
@@ -548,6 +548,7 @@
             <a href="https://www.linkedin.com/in/nilesh-mishra-064a861b3/" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="https://github.com/nilesh5911" target="_blank"><i class="fab fa-github"></i></a>
             <a href="mailto:mishranilesh968@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://whatsapp.com/channel/0029Vb6RowtGE56cnp58012p" target="_blank"><i class="fab fa-whatsapp"></i></a>
         </div>
     </section>
 
@@ -557,6 +558,7 @@
     </footer>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
 
 
         // Enhanced Skills Tab Switching and Animations
@@ -577,24 +579,16 @@
             });
         });
 
-        // Function to animate progress circles
+        // Function to animate progress bars (linear)
         function animateProgressBars(container) {
-            const circles = container.querySelectorAll('.progress-circle');
-            circles.forEach((circle, index) => {
-                // Small delay for staggered effect
+            const bars = container.querySelectorAll('.progress-bar');
+            bars.forEach((bar, index) => {
                 setTimeout(() => {
-                    const progress = parseInt(circle.getAttribute('data-progress'));
-                    const ring = circle.querySelector('.progress-ring');
-                    
-                    // Calculate angle for conic gradient
-                    const angle = (progress / 100) * 360;
-                    ring.style.background = `conic-gradient(var(--secondary-accent) 0deg ${angle}deg, var(--border-color) ${angle}deg 360deg)`;
-                    
-                    // Animate the ring expansion from 0%
-                    ring.style.clipPath = 'circle(0% at 50% 50%)';
-                    setTimeout(() => {
-                        ring.style.clipPath = 'circle(100% at 50% 50%)';
-                    }, 100);
+                    const progress = parseInt(bar.getAttribute('data-progress'));
+                    const fill = bar.querySelector('.progress-fill');
+                    if (fill) {
+                        fill.style.width = progress + '%';
+                    }
                 }, index * 100);
             });
         }
@@ -617,12 +611,35 @@
             skillsObserver.observe(skillsSection);
         }
 
-        // Contact Form (basic handling)
-        document.getElementById('contactForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for your message! It will be sent to Nilesh.');
-            e.target.reset();
-        });
+                // Contact Form with Web3Forms - add debug log
+                document.getElementById('contactForm').addEventListener('submit', function(e) {
+                    console.log('Contact form submitted'); // Debug log
+                    e.preventDefault();
+                    
+                    const form = e.target;
+                    const data = new FormData(form);
+                    const accessKey = '22b298e2-6999-40ce-9896-61b8e9302629';
+                    
+                    data.append('access_key', accessKey);
+                    
+                    fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        body: data,
+                    })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.success) {
+                            alert('Thank you! Your message has been sent successfully.');
+                            form.reset();
+                        } else {
+                            alert('Oops! There was a problem submitting your form: ' + (data.message || 'Unknown error'));
+                        }
+                    })
+                    .catch(err => {
+                        console.error('Error:', err);
+                        alert('Something went wrong. Please try again or contact directly.');
+                    });
+                });
 
     
         // Make project cards clickable
@@ -635,6 +652,7 @@
                     window.location.href = detailsLink.href;
                 }
             }
+        });
         });
     </script>
     <script src="assets/common.js" defer></script>
