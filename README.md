@@ -40,7 +40,7 @@ An interactive and responsive portfolio built using **HTML**, **CSS**, and **Jav
 ## 🚀 Deployment
 
 - GitHub Pages  
-- Netlify *(drag & drop or CI/CD)*
+- Vercel 
 
 ---
 
