@@ -52,7 +52,18 @@ ML_Portfolio/
 
 ---
 
+<<<<<<< HEAD
 ## 🚀 Getting Started
+=======
+## 🚀 Deployment
+
+- GitHub Pages  
+- Vercel 
+
+---
+
+## 📦 Usage
+>>>>>>> f0ea97b4a15ebc6a03d7e5631fcb6a0e49ee8737
 
 ### Clone the Repository
 ```bash
