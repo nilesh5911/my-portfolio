@@ -1,52 +1,127 @@
 # ML Portfolio – Nilesh Mishra
 
-An interactive and responsive portfolio built using **HTML**, **CSS**, and **JavaScript**, showcasing real-world ML and AI projects.
+A modern, professional portfolio built with **Tailwind CSS** and **JavaScript**, showcasing innovative AI/ML projects and technical expertise.
 
 ---
 
-## 🔍 Features
+## ✨ Features
 
-- Dark mode toggle  
-- Project carousel  
-- Dedicated project pages  
-- Bootstrap 5 responsive design  
-- Resume & contact section
+- **Dark/Light Mode Toggle** – Seamless theme switching with localStorage persistence  
+- **Responsive Design** – Mobile-first approach with Tailwind CSS utilities  
+- **Project Showcase** – Detailed project pages with Problem-Solution-Impact framework  
+- **Skill Visualization** – Interactive skill icons with theme support  
+- **Multi-channel Contact** – GitHub, LinkedIn, Email, and WhatsApp integration  
+- **Professional Branding** – Custom color palette with Navy, Primary Blue, and Accent Orange
 
 ---
 
-## 🧠 Projects
+## 🧠 Featured Projects
 
-1. **Breast Cancer Detection** – SVM, RF, Streamlit  
-2. **Stock Price Forecasting** – LSTM  
-3. **Medical ChatBot** – GenAI-based Q&A  
-4. **CV Health App** – Real-time posture & skin check
+1. **Healthcare AI** – CNN-based breast cancer detection with 94.5% accuracy  
+2. **Time Series Forecasting** – LSTM model for stock price prediction (18% MAPE)  
+3. **Generative AI Chatbot** – Medical Q&A system with RAG and fact-checking  
+4. **शिव युवा मित्र मंडल** – Community engagement website with event management
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** HTML5, CSS3, JavaScript  
-- **Styling:** Bootstrap, AOS, Google Fonts  
-- **ML Backend:** Python, Streamlit *(hosted separately)*
+- **Frontend:** HTML5, Vanilla JavaScript, Tailwind CSS 3  
+- **Styling:** Custom utility classes, dark mode with `darkMode: 'class'`  
+- **Icons:** Font Awesome 6.4.0, custom SVG icons  
+- **Fonts:** Montserrat (headings), Inter (body)  
+- **Deployment:** GitHub Pages, Vercel
 
 ---
 
-## 🌐 Live Demo
+## 📂 Project Structure
 
-👉 [https://nilesh5911.github.io/my-portfolio]
+```
+ML_Portfolio/
+├── index.html              # Main landing page
+├── assets/
+│   ├── common.js          # Shared JavaScript (theme toggle, mobile menu)
+│   └── nilesh.jpg         # Profile image
+├── projects/
+│   ├── project1.html      # Healthcare AI details
+│   ├── project2.html      # Time Series Forecasting details
+│   ├── project3.html      # Generative AI Chatbot details
+│   └── project4.html      # Community Website details
+└── README.md              # This file
+```
 
 ---
 
-## 🚀 Deployment
+## 🚀 Getting Started
 
-- GitHub Pages  
-- Netlify *(drag & drop or CI/CD)*
-
----
-
-## 📦 Usage
-
+### Clone the Repository
 ```bash
-git clone https://e/my-portfolio.git](https://nilesh5911.github.io/my-portfolio
-cd my-portfolio
+git clone https://github.com/nilesh5911/ML_Portfolio.git
+cd ML_Portfolio
+```
+
+### View Locally
+Simply open `index.html` in your browser:
+```bash
 open index.html
+```
+
+Or use a live server:
+```bash
+python -m http.server 8000
+# Visit http://localhost:8000
+```
+
+---
+
+## 🎨 Color Palette
+
+- **Navy:** `#1E293B` – Primary text and accents  
+- **Primary Blue:** `#1A73E8` – CTA buttons and highlights  
+- **Accent Orange:** `#F97316` – Secondary actions and borders  
+- **Dark Mode:** Gray-900 to Gray-950 backgrounds
+
+---
+
+## 🔧 Customization
+
+### Update Personal Information
+Edit `index.html` to replace:
+- Name: "Nilesh Mishra"
+- Contact links: GitHub, LinkedIn, Email, WhatsApp
+- Profile image: `assets/nilesh.jpg`
+
+### Modify Project Details
+Update individual project pages in `projects/` folder with:
+- Project title and icon
+- Problem statement
+- Solution approach
+- Impact metrics
+- Demo and GitHub links
+
+### Toggle Dark Mode
+Dark mode is automatically applied based on system preference and user selection. Toggle button in navbar controls the theme.
+
+---
+
+## 📱 Responsive Breakpoints
+
+- **Mobile:** < 640px (`sm`)
+- **Tablet:** ≥ 640px to < 768px  
+- **Desktop:** ≥ 768px (`md`)
+- **Large Desktop:** ≥ 1024px (`lg`)
+
+---
+
+## 🤝 Contact & Connect
+
+- **GitHub:** https://github.com/nilesh5911  
+- **LinkedIn:** https://www.linkedin.com/in/nilesh-mishra-064a861b3/  
+- **Email:** mishranilesh968@gmail.com  
+- **WhatsApp:** https://whatsapp.com/channel/0029Vb6RowtGE56cnp58012p
+
+---
+
+## 📄 License
+
+This portfolio is open source and available under the MIT License.

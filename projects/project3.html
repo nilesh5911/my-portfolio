@@ -1,98 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Medical Chatbot with RAG Project - Nilesh Mishra Portfolio" />
-        <meta name="keywords" content="Medical Chatbot, RAG, LangChain, Pinecone, OpenAI" />
-        <title>Medical Chatbot with RAG | Nilesh Mishra</title>
-        <!-- Google Fonts: Poppins for headings, Inter for body -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap" />
-        <!-- Font Awesome for icons -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-        <link rel="stylesheet" href="../assets/style.css" />
-    </head>
-    <body data-theme="dark">
-        <!-- Fixed Navigation Bar -->
-        <nav class="navbar" role="navigation" aria-label="Main navigation">
-            <div class="nav-container">
-                <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="../index.html#hero">Home</a></li>
-                    <li><a href="../index.html#about">About</a></li>
-                    <li><a href="../index.html#projects">Projects</a></li>
-                    <li><a href="../index.html#ongoing-projects">Ongoing Projects</a></li>
-                    <li><a href="../index.html#skills">Skills</a></li>
-                    <li><a href="../index.html#experience">Experience</a></li>
-                    <li><a href="../index.html#education">Education</a></li>
-                    <li><a href="../index.html#contact">Contact</a></li>
-                    <li>
-                        <button class="theme-toggle" id="themeToggle">
-                            <i class="fas fa-moon"></i>
-                        </button>
-                    </li>
-                </ul>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Medical Chatbot with RAG Project - Nilesh Mishra Portfolio" />
+    <meta name="keywords" content="Medical Chatbot, RAG, LangChain, Pinecone, OpenAI" />
+    <title>Medical Chatbot with RAG | Nilesh Mishra</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#1E293B',
+                        primary: '#1A73E8',
+                        accent: '#F97316',
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/style-minimal.css">
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100" data-theme="light">
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-white dark:bg-gray-900 shadow-md dark:shadow-lg">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="../index.html" class="font-bold text-navy dark:text-white text-lg hover:text-primary dark:hover:text-blue-400 transition"><i class="fas fa-arrow-left mr-2"></i>Back to Portfolio</a>
+            <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition" aria-label="Toggle theme">
+                <i class="fas fa-moon text-navy dark:text-gray-300"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gray-100 dark:bg-gray-950 py-16 md:py-20">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h1 class="font-bold text-4xl md:text-5xl text-navy dark:text-white mb-4">Medical Chatbot with RAG</h1>
+            <p class="text-xl text-gray-700 dark:text-gray-400">Built a context-aware medical Q&A system using LangChain, Pinecone, and OpenAI GPT, enabling accurate responses from medical documents.</p>
+        </div>
+    </section>
+
+
+    <!-- Project Details Section -->
+    <section class="py-16 md:py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="font-bold text-3xl md:text-4xl text-navy dark:text-white mb-6">Project Overview</h2>
+            <p class="text-gray-700 dark:text-gray-400 mb-8 leading-relaxed">
+                This project is an NLP-powered chatbot built to assist with health triage by providing preliminary medical advice based on user inputs. It uses advanced language models to understand and respond to health-related
+                queries effectively, incorporating Retrieval-Augmented Generation (RAG) for context-aware responses.
+            </p>
+
+            <h3 class="font-bold text-2xl text-navy dark:text-white mb-4">Technologies Used</h3>
+            <div class="flex flex-wrap gap-3 mb-8">
+                <span class="bg-primary text-white px-4 py-2 rounded-lg font-semibold">LangChain</span>
+                <span class="bg-primary text-white px-4 py-2 rounded-lg font-semibold">Pinecone</span>
+                <span class="bg-primary text-white px-4 py-2 rounded-lg font-semibold">OpenAI GPT</span>
+                <span class="bg-primary text-white px-4 py-2 rounded-lg font-semibold">Python</span>
+                <span class="bg-primary text-white px-4 py-2 rounded-lg font-semibold">FastAPI</span>
             </div>
-        </nav>
 
-        <!-- Hero Section -->
-        <section id="project-hero" class="fade-in" id="main-content">
-            <div class="hero-content">
-                <h1>Medical Chatbot with RAG</h1>
-                <p>Built a context-aware medical Q&A system using LangChain, Pinecone, and OpenAI GPT, enabling accurate responses from medical documents.</p>
-                <button class="cta-button" onclick="window.location.href='../index.html#projects'">Back to Projects</button>
-            </div>
-        </section>
+            <h3 class="font-bold text-2xl text-navy dark:text-white mb-4">Key Features</h3>
+            <ul class="space-y-3 mb-8 text-gray-700 dark:text-gray-400">
+                <li class="flex items-start"><span class="text-accent mr-3"><i class="fas fa-check-circle"></i></span> Conversational AI with context-aware responses using RAG.</li>
+                <li class="flex items-start"><span class="text-accent mr-3"><i class="fas fa-check-circle"></i></span> Integration with medical knowledge bases for accurate advice.</li>
+                <li class="flex items-start"><span class="text-accent mr-3"><i class="fas fa-check-circle"></i></span> Scalable API design for real-time interactions.</li>
+                <li class="flex items-start"><span class="text-accent mr-3"><i class="fas fa-check-circle"></i></span> Multilingual support for broader accessibility.</li>
+            </ul>
 
-        <!-- Project Details Section -->
-        <section id="project-details" class="fade-in">
-            <div class="container">
-                <h2>Project Overview</h2>
-                <div class="about-container">
-                    <div class="about-text">
-                        <p>
-                            This project is an NLP-powered chatbot built to assist with health triage by providing preliminary medical advice based on user inputs. It uses advanced language models to understand and respond to health-related
-                            queries effectively, incorporating Retrieval-Augmented Generation (RAG) for context-aware responses.
-                        </p>
-                    </div>
-                </div>
+            <h3 class="font-bold text-2xl text-navy dark:text-white mb-4">Impact</h3>
+            <p class="text-gray-700 dark:text-gray-400 mb-8 leading-relaxed">
+                The chatbot improves access to preliminary healthcare advice, especially in underserved areas, by providing instant responses and guiding users to appropriate care. It leverages vector databases for efficient retrieval
+                of relevant medical information.
+            </p>
 
-                <h3>Technologies Used</h3>
-                <div class="tech-badges">
-                    <span class="tech-badge">LangChain</span>
-                    <span class="tech-badge">Pinecone</span>
-                    <span class="tech-badge">OpenAI GPT</span>
-                    <span class="tech-badge">Python</span>
-                    <span class="tech-badge">FastAPI</span>
-                </div>
+            <a href="https://github.com/nilesh5911/Medicalchatbot" target="_blank" class="inline-block bg-navy dark:bg-gray-950 hover:bg-slate-800 dark:hover:bg-slate-800 text-white font-semibold px-8 py-3 rounded-lg transition">GitHub</a>
+        </div>
+    </section>
 
-                <h3>Key Features</h3>
-                <ul class="project-features">
-                    <li><i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 0.5rem;"></i>Conversational AI with context-aware responses using RAG.</li>
-                    <li><i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 0.5rem;"></i>Integration with medical knowledge bases for accurate advice.</li>
-                    <li><i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 0.5rem;"></i>Scalable API design for real-time interactions.</li>
-                    <li><i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 0.5rem;"></i>Multilingual support for broader accessibility.</li>
-                </ul>
-
-                <h3>Impact</h3>
-                <p>
-                    The chatbot improves access to preliminary healthcare advice, especially in underserved areas, by providing instant responses and guiding users to appropriate care. It leverages vector databases for efficient retrieval
-                    of relevant medical information.
-                </p>
-
-                <div class="project-links">
-                    <a href="https://github.com/nilesh5911/Medicalchatbot" target="_blank">GitHub</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer>
+    <!-- Footer -->
+    <footer class="bg-navy dark:bg-gray-950 text-white py-8">
+        <div class="max-w-6xl mx-auto px-6 text-center">
             <p>&copy; 2025 Nilesh Mishra. All rights reserved.</p>
-        </footer>
+        </div>
+    </footer>
 
-        <script src="../assets/common.js" defer></script>
-    </body>
+    <script src="../assets/common.js" defer></script>
+</body>
 </html>

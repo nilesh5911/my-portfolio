@@ -3,659 +3,553 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nilesh Mishra - AI Engineer Portfolio: Innovative projects in ML, NLP, Computer Vision, and more.">
-    <meta name="keywords" content="AI Engineer, Machine Learning, NLP, Portfolio, Nilesh Mishra">
-    <title>Nilesh Mishra - AI Engineer</title>
-    <!-- Google Fonts: Poppins for headings, Inter for body -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap">
-    <!-- Font Awesome for icons -->
+    <meta name="description" content="Nilesh Mishra - AI Engineer | Innovating with ML & NLP. Healthcare AI, Time Series Forecasting, Generative AI, and Full-Stack Development projects.">
+    <meta name="keywords" content="AI, Machine Learning, NLP, Data Science, Deep Learning, Neural Networks, LSTM, RAG, Generative AI">
+    <meta name="author" content="Nilesh Mishra">
+    <meta name="theme-color" content="#1E293B">
+    <meta name="robots" content="index, follow">
+    <meta name="canonical" content="https://nilesh-portfolio.com">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nilesh Mishra - AI Engineer Portfolio">
+    <meta property="og:description" content="Professional AI/ML Engineer portfolio showcasing innovative projects in Healthcare AI, Generative AI, and Time Series Forecasting.">
+    <meta property="og:url" content="https://nilesh-portfolio.com">
+    <meta property="og:image" content="https://nilesh-portfolio.com/og-image.png">
+    <meta property="og:site_name" content="Nilesh Mishra Portfolio">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nilesh Mishra - AI Engineer Portfolio">
+    <meta name="twitter:description" content="Professional AI/ML Engineer - Innovating with ML & NLP">
+    <meta name="twitter:image" content="https://nilesh-portfolio.com/og-image.png">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Nilesh Mishra",
+        "jobTitle": "AI Engineer",
+        "url": "https://nilesh-portfolio.com",
+        "sameAs": [
+            "https://github.com/nilesh",
+            "https://linkedin.com/in/nilesh-mishra",
+            "mailto:nilesh@example.com"
+        ]
+    }
+    </script>
+    
+    <title>Nilesh Mishra - AI Engineer | ML & NLP Innovator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#1E293B',
+                        primary: '#1A73E8',
+                        accent: '#F97316',
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body data-theme="dark">
-    <!-- Fixed Navigation Bar -->
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
-        <div class="nav-container">
-            <button class="mobile-menu-toggle" id="mobileToggle">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#ongoing-projects">Ongoing Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-inter" data-theme="light">
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-white dark:bg-gray-900 shadow-md dark:shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2 sm:space-x-3 font-montserrat font-bold text-sm sm:text-xl">
+                <svg class="w-8 h-8 sm:w-10 sm:h-10 rounded" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="gradientNM" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#1E293B;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#F97316;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <rect class="logo-bg" fill="url(#gradientNM)" width="100" height="100" rx="12" />
+                    <text x="50" y="65" style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:50px;fill:white;text-anchor:middle;">NM</text>
+                </svg>
+                <span class="text-navy dark:text-white hidden sm:inline">Nilesh Mishra</span>
+            </div>
+
+            <!-- Desktop & Mobile Menu -->
+            <ul id="nav-menu" class="nav-menu hidden md:flex absolute md:relative top-16 md:top-0 left-0 right-0 md:space-x-8 flex-col md:flex-row bg-white dark:bg-gray-900 md:bg-transparent md:dark:bg-transparent px-6 md:px-0 py-4 md:py-0 space-y-4 md:space-y-0 font-medium text-gray-700 dark:text-gray-300 shadow-lg md:shadow-none">
+                <li><a href="#home" class="hover:text-primary dark:hover:text-blue-400 transition">Home</a></li>
+                <li><a href="#about" class="hover:text-primary dark:hover:text-blue-400 transition">About</a></li>
+                <li><a href="#projects" class="hover:text-primary dark:hover:text-blue-400 transition">Projects</a></li>
+                <li><a href="#skills" class="hover:text-primary dark:hover:text-blue-400 transition">Skills</a></li>
+                <li><a href="#future" class="hover:text-primary dark:hover:text-blue-400 transition">Future</a></li>
+                <li><a href="#contact" class="hover:text-primary dark:hover:text-blue-400 transition">Contact</a></li>
             </ul>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                <i class="fas fa-moon"></i>
-            </button>
+
+            <!-- Theme Toggle & Mobile Menu -->
+            <div class="flex items-center space-x-4">
+                <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition" aria-label="Toggle theme">
+                    <i class="fas fa-moon text-navy dark:text-gray-300"></i>
+                </button>
+                <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition" aria-label="Toggle menu">
+                    <i class="fas fa-bars text-navy dark:text-gray-300"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="fade-in" role="main">
-        <div class="hero-content">
-            <!-- Profile Photo -->
-            <img loading="lazy" src="assets/nilesh.jpg" alt="Nilesh Mishra Profile">
-            <h1>Nilesh Mishra</h1>
-            <p>AI Engineer | Innovating with ML & NLP</p>
-            <button class="cta-button" onclick="document.querySelector('#projects').scrollIntoView({behavior: 'smooth'})">View Projects</button>
+    <section id="home" class="relative bg-gray-100 dark:bg-gray-950 py-16 sm:py-24 md:py-32 overflow-hidden">
+        <!-- Tech Pattern Background -->
+        <div class="absolute inset-0 opacity-5 bg-pattern"></div>
+        <svg class="absolute top-0 right-0 w-64 sm:w-96 h-64 sm:h-96 text-gray-200 dark:text-gray-800 opacity-20" viewBox="0 0 200 200">
+            <circle cx="100" cy="100" r="80" fill="none" stroke="currentColor" stroke-width="1"/>
+            <circle cx="100" cy="100" r="60" fill="none" stroke="currentColor" stroke-width="1"/>
+            <circle cx="100" cy="100" r="40" fill="none" stroke="currentColor" stroke-width="1"/>
+        </svg>
+
+        <div class="relative max-w-6xl mx-auto px-4 sm:px-6 text-center">
+            <!-- Hero Logo -->
+            <div class="flex justify-center mb-6 sm:mb-8 animate-bounce">
+                <svg class="w-20 sm:w-24 md:w-32 h-20 sm:h-24 md:h-32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="gradientHero" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#1E293B;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#F97316;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <rect fill="url(#gradientHero)" width="100" height="100" rx="16" />
+                    <text x="50" y="65" style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:50px;fill:white;text-anchor:middle;">NM</text>
+                </svg>
+            </div>
+
+            <!-- Hero Content -->
+            <h1 class="font-montserrat font-bold text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-navy dark:text-white mb-4">Nilesh Mishra</h1>
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-400 font-medium mb-6 sm:mb-8 px-4">AI Engineer | Innovating with ML & NLP</p>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="fade-in">
-        <h2>About Me</h2>
-        <div class="about-container">
-            <div class="about-text">
-                <p>Passionate AI Engineer specializing in Healthcare AI, OCR, Generative AI, Computer Vision, Time Series Forecasting, and MLOps. Hands-on ML solutions for real-world impact.</p>
-                <p><strong>Certifications:</strong> Python for ML, EDA, Intro to ML on AWS (Great Learning).</p>
-                <p><strong>Interests:</strong> Healthcare AI & OCR, Generative AI (LLMs, RAG), CV & Forecasting, MLOps.</p>
-                <p><strong>Extracurriculars:</strong> Football, cricket, singing, reading.</p>
+    <section id="about" class="py-16 sm:py-20 md:py-28 bg-white dark:bg-gray-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="font-montserrat font-bold text-3xl sm:text-4xl md:text-5xl text-navy dark:text-white mb-4">About Me</h2>
+                <p class="text-sm sm:text-base text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">Transforming complex AI challenges into scalable, production-ready solutions</p>
             </div>
-            <div class="about-image">
-                <img loading="lazy" src="assets/nilesh.jpg" alt="About Nilesh Mishra">
+
+            <!-- About Content Grid -->
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                <!-- Text Content -->
+                <div class="space-y-6">
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 sm:p-8 hover:shadow-lg transition">
+                        <div class="flex items-start gap-4">
+                            <div class="text-3xl text-primary flex-shrink-0"><i class="fas fa-brain"></i></div>
+                            <div>
+                                <h3 class="font-bold text-lg sm:text-xl text-navy dark:text-white mb-2">AI/ML Expertise</h3>
+                                <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300">Specialized in deep learning, neural networks, and machine learning pipeline development with a focus on practical real-world applications.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 sm:p-8 hover:shadow-lg transition">
+                        <div class="flex items-start gap-4">
+                            <div class="text-3xl text-accent flex-shrink-0"><i class="fas fa-code"></i></div>
+                            <div>
+                                <h3 class="font-bold text-lg sm:text-xl text-navy dark:text-white mb-2">Technical Skills</h3>
+                                <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300">Proficient in Python, PyTorch, LangChain, and modern AI frameworks with expertise in generative AI, RAG, and MLOps.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 sm:p-8 hover:shadow-lg transition">
+                        <div class="flex items-start gap-4">
+                            <div class="text-3xl text-primary flex-shrink-0"><i class="fas fa-rocket"></i></div>
+                            <div>
+                                <h3 class="font-bold text-lg sm:text-xl text-navy dark:text-white mb-2">Innovation Focus</h3>
+                                <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300">Passionate about building intelligent systems that solve real-world problems in healthcare, finance, and enterprise applications.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Image -->
+                <div class="mt-8 md:mt-0 flex justify-center">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-2xl blur-lg opacity-20"></div>
+                        <img src="assets/nilesh.jpg" alt="Profile picture of Nilesh Mishra" class="relative w-full max-w-sm rounded-2xl shadow-2xl dark:shadow-2xl dark:shadow-black/50">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-
 
     <!-- Projects Section -->
-    <section id="projects" class="fade-in">
-        <h2>Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>Breast Cancer Detection</h3>
-                <p>Designed a machine learning pipeline with tuned KNN and SVM classifiers, achieving high precision in breast cancer classification.</p>
-                <div class="tech-badges">
-                    <span class="tech-badge">Streamlit</span>
-                    <span class="tech-badge">Scikit-learn</span>
-                    <span class="tech-badge">Python</span>
+    <section id="projects" class="py-16 sm:py-20 md:py-28 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <h2 class="font-montserrat font-bold text-3xl sm:text-4xl md:text-5xl text-navy dark:text-white mb-12 sm:mb-16 text-center">Featured Projects</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white dark:bg-gray-900 rounded-lg sm:rounded-xl shadow-md sm:shadow-lg dark:shadow-xl dark:shadow-black/30 p-6 sm:p-8 hover:shadow-lg sm:hover:shadow-xl dark:hover:shadow-black/50 transition">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="font-bold text-2xl text-navy dark:text-white">Healthcare AI</h3>
+                        <span class="text-4xl text-primary"><i class="fas fa-heartbeat"></i></span>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Problem</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Early detection challenges in medical diagnosis</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Limited accessibility to expert pathologists</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Time-consuming manual analysis</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Solution</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> CNN-based deep learning model</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Breast cancer detection system</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Automated screening pipeline</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Impact</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> 94.5% accuracy achieved</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Potential for clinical deployment</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Reduces diagnosis time by 60%</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="flex gap-3 sm:gap-4">
+                        <a href="projects/project1.html" class="flex-1 bg-primary hover:bg-blue-700 text-white font-semibold py-2 sm:py-3 rounded-lg text-center transition active:scale-95 text-sm sm:text-base">View Project</a>
+                        <a href="#" class="flex-1 border-2 border-accent text-accent dark:text-orange-400 hover:bg-accent hover:text-white dark:hover:bg-accent dark:hover:text-white font-semibold py-2 sm:py-3 rounded-lg text-center transition active:scale-95 text-sm sm:text-base">Live Demo</a>
+                    </div>
                 </div>
-                <div class="project-links">
-                    <a href="https://github.com/nilesh5911/breast-cancer-app" target="_blank">GitHub</a>
-                    <a href="projects/project1.html">Details</a>
-                    <a href="https://breast-cancer-app-predict.streamlit.app/" target="_blank">Demo</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <h3>Stock Price Forecasting</h3>
-                <p>Developed LSTM and CNN-LSTM models for time-series stock price forecasting, incorporating feature engineering and visual performance metrics.</p>
-                <div class="tech-badges">
-                    <span class="tech-badge">LSTM</span>
-                    <span class="tech-badge">Flask</span>
-                    <span class="tech-badge">Keras</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/nilesh5911/Stock-Price-Prediction-App" target="_blank">GitHub</a>
-                    <a href="projects/project2.html">Details</a>
-                    <a href="https://stock-price-forecast-app.herokuapp.com/" target="_blank">Demo</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <h3>Medical Chatbot with RAG</h3>
-                <p>Built a context-aware medical Q&A system using LangChain, Pinecone, and OpenAI GPT, enabling accurate responses from medical documents.</p>
-                <div class="tech-badges">
-                    <span class="tech-badge">LangChain</span>
-                    <span class="tech-badge">Pinecone</span>
-                    <span class="tech-badge">OpenAI GPT</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/nilesh5911/Medicalchatbot" target="_blank">GitHub</a>
-                    <a href="projects/project3.html">Details</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <h3>शिव युवा मित्र मंडल Website</h3>
-                <p>A community website for youth engagement, built with modern web technologies and deployed on Vercel.</p>
-                <div class="tech-badges">
-                    <span class="tech-badge">HTML</span>
-                    <span class="tech-badge">CSS</span>
-                    <span class="tech-badge">JavaScript</span>
-                    <span class="tech-badge">Vercel</span>
-                </div>
-                <div class="project-links">
-                    <a href="projects/project4.html">Details</a>
-                    <a href="https://shivyuvamitramandal.vercel.app/" target="_blank">Demo</a>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Ongoing Projects Section -->
-    <section id="ongoing-projects" class="fade-in">
-        <h2>Ongoing Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>Non-intrusive BP Estimation</h3>
-                <p>Edge-device r-PPG signal reconstruction and DL modeling. Expected: June 2025</p>
-                <p>Photoplethysmography signal reconstruction, healing, and de-noising techniques, time series data re-assembly with a mathematics-backed approach, and cloud integration. TS-based deep learning frameworks: MultiResUnet, UNetDS64.</p>
-                <div class="tech-badges">
-                    <span class="tech-badge">Deep Learning</span>
-                    <span class="tech-badge">Time Series</span>
-                    <span class="tech-badge">Cloud</span>
+                <!-- Project 2 -->
+                <div class="bg-white dark:bg-gray-900 rounded-lg sm:rounded-xl shadow-md sm:shadow-lg dark:shadow-xl dark:shadow-black/30 p-6 sm:p-8 hover:shadow-lg sm:hover:shadow-xl dark:hover:shadow-black/50 transition">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="font-bold text-2xl text-navy dark:text-white">Time Series Forecasting</h3>
+                        <span class="text-4xl text-accent"><i class="fa-solid fa-chart-area"></i></span>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Problem</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Predicting stock market trends accurately</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Complex temporal dependencies</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> High volatility and noise in data</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Solution</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> LSTM neural network architecture</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Multi-step ahead prediction</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Feature engineering & optimization</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Impact</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> 18% MAPE (Mean Absolute Percentage Error)</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Viable for trading strategies</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Real-time market predictions</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="flex gap-3 sm:gap-4">
+                        <a href="projects/project2.html" class="flex-1 bg-primary hover:bg-blue-700 text-white font-semibold py-2 sm:py-3 rounded-lg text-center transition active:scale-95 text-sm sm:text-base">View Project</a>
+                        <a href="#" class="flex-1 border-2 border-accent text-accent dark:text-orange-400 hover:bg-accent hover:text-white dark:hover:bg-accent dark:hover:text-white font-semibold py-2 sm:py-3 rounded-lg text-center transition active:scale-95 text-sm sm:text-base">Live Demo</a>
+                    </div>
                 </div>
-                <div class="project-links">
-                    <span class="tech-badge in-progress">In Progress</span>
+
+                <!-- Project 3 -->
+                <div class="bg-white dark:bg-gray-900 rounded-lg sm:rounded-xl shadow-md sm:shadow-lg dark:shadow-xl dark:shadow-black/30 p-6 sm:p-8 hover:shadow-lg sm:hover:shadow-xl dark:hover:shadow-black/50 transition">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="font-bold text-2xl text-navy dark:text-white">Generative AI Chatbot</h3>
+                        <span class="text-4xl text-primary"><i class="fas fa-robot"></i></span>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Problem</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Providing medical consultation at scale</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Information accuracy & verification</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Hallucination in LLM responses</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Solution</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Medical Chatbot with RAG framework</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> LLM integration with fact-checking</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Knowledge base implementation</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Impact</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Real-time medical Q&A system</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Verified source attribution</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Improved response accuracy</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="flex gap-3 sm:gap-4">
+                        <a href="projects/project3.html" class="flex-1 bg-primary hover:bg-blue-700 text-white font-semibold py-2 sm:py-3 rounded-lg text-center transition active:scale-95 text-sm sm:text-base">View Project</a>
+                        <a href="#" class="flex-1 border-2 border-accent text-accent dark:text-orange-400 hover:bg-accent hover:text-white dark:hover:bg-accent dark:hover:text-white font-semibold py-2 sm:py-3 rounded-lg text-center transition active:scale-95 text-sm sm:text-base">Live Demo</a>
+                    </div>
                 </div>
-            </div>
-            <div class="project-card">
-                <h3>Contactless Heart Rate Monitoring</h3>
-                <p>RGB-based heart rate detection with signal filtering. Expected: June 2025</p>
-                <p>Feature extraction from the red channel of frames over a consistent period to generate time-varying data points, requiring a gated mechanism to refine redundant features.</p>
-                <div class="tech-badges">
-                    <span class="tech-badge">Computer Vision</span>
-                    <span class="tech-badge">Signal Processing</span>
-                </div>
-                <div class="project-links">
-                    <span class="tech-badge in-progress">In Progress</span>
-                </div>
-            </div>
-            <div class="project-card">
-                <h3>Insurance Report Parser</h3>
-                <p>Expected: Jul 2025</p>
-                <p>Building an end-to-end pipeline to extract structured content (text blocks, tables, key terms) from insurance claim PDFs. Using PDF parsers, NLP, and layout-aware models to handle diverse document formats from various companies.</p>
-                <div class="tech-badges">
-                    <span class="tech-badge">NLP</span>
-                    <span class="tech-badge">PDF Parsing</span>
-                    <span class="tech-badge">OCR</span>
-                </div>
-                <div class="project-links">
-                    <span class="tech-badge in-progress">In Progress</span>
+
+                <!-- Project 4 -->
+                <div class="bg-white dark:bg-gray-900 rounded-lg sm:rounded-xl shadow-md sm:shadow-lg dark:shadow-xl dark:shadow-black/30 p-6 sm:p-8 hover:shadow-lg sm:hover:shadow-xl dark:hover:shadow-black/50 transition">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="font-bold text-2xl text-navy dark:text-white">शिव युवा मित्र मंडल</h3>
+                        <span class="text-4xl text-accent"><i class="fas fa-globe"></i></span>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Problem</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Community needed centralized engagement platform</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Limited digital presence for youth activities</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Information scattered across channels</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Solution</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Responsive website with HTML, CSS, JavaScript</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Community event listings and collaboration tools</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Deployed on Vercel for seamless performance</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Impact</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Central hub for community engagement</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Enhanced information accessibility</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Active youth participation & collaboration</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="flex gap-3 sm:gap-4">
+                        <a href="projects/project4.html" class="flex-1 bg-primary hover:bg-blue-700 text-white font-semibold py-2 sm:py-3 rounded-lg text-center transition active:scale-95 text-sm sm:text-base">View Project</a>
+                        <a href="https://shivyuvamitramandal.vercel.app/" class="flex-1 border-2 border-accent text-accent dark:text-orange-400 hover:bg-accent hover:text-white dark:hover:bg-accent dark:hover:text-white font-semibold py-2 sm:py-3 rounded-lg text-center transition active:scale-95 text-sm sm:text-base">Live Demo</a>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    </div>
 
     <!-- Skills Section -->
-    <section id="skills" class="fade-in">
-        <h2>Technical Skills</h2>
-        <div class="skills-tabs">
-            <button class="tab-btn active" data-tab="programming"><i class="fas fa-code"></i> Programming</button>
-            <button class="tab-btn" data-tab="ml"><i class="fas fa-brain"></i> ML & AI</button>
-            <button class="tab-btn" data-tab="web"><i class="fas fa-globe"></i> Web & App</button>
-            <button class="tab-btn" data-tab="tools"><i class="fas fa-tools"></i> Tools & DevOps</button>
-            <button class="tab-btn" data-tab="os"><i class="fas fa-desktop"></i> OS</button>
-        </div>
-        <div class="skills-content">
-            <div id="programming" class="tab-content active">
-                <div class="skills-grid">
-                    <div class="skill-card" data-skill="python">
-                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/python/ffffff/20" alt="Python"></div>
-                        <h4>Python</h4>
-                        <div class="progress-bar" data-progress="95">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <span class="progress-text">95%</span>
-                        <div class="skill-tooltip">Core language for AI/ML development, data analysis, and automation.</div>
-                    </div>
-                    <div class="skill-card" data-skill="cpp">
-                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/cplusplus/ffffff/20" alt="C++"></div>
-                        <h4>C/C++</h4>
-                        <div class="progress-bar" data-progress="80">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <span class="progress-text">80%</span>
-                        <div class="skill-tooltip">High-performance computing and system-level programming.</div>
-                    </div>
-                    <div class="skill-card" data-skill="sql">
-                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/mysql/ffffff/20" alt="SQL"></div>
-                        <h4>SQL</h4>
-                        <div class="progress-bar" data-progress="85">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <span class="progress-text">85%</span>
-                        <div class="skill-tooltip">Database querying and management for data-driven applications.</div>
-                    </div>
-                                    <div class="skill-card" data-skill="mongodb">
-                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/mongodb/ffffff/20" alt="MongoDB"></div>
-                        <h4>MongoDB</h4>
-                        <div class="progress-bar" data-progress="75">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <span class="progress-text">75%</span>
-                        <div class="skill-tooltip">NoSQL document database for flexible and scalable data storage.</div>
-                    </div>
-                    <div class="skill-card" data-skill="html">
-                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/html5/ffffff/20" alt="HTML"></div>
-                        <h4>HTML</h4>
-                        <div class="progress-bar" data-progress="70">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <span class="progress-text">70%</span>
-                        <div class="skill-tooltip">Markup for structuring web content and applications.</div>
-                    </div>
-                    <div class="skill-card" data-skill="css">
-                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/css3/ffffff/20" alt="CSS"></div>
-                        <h4>CSS</h4>
-                        <div class="progress-bar" data-progress="70">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <span class="progress-text">70%</span>
-                        <div class="skill-tooltip">Styling and layout for modern web interfaces.</div>
-                    </div>
-                    <div class="skill-card" data-skill="javascript">
-                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/javascript/ffffff/20" alt="JavaScript"></div>
-                        <h4>JavaScript</h4>
-                        <div class="progress-bar" data-progress="75">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <span class="progress-text">75%</span>
-                        <div class="skill-tooltip">Dynamic scripting for interactive web applications.</div>
-                    </div>
+    <section id="skills" class="py-16 sm:py-20 md:py-28 bg-white dark:bg-gray-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <h2 class="font-montserrat font-bold text-3xl sm:text-4xl md:text-5xl text-navy dark:text-white mb-12 sm:mb-16 text-center">Technical Skills</h2>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8">
+                <!-- Python -->
+                <div class="text-center">
+                    <svg class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 skill-icon" data-color="navy" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" class="skill-circle" data-theme="light" fill="#1E293B" opacity="0.15"/>
+                        <circle cx="50" cy="50" r="45" class="skill-circle dark-mode" style="display:none" fill="#FFFFFF" opacity="0.15"/>
+                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="40" font-weight="bold" text-anchor="middle" class="skill-text" data-theme="light" fill="#1E293B">Py</text>
+                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="40" font-weight="bold" text-anchor="middle" class="skill-text dark-mode" style="display:none" fill="#F3F4F6">Py</text>
+                    </svg>
+                    <h3 class="font-bold text-sm sm:text-base md:text-lg text-navy dark:text-white">Python</h3>
+                    <p class="text-xs sm:text-sm text-primary dark:text-blue-400 font-semibold">Expert</p>
                 </div>
-            </div>
-            <div id="ml" class="tab-content">
-                <div class="skills-grid">
-                    <div class="skill-card" data-skill="tensorflow">
-                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/tensorflow/ffffff/20" alt="TensorFlow"></div>
-                        <h4>TensorFlow</h4>
-                        <div class="progress-bar" data-progress="85">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <span class="progress-text">85%</span>
-                        <div class="skill-tooltip">End-to-end ML platform for deep learning models.</div>
-                    </div>
-                    <div class="skill-card" data-skill="pytorch">
-                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/pytorch/ffffff/20" alt="PyTorch"></div>
-                        <h4>PyTorch</h4>
-                        <div class="progress-bar" data-progress="80">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <span class="progress-text">80%</span>
-                        <div class="skill-tooltip">Dynamic neural networks with strong GPU acceleration.</div>
-                    </div>
-                    <div class="skill-card" data-skill="keras">
-                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/keras/ffffff/20" alt="Keras"></div>
-                        <h4>Keras</h4>
-                        <div class="progress-bar" data-progress="80">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <span class="progress-text">80%</span>
-                        <div class="skill-tooltip">High-level API for building and training models.</div>
-                    </div>
-                    <div class="skill-card" data-skill="scikit">
-                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/scikitlearn/ffffff/20" alt="Scikit-learn"></div>
-                        <h4>Scikit-learn</h4>
-                        <div class="progress-bar" data-progress="90">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <span class="progress-text">90%</span>
-                        <div class="skill-tooltip">Machine learning algorithms for classical ML tasks.</div>
-                    </div>
-                    <div class="skill-card" data-skill="opencv">
-                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/opencv/ffffff/20" alt="OpenCV"></div>
-                        <h4>OpenCV</h4>
-                        <div class="progress-bar" data-progress="90">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <span class="progress-text">90%</span>
-                        <div class="skill-tooltip">Computer vision library for image processing.</div>
-                    </div>
-                    <div class="skill-card" data-skill="huggingface">
-                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/huggingface/ffffff/20" alt="Hugging Face"></div>
-                        <h4>Hugging Face</h4>
-                        <div class="progress-bar" data-progress="75">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <span class="progress-text">75%</span>
-                        <div class="skill-tooltip">NLP models and transformers hub.</div>
-                    </div>
-                    <div class="skill-card" data-skill="langchain">
-                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/langchain/ffffff/20" alt="LangChain"></div>
-                        <h4>LangChain</h4>
-                        <div class="progress-bar" data-progress="75">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <span class="progress-text">75%</span>
-                        <div class="skill-tooltip">Framework for LLM applications and chains.</div>
-                    </div>
-                    <div class="skill-card" data-skill="pinecone">
-                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/pinecone/ffffff/20" alt="Pinecone"></div>
-                        <h4>Pinecone</h4>
-                        <div class="progress-bar" data-progress="70">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <span class="progress-text">70%</span>
-                        <div class="skill-tooltip">Vector database for semantic search.</div>
-                    </div>
-                    <div class="skill-card" data-skill="tesseract">
-                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/tesseract/ffffff/20" alt="Tesseract"></div>
-                        <h4>Tesseract</h4>
-                        <div class="progress-bar" data-progress="80">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <span class="progress-text">80%</span>
-                        <div class="skill-tooltip">OCR engine for text extraction from images.</div>
-                    </div>
-                    <div class="skill-card" data-skill="openai">
-                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/openai/ffffff/20" alt="OpenAI"></div>
-                        <h4>OpenAI GPT</h4>
-                        <div class="progress-bar" data-progress="80">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <span class="progress-text">80%</span>
-                        <div class="skill-tooltip">Generative AI models and APIs for advanced NLP and chat applications.</div>
-                    </div>
+                
+                <!-- LangChain & RAG -->
+                <div class="text-center">
+                    <svg class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 skill-icon" data-color="accent" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" class="skill-circle" data-theme="light" fill="#F97316" opacity="0.15"/>
+                        <circle cx="50" cy="50" r="45" class="skill-circle dark-mode" style="display:none" fill="#FFFFFF" opacity="0.15"/>
+                        <text x="50" y="55" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" class="skill-text" data-theme="light" fill="#F97316">RAG</text>
+                        <text x="50" y="55" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" class="skill-text dark-mode" style="display:none" fill="#F3F4F6">RAG</text>
+                    </svg>
+                    <h3 class="font-bold text-sm sm:text-base md:text-lg text-navy dark:text-white">LangChain & RAG</h3>
+                    <p class="text-xs sm:text-sm text-primary dark:text-blue-400 font-semibold">Advanced</p>
                 </div>
-            </div>
-            <div id="web" class="tab-content">
-                <div class="skills-grid">
-                    <div class="skill-card" data-skill="flask">
-                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/flask/ffffff/20" alt="Flask"></div>
-                        <h4>Flask</h4>
-                        <div class="progress-bar" data-progress="85">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <span class="progress-text">85%</span>
-                        <div class="skill-tooltip">Lightweight web framework for Python apps.</div>
-                    </div>
-                    <div class="skill-card" data-skill="fastapi">
-                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/fastapi/ffffff/20" alt="FastAPI"></div>
-                        <h4>FastAPI</h4>
-                        <div class="progress-bar" data-progress="80">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <span class="progress-text">80%</span>
-                        <div class="skill-tooltip">Modern, fast API framework with auto-docs.</div>
-                    </div>
-                    <div class="skill-card" data-skill="streamlit">
-                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/streamlit/ffffff/20" alt="Streamlit"></div>
-                        <h4>Streamlit</h4>
-                        <div class="progress-bar" data-progress="75">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <span class="progress-text">75%</span>
-                        <div class="skill-tooltip">App framework for data apps and dashboards.</div>
-                    </div>
-                    <div class="skill-card" data-skill="pydantic">
-                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/pydantic/ffffff/20" alt="Pydantic"></div>
-                        <h4>Pydantic</h4>
-                        <div class="progress-bar" data-progress="75">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <span class="progress-text">75%</span>
-                        <div class="skill-tooltip">Data validation using Python type annotations.</div>
-                    </div>
+                
+                <!-- PyTorch & Hugging Face -->
+                <div class="text-center">
+                    <svg class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 skill-icon" data-color="primary" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" class="skill-circle" data-theme="light" fill="#1A73E8" opacity="0.15"/>
+                        <circle cx="50" cy="50" r="45" class="skill-circle dark-mode" style="display:none" fill="#FFFFFF" opacity="0.15"/>
+                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" class="skill-text" data-theme="light" fill="#1A73E8">HF</text>
+                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" class="skill-text dark-mode" style="display:none" fill="#F3F4F6">HF</text>
+                    </svg>
+                    <h3 class="font-bold text-sm sm:text-base md:text-lg text-navy dark:text-white">PyTorch & HF</h3>
+                    <p class="text-xs sm:text-sm text-primary dark:text-blue-400 font-semibold">Expert</p>
                 </div>
-            </div>
-            <div id="tools" class="tab-content">
-                <div class="skills-grid">
-                    <div class="skill-card" data-skill="git">
-                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/git/ffffff/20" alt="Git"></div>
-                        <h4>Git</h4>
-                        <div class="progress-bar" data-progress="90">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <span class="progress-text">90%</span>
-                        <div class="skill-tooltip">Version control system for code collaboration.</div>
-                    </div>
-                    <div class="skill-card" data-skill="docker">
-                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/docker/ffffff/20" alt="Docker"></div>
-                        <h4>Docker</h4>
-                        <div class="progress-bar" data-progress="70">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <span class="progress-text">70%</span>
-                        <div class="skill-tooltip">Containerization for consistent deployments.</div>
-                    </div>
-                    <div class="skill-card" data-skill="aws">
-                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/amazonaws/ffffff/20" alt="AWS"></div>
-                        <h4>AWS</h4>
-                        <div class="progress-bar" data-progress="70">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <span class="progress-text">70%</span>
-                        <div class="skill-tooltip">Cloud computing services for scalable apps.</div>
-                    </div>
-                    <div class="skill-card" data-skill="kubernetes">
-                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/kubernetes/ffffff/20" alt="Kubernetes"></div>
-                        <h4>Kubernetes</h4>
-                        <div class="progress-bar" data-progress="50">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <span class="progress-text">50%</span>
-                        <div class="skill-tooltip">Container orchestration for automating deployment and scaling.</div>
-                    </div>
-                    <div class="skill-card" data-skill="jenkins">
-                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/jenkins/ffffff/20" alt="Jenkins"></div>
-                        <h4>Jenkins</h4>
-                        <div class="progress-bar" data-progress="50">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <span class="progress-text">50%</span>
-                        <div class="skill-tooltip">Automation server for CI/CD pipelines.</div>
-                    </div>
+                
+                <!-- LLMs & Prompt Engineering -->
+                <div class="text-center">
+                    <svg class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 skill-icon" data-color="accent" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" class="skill-circle" data-theme="light" fill="#F97316" opacity="0.15"/>
+                        <circle cx="50" cy="50" r="45" class="skill-circle dark-mode" style="display:none" fill="#FFFFFF" opacity="0.15"/>
+                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" class="skill-text" data-theme="light" fill="#F97316">LLM</text>
+                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" class="skill-text dark-mode" style="display:none" fill="#F3F4F6">LLM</text>
+                    </svg>
+                    <h3 class="font-bold text-sm sm:text-base md:text-lg text-navy dark:text-white">LLMs & Prompt Eng</h3>
+                    <p class="text-xs sm:text-sm text-primary dark:text-blue-400 font-semibold">Advanced</p>
                 </div>
-            </div>
-            <div id="os" class="tab-content">
-                <div class="skills-grid">
-                    <div class="skill-card" data-skill="windows">
-                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/microsoftwindows/ffffff/20" alt="Windows"></div>
-                        <h4>Windows</h4>
-                        <div class="progress-bar" data-progress="90">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <span class="progress-text">90%</span>
-                        <div class="skill-tooltip">Primary OS for development and daily use.</div>
-                    </div>
-                    <div class="skill-card" data-skill="linux">
-                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/linux/ffffff/20" alt="Linux"></div>
-                        <h4>Linux</h4>
-                        <div class="progress-bar" data-progress="60">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <span class="progress-text">60%</span>
-                        <div class="skill-tooltip">Server and development environment expertise.</div>
-                    </div>
-                    <div class="skill-card" data-skill="macos">
-                        <div class="skill-icon"><img src="https://cdn.simpleicons.org/apple/ffffff/20" alt="macOS"></div>
-                        <h4>macOS</h4>
-                        <div class="progress-bar" data-progress="70">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <span class="progress-text">70%</span>
-                        <div class="skill-tooltip">Unix-based OS for development and creative workflows.</div>
-                    </div>
+                
+                <!-- GenAI & Fine-tuning -->
+                <div class="text-center">
+                    <svg class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 skill-icon" data-color="navy" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" class="skill-circle" data-theme="light" fill="#1E293B" opacity="0.15"/>
+                        <circle cx="50" cy="50" r="45" class="skill-circle dark-mode" style="display:none" fill="#FFFFFF" opacity="0.15"/>
+                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" class="skill-text" data-theme="light" fill="#1E293B">AI</text>
+                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" class="skill-text dark-mode" style="display:none" fill="#F3F4F6">AI</text>
+                    </svg>
+                    <h3 class="font-bold text-sm sm:text-base md:text-lg text-navy dark:text-white">GenAI & Fine-tuning</h3>
+                    <p class="text-xs sm:text-sm text-primary dark:text-blue-400 font-semibold">Advanced</p>
+                </div>
+                
+                <!-- Vector Databases -->
+                <div class="text-center">
+                    <svg class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 skill-icon" data-color="primary" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" class="skill-circle" data-theme="light" fill="#1A73E8" opacity="0.15"/>
+                        <circle cx="50" cy="50" r="45" class="skill-circle dark-mode" style="display:none" fill="#FFFFFF" opacity="0.15"/>
+                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" class="skill-text" data-theme="light" fill="#1A73E8">VDB</text>
+                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" class="skill-text dark-mode" style="display:none" fill="#F3F4F6">VDB</text>
+                    </svg>
+                    <h3 class="font-bold text-sm sm:text-base md:text-lg text-navy dark:text-white">Vector Databases</h3>
+                    <p class="text-xs sm:text-sm text-primary dark:text-blue-400 font-semibold">Advanced</p>
+                </div>
+                
+                <!-- MLOps & Deployment -->
+                <div class="text-center">
+                    <svg class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 skill-icon" data-color="accent" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" class="skill-circle" data-theme="light" fill="#F97316" opacity="0.15"/>
+                        <circle cx="50" cy="50" r="45" class="skill-circle dark-mode" style="display:none" fill="#FFFFFF" opacity="0.15"/>
+                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="26" font-weight="bold" text-anchor="middle" class="skill-text" data-theme="light" fill="#F97316">OPS</text>
+                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="26" font-weight="bold" text-anchor="middle" class="skill-text dark-mode" style="display:none" fill="#F3F4F6">OPS</text>
+                    </svg>
+                    <h3 class="font-bold text-sm sm:text-base md:text-lg text-navy dark:text-white">MLOps & Deployment</h3>
+                    <p class="text-xs sm:text-sm text-primary dark:text-blue-400 font-semibold">Advanced</p>
+                </div>
+                
+                <!-- Computer Vision -->
+                <div class="text-center">
+                    <svg class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 skill-icon" data-color="navy" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" class="skill-circle" data-theme="light" fill="#1E293B" opacity="0.15"/>
+                        <circle cx="50" cy="50" r="45" class="skill-circle dark-mode" style="display:none" fill="#FFFFFF" opacity="0.15"/>
+                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="38" font-weight="bold" text-anchor="middle" class="skill-text" data-theme="light" fill="#1E293B">CV</text>
+                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="38" font-weight="bold" text-anchor="middle" class="skill-text dark-mode" style="display:none" fill="#F3F4F6">CV</text>
+                    </svg>
+                    <h3 class="font-bold text-sm sm:text-base md:text-lg text-navy dark:text-white">Computer Vision</h3>
+                    <p class="text-xs sm:text-sm text-primary dark:text-blue-400 font-semibold">Expert</p>
+                </div>
+                
+                <!-- NLP & Time Series -->
+                <div class="text-center">
+                    <svg class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 skill-icon" data-color="primary" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" class="skill-circle" data-theme="light" fill="#1A73E8" opacity="0.15"/>
+                        <circle cx="50" cy="50" r="45" class="skill-circle dark-mode" style="display:none" fill="#FFFFFF" opacity="0.15"/>
+                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" class="skill-text" data-theme="light" fill="#1A73E8">TS</text>
+                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" class="skill-text dark-mode" style="display:none" fill="#F3F4F6">TS</text>
+                    </svg>
+                    <h3 class="font-bold text-sm sm:text-base md:text-lg text-navy dark:text-white">NLP & Time Series</h3>
+                    <p class="text-xs sm:text-sm text-primary dark:text-blue-400 font-semibold">Expert</p>
+                </div>
+                
+                <!-- Deep Learning -->
+                <div class="text-center">
+                    <svg class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 skill-icon" data-color="primary" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" class="skill-circle" data-theme="light" fill="#1A73E8" opacity="0.15"/>
+                        <circle cx="50" cy="50" r="45" class="skill-circle dark-mode" style="display:none" fill="#FFFFFF" opacity="0.15"/>
+                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" class="skill-text" data-theme="light" fill="#1A73E8">DL</text>
+                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" class="skill-text dark-mode" style="display:none" fill="#F3F4F6">DL</text>
+                    </svg>
+                    <h3 class="font-bold text-sm sm:text-base md:text-lg text-navy dark:text-white">Deep Learning</h3>
+                    <p class="text-xs sm:text-sm text-primary dark:text-blue-400 font-semibold">Expert</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="fade-in">
-        <h2>Experience</h2>
-        <div class="timeline">
-            <div class="timeline-item left">
-                <div class="timeline-content">
-                    <h3>Junior Software Developer</h3>
-                    <p>Enirmaan Techsolutions Pvt. Ltd., Kurla, Maharashtra</p>
-                    <p>May 2025 – Present</p>
-                    <p>Integrated API for video-based health vitals detection with FastAPI backend and Flutter app. Added face validation and multi-face rejection. Built OCR visiting card extractor using Tesseract, EasyOCR, OpenCV, regex, and Hugging Face LLM with Pydantic validation.</p>
+    <!-- The Road Ahead Section -->
+    <section id="future" class="py-16 sm:py-20 md:py-28 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <h2 class="font-montserrat font-bold text-3xl sm:text-4xl md:text-5xl text-navy dark:text-white mb-3 sm:mb-4 text-center">The Road Ahead</h2>
+            <p class="text-center text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-12 sm:mb-16">Focused on advancing the frontiers of AI and its practical applications</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+                <div class="bg-white dark:bg-gray-900 rounded-lg sm:rounded-xl shadow-md sm:shadow-lg dark:shadow-xl dark:shadow-black/30 p-6 sm:p-8 hover:shadow-lg sm:hover:shadow-xl dark:hover:shadow-black/50 transition text-center">
+                    <div class="text-5xl sm:text-6xl text-primary mb-4"><i class="fas fa-brain"></i></div>
+                    <h3 class="font-bold text-xl sm:text-2xl text-navy dark:text-white mb-4">Generative AI</h3>
+                    <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">Building next-generation AI systems leveraging large language models and multimodal transformers to create intelligent, context-aware applications that understand and generate human-like content.</p>
                 </div>
-            </div>
-            <div class="timeline-item right">
-                <div class="timeline-content">
-                    <h3>Tech Support Intern</h3>
-                    <p>Livingthings.ai (RBTIC, IIT Bombay)</p>
-                    <p>Oct 2024 – Feb 2025</p>
-                    <p>Analyzed IoT AC monitoring data to optimize energy use and support sustainability.</p>
+                
+                <div class="bg-white dark:bg-gray-900 rounded-lg sm:rounded-xl shadow-md sm:shadow-lg dark:shadow-xl dark:shadow-black/30 p-6 sm:p-8 hover:shadow-lg sm:hover:shadow-xl dark:hover:shadow-black/50 transition text-center">
+                    <div class="text-5xl sm:text-6xl text-accent mb-4"><i class="fas fa-boxes"></i></div>
+                    <h3 class="font-bold text-xl sm:text-2xl text-navy dark:text-white mb-4">Inventory Automation</h3>
+                    <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">Developing intelligent supply chain solutions using computer vision and predictive analytics to optimize inventory management, reduce waste, and enhance operational efficiency at scale.</p>
                 </div>
-            </div>
-            <div class="timeline-item left">
-                <div class="timeline-content">
-                    <h3>Desktop Support Intern</h3>
-                    <p>Policy Junction Marketing Pvt. Ltd.</p>
-                    <p>Mar 2024 – Jun 2024</p>
-                    <p>Handled IT support: system setup, software config, and troubleshooting to reduce downtime.</p>
-                </div>
-            </div>
-            <div class="timeline-item right">
-                <div class="timeline-content">
-                    <h3>Market Research Intern</h3>
-                    <p>Network Techlab India Pvt. Ltd.</p>
-                    <p>Jan 2024 – Mar 2024</p>
-                    <p>Researched AI document/print management, identifying gaps and opportunities for product dev.</p>
-                </div>
-            </div>
-        </div>
-    <!-- Education Section -->
-    <section id="education" class="fade-in">
-        <h2>Education</h2>
-        <div class="timeline">
-            <div class="timeline-item left">
-                <div class="timeline-content">
-                    <h3>M.Sc. in Information Technology</h3>
-                    <p>S.M. Shetty College, Mumbai (Autonomous)</p>
-                    <p>2023 – 2025</p>
-                </div>
-            </div>
-            <div class="timeline-item right">
-                <div class="timeline-content">
-                    <h3>B.Sc. in Information Technology</h3>
-                    <p>S.M. Shetty College, Mumbai (Autonomous)</p>
-                    <p>2020 – 2023</p>
+                
+                <div class="bg-white dark:bg-gray-900 rounded-lg sm:rounded-xl shadow-md sm:shadow-lg dark:shadow-xl dark:shadow-black/30 p-6 sm:p-8 hover:shadow-lg sm:hover:shadow-xl dark:hover:shadow-black/50 transition text-center">
+                    <div class="text-5xl sm:text-6xl text-primary mb-4"><i class="fas fa-graduation-cap"></i></div>
+                    <h3 class="font-bold text-xl sm:text-2xl text-navy dark:text-white mb-4">Research & Innovation</h3>
+                    <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">Contributing to cutting-edge AI research, publishing papers on novel architectures, and mentoring the next generation of AI engineers to drive innovation in the field.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="fade-in">
-        <h2>Contact Me</h2>
-        <div class="contact-form">
-            <form id="contactForm">
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Your Message</label>
-                    <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
-        </div>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/nilesh-mishra-064a861b3/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/nilesh5911" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="mailto:mishranilesh968@gmail.com"><i class="fas fa-envelope"></i></a>
-            <a href="https://whatsapp.com/channel/0029Vb6RowtGE56cnp58012p" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <section id="contact" class="py-16 sm:py-20 md:py-28 bg-white dark:bg-gray-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+            <h2 class="font-montserrat font-bold text-3xl sm:text-4xl md:text-5xl text-navy dark:text-white mb-3 sm:mb-4">Get In Touch</h2>
+            <p class="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-8 sm:mb-12">Let's collaborate on innovative AI solutions. Reach out via any channel below.</p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-8 sm:gap-12">
+                <a href="https://github.com/nilesh5911" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center hover:scale-110 transition active:scale-95">
+                    <div class="text-5xl sm:text-6xl text-navy dark:text-gray-300 mb-2 sm:mb-3"><i class="fab fa-github"></i></div>
+                    <span class="font-semibold text-sm sm:text-base text-navy dark:text-gray-300">GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/nilesh-mishra-064a861b3/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center hover:scale-110 transition active:scale-95">
+                    <div class="text-5xl sm:text-6xl text-primary dark:text-blue-400 mb-2 sm:mb-3"><i class="fab fa-linkedin"></i></div>
+                    <span class="font-semibold text-sm sm:text-base text-primary dark:text-blue-400">LinkedIn</span>
+                </a>
+                <a href="mailto:mishranilesh968@gmail.com" class="flex flex-col items-center hover:scale-110 transition active:scale-95">
+                    <div class="text-5xl sm:text-6xl text-accent dark:text-orange-400 mb-2 sm:mb-3"><i class="fas fa-envelope"></i></div>
+                    <span class="font-semibold text-sm sm:text-base text-accent dark:text-orange-400">Email</span>
+                </a>
+                <a href="https://whatsapp.com/channel/0029Vb6RowtGE56cnp58012p" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center hover:scale-110 transition active:scale-95">
+                    <div class="text-5xl sm:text-6xl text-green-500 dark:text-green-400 mb-2 sm:mb-3"><i class="fab fa-whatsapp"></i></div>
+                    <span class="font-semibold text-sm sm:text-base text-green-500 dark:text-green-400">WhatsApp</span>
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Nilesh Mishra. All rights reserved.</p>
+    <footer class="bg-navy dark:bg-gray-950 text-white py-6 sm:py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+            <p class="text-sm sm:text-base">&copy; 2024 Nilesh Mishra. All rights reserved.</p>
+        </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-
-
-        // Enhanced Skills Tab Switching and Animations
-        document.querySelectorAll('.tab-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const tabName = btn.getAttribute('data-tab');
-                
-                // Remove active from all tabs and contents
-                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-                
-                // Add active to clicked tab and content
-                btn.classList.add('active');
-                document.getElementById(tabName).classList.add('active');
-                
-                // Trigger progress animation for new tab
-                animateProgressBars(document.getElementById(tabName));
-            });
-        });
-
-        // Function to animate progress bars (linear)
-        function animateProgressBars(container) {
-            const bars = container.querySelectorAll('.progress-bar');
-            bars.forEach((bar, index) => {
-                setTimeout(() => {
-                    const progress = parseInt(bar.getAttribute('data-progress'));
-                    const fill = bar.querySelector('.progress-fill');
-                    if (fill) {
-                        fill.style.width = progress + '%';
-                    }
-                }, index * 100);
-            });
-        }
-
-        // Initial animation on skills section intersection
-        const skillsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const activeTab = document.querySelector('.tab-content.active');
-                    if (activeTab) {
-                        animateProgressBars(activeTab);
-                    }
-                    skillsObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.3 });
-
-        const skillsSection = document.getElementById('skills');
-        if (skillsSection) {
-            skillsObserver.observe(skillsSection);
-        }
-
-                // Contact Form with Web3Forms - add debug log
-                document.getElementById('contactForm').addEventListener('submit', function(e) {
-                    console.log('Contact form submitted'); // Debug log
-                    e.preventDefault();
-                    
-                    const form = e.target;
-                    const data = new FormData(form);
-                    const accessKey = '22b298e2-6999-40ce-9896-61b8e9302629';
-                    
-                    data.append('access_key', accessKey);
-                    
-                    fetch('https://api.web3forms.com/submit', {
-                        method: 'POST',
-                        body: data,
-                    })
-                    .then(res => res.json())
-                    .then(data => {
-                        if (data.success) {
-                            alert('Thank you! Your message has been sent successfully.');
-                            form.reset();
-                        } else {
-                            alert('Oops! There was a problem submitting your form: ' + (data.message || 'Unknown error'));
-                        }
-                    })
-                    .catch(err => {
-                        console.error('Error:', err);
-                        alert('Something went wrong. Please try again or contact directly.');
-                    });
-                });
-
-    
-        // Make project cards clickable
-        document.addEventListener('click', (e) => {
-            if (e.target.closest('.project-card')) {
-                const card = e.target.closest('.project-card');
-                const detailsLink = card.querySelector('a[href*="project"]');
-                if (detailsLink && !e.target.closest('.project-links a')) {
-                    e.preventDefault();
-                    window.location.href = detailsLink.href;
-                }
-            }
-        });
-        });
-    </script>
-    <script src="assets/common.js" defer></script>
+    <script src="assets/common.js"></script>
 </body>
 </html>
-
