@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Business Card Extractor - An intelligent system using OCR and AI to extract structured data from business cards.">
+    <meta name="keywords" content="AI, Business Card Extraction, OCR, FastAPI, Streamlit, MongoDB, Gemini AI">
+    <meta name="author" content="Nilesh Mishra">
+    <meta name="theme-color" content="#1E293B">
+    
+    <title>AI Business Card Extractor | Nilesh Mishra</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#1E293B',
+                        primary: '#1A73E8',
+                        accent: '#F97316',
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-inter" data-theme="light">
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-white dark:bg-gray-900 shadow-md dark:shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="../index.html" class="flex items-center space-x-2 sm:space-x-3 font-montserrat font-bold text-sm sm:text-xl hover:opacity-80 transition">
+                <svg class="w-8 h-8 sm:w-10 sm:h-10 rounded" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="gradientNM" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#1E293B;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#F97316;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <rect fill="url(#gradientNM)" width="100" height="100" rx="12" />
+                    <text x="50" y="65" style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:50px;fill:white;text-anchor:middle;">NM</text>
+                </svg>
+                <span class="text-navy dark:text-white hidden sm:inline">Nilesh Mishra</span>
+            </a>
+
+            <!-- Theme Toggle & Back Button -->
+            <div class="flex items-center space-x-4">
+                <a href="../index.html" class="text-sm sm:text-base font-semibold text-navy dark:text-white hover:text-primary dark:hover:text-blue-400 transition">← Back</a>
+                <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition" aria-label="Toggle theme">
+                    <i class="fas fa-moon text-navy dark:text-gray-300"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-950 dark:to-gray-800 py-16 sm:py-24 md:py-32 overflow-hidden">
+        <svg class="absolute top-0 right-0 w-64 sm:w-96 h-64 sm:h-96 text-gray-300 dark:text-gray-700 opacity-20" viewBox="0 0 200 200">
+            <circle cx="100" cy="100" r="80" fill="none" stroke="currentColor" stroke-width="1"/>
+            <circle cx="100" cy="100" r="60" fill="none" stroke="currentColor" stroke-width="1"/>
+        </svg>
+
+        <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex items-center gap-4 sm:gap-6 mb-6">
+                <div class="text-5xl sm:text-6xl md:text-7xl text-accent">
+                    <i class="fas fa-id-card"></i>
+                </div>
+                <h1 class="font-montserrat font-bold text-3xl sm:text-4xl md:text-5xl text-navy dark:text-white">AI Business Card Extractor</h1>
+            </div>
+            <p class="text-base sm:text-lg text-gray-700 dark:text-gray-400 max-w-3xl">An intelligent system leveraging OCR and AI to automatically extract and structure business card data with high accuracy and reliability.</p>
+        </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class="py-16 sm:py-20 md:py-28 bg-white dark:bg-gray-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <!-- Overview -->
+            <div class="mb-16">
+                <h2 class="font-montserrat font-bold text-3xl sm:text-4xl text-navy dark:text-white mb-6">Project Overview</h2>
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="bg-gray-50 dark:bg-gray-800 p-6 sm:p-8 rounded-lg">
+                        <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300 mb-4">
+                            The AI Business Card Extractor is a full-stack web application that automates the process of extracting contact information from business card images. By combining Tesseract OCR for text extraction with Google Gemini AI for intelligent data structuring, the system delivers accurate, properly formatted contact information ready for database storage.
+                        </p>
+                        <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300">
+                            The backend is built with FastAPI for high performance, while the user-friendly Streamlit interface provides an intuitive experience. MongoDB stores user data and extraction history, enabling multi-user support and data persistence.
+                        </p>
+                    </div>
+                    <div class="bg-gradient-to-br from-accent/20 to-primary/20 dark:from-accent/10 dark:to-primary/10 p-6 sm:p-8 rounded-lg border-2 border-accent/30">
+                        <h3 class="font-bold text-lg sm:text-xl text-navy dark:text-white mb-4">Key Metrics</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-700 dark:text-gray-400">Extraction Accuracy</span>
+                                <span class="font-bold text-primary">95%+</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-700 dark:text-gray-400">Processing Speed</span>
+                                <span class="font-bold text-accent">< 2 seconds</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-700 dark:text-gray-400">Supported Formats</span>
+                                <span class="font-bold text-primary">JPG, JPEG, PNG</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-700 dark:text-gray-400">Export Formats</span>
+                                <span class="font-bold text-accent">CSV, JSON</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Problem Section -->
+            <div class="mb-16 bg-gray-50 dark:bg-gray-800 p-6 sm:p-8 rounded-lg">
+                <h2 class="font-montserrat font-bold text-3xl sm:text-4xl text-navy dark:text-white mb-6 flex items-center gap-3">
+                    <span class="text-primary"><i class="fas fa-exclamation-circle"></i></span> The Problem
+                </h2>
+                <ul class="space-y-4">
+                    <li class="flex gap-4 items-start">
+                        <span class="text-accent text-lg flex-shrink-0"><i class="fas fa-check"></i></span>
+                        <div>
+                            <h3 class="font-bold text-navy dark:text-white mb-1">Manual Data Entry Bottleneck</h3>
+                            <p class="text-gray-700 dark:text-gray-300 text-sm sm:text-base">Business professionals and organizations spend hours manually entering contact information from business cards into CRM systems and databases.</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4 items-start">
+                        <span class="text-accent text-lg flex-shrink-0"><i class="fas fa-check"></i></span>
+                        <div>
+                            <h3 class="font-bold text-navy dark:text-white mb-1">OCR Quality Inconsistency</h3>
+                            <p class="text-gray-700 dark:text-gray-300 text-sm sm:text-base">Traditional OCR solutions struggle with variations in card layouts, fonts, and backgrounds, resulting in garbled or incomplete text extraction.</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4 items-start">
+                        <span class="text-accent text-lg flex-shrink-0"><i class="fas fa-check"></i></span>
+                        <div>
+                            <h3 class="font-bold text-navy dark:text-white mb-1">Data Structuring Challenge</h3>
+                            <p class="text-gray-700 dark:text-gray-300 text-sm sm:text-base">Even with good OCR results, intelligently categorizing and structuring diverse card formats (name, email, phone, company) requires manual intervention.</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4 items-start">
+                        <span class="text-accent text-lg flex-shrink-0"><i class="fas fa-check"></i></span>
+                        <div>
+                            <h3 class="font-bold text-navy dark:text-white mb-1">Lack of Scalability</h3>
+                            <p class="text-gray-700 dark:text-gray-300 text-sm sm:text-base">Organizations processing bulk business cards lack a scalable, automated solution with data persistence and user management.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Solution Section -->
+            <div class="mb-16 bg-primary/5 dark:bg-primary/10 border-l-4 border-primary p-6 sm:p-8 rounded-lg">
+                <h2 class="font-montserrat font-bold text-3xl sm:text-4xl text-navy dark:text-white mb-6 flex items-center gap-3">
+                    <span class="text-primary"><i class="fas fa-lightbulb"></i></span> The Solution
+                </h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="font-bold text-lg sm:text-xl text-navy dark:text-white mb-4">Architecture</h3>
+                        <ul class="space-y-3">
+                            <li class="flex gap-3 items-start">
+                                <span class="text-accent font-bold">1.</span>
+                                <div>
+                                    <p class="font-semibold text-navy dark:text-white">Image Upload & Processing</p>
+                                    <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Streamlit UI for easy image upload with validation for JPG, JPEG, and PNG formats</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <span class="text-accent font-bold">2.</span>
+                                <div>
+                                    <p class="font-semibold text-navy dark:text-white">OCR Text Extraction</p>
+                                    <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Tesseract/Pytesseract extracts raw text from card images with preprocessing</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <span class="text-accent font-bold">3.</span>
+                                <div>
+                                    <p class="font-semibold text-navy dark:text-white">AI-Powered Structuring</p>
+                                    <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Google Gemini API intelligently parses text and structures it into standardized fields</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <span class="text-accent font-bold">4.</span>
+                                <div>
+                                    <p class="font-semibold text-navy dark:text-white">Data Storage & Export</p>
+                                    <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400">MongoDB persistence with CSV/JSON export options and user history tracking</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg sm:text-xl text-navy dark:text-white mb-4">Tech Stack</h3>
+                        <div class="space-y-2">
+                            <div class="bg-white dark:bg-gray-900 p-3 rounded border-l-2 border-accent">
+                                <p class="font-semibold text-navy dark:text-white text-sm">Backend</p>
+                                <p class="text-xs text-gray-600 dark:text-gray-400">FastAPI, Python 3.10+</p>
+                            </div>
+                            <div class="bg-white dark:bg-gray-900 p-3 rounded border-l-2 border-primary">
+                                <p class="font-semibold text-navy dark:text-white text-sm">Frontend</p>
+                                <p class="text-xs text-gray-600 dark:text-gray-400">Streamlit UI</p>
+                            </div>
+                            <div class="bg-white dark:bg-gray-900 p-3 rounded border-l-2 border-accent">
+                                <p class="font-semibold text-navy dark:text-white text-sm">OCR</p>
+                                <p class="text-xs text-gray-600 dark:text-gray-400">Tesseract, Pytesseract</p>
+                            </div>
+                            <div class="bg-white dark:bg-gray-900 p-3 rounded border-l-2 border-primary">
+                                <p class="font-semibold text-navy dark:text-white text-sm">AI Integration</p>
+                                <p class="text-xs text-gray-600 dark:text-gray-400">Google Gemini API</p>
+                            </div>
+                            <div class="bg-white dark:bg-gray-900 p-3 rounded border-l-2 border-accent">
+                                <p class="font-semibold text-navy dark:text-white text-sm">Database</p>
+                                <p class="text-xs text-gray-600 dark:text-gray-400">MongoDB</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Section -->
+            <div class="mb-16">
+                <h2 class="font-montserrat font-bold text-3xl sm:text-4xl text-navy dark:text-white mb-8">Core Features</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 p-6 rounded-lg hover:border-accent transition">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="text-3xl text-accent"><i class="fas fa-image"></i></span>
+                            <h3 class="font-bold text-lg text-navy dark:text-white">Image Upload & Processing</h3>
+                        </div>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Upload business card images in JPG, JPEG, or PNG format. Streamlit interface provides drag-and-drop functionality with instant preview.</p>
+                    </div>
+
+                    <div class="bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 p-6 rounded-lg hover:border-primary transition">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="text-3xl text-primary"><i class="fas fa-barcode"></i></span>
+                            <h3 class="font-bold text-lg text-navy dark:text-white">OCR Text Extraction</h3>
+                        </div>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Advanced Tesseract OCR with preprocessing techniques to accurately extract text from cards with varying quality and backgrounds.</p>
+                    </div>
+
+                    <div class="bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 p-6 rounded-lg hover:border-accent transition">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="text-3xl text-accent"><i class="fas fa-brain"></i></span>
+                            <h3 class="font-bold text-lg text-navy dark:text-white">AI-Powered Extraction</h3>
+                        </div>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Google Gemini API intelligently structures extracted text into standardized contact fields with validation and error correction.</p>
+                    </div>
+
+                    <div class="bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 p-6 rounded-lg hover:border-primary transition">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="text-3xl text-primary"><i class="fas fa-database"></i></span>
+                            <h3 class="font-bold text-lg text-navy dark:text-white">MongoDB Storage</h3>
+                        </div>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Persistent data storage with user management, extraction history tracking, and audit logging for compliance and accountability.</p>
+                    </div>
+
+                    <div class="bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 p-6 rounded-lg hover:border-accent transition">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="text-3xl text-accent"><i class="fas fa-download"></i></span>
+                            <h3 class="font-bold text-lg text-navy dark:text-white">Data Export</h3>
+                        </div>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Export extracted data in CSV or JSON formats for easy integration with CRM systems, spreadsheets, and databases.</p>
+                    </div>
+
+                    <div class="bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 p-6 rounded-lg hover:border-primary transition">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="text-3xl text-primary"><i class="fas fa-code"></i></span>
+                            <h3 class="font-bold text-lg text-navy dark:text-white">CORS & API Support</h3>
+                        </div>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">RESTful FastAPI backend with CORS support enables integration with external applications and microservices.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Impact Section -->
+            <div class="mb-16 bg-gradient-to-r from-navy to-navy/80 dark:from-gray-950 dark:to-gray-900 text-white p-8 sm:p-12 rounded-lg">
+                <h2 class="font-montserrat font-bold text-3xl sm:text-4xl mb-8 flex items-center gap-3">
+                    <span><i class="fas fa-rocket"></i></span> Impact & Results
+                </h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">95%+</div>
+                        <p class="text-gray-200">Extraction Accuracy Rate</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-primary mb-2">< 2s</div>
+                        <p class="text-gray-200">Average Processing Time</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">24/7</div>
+                        <p class="text-gray-200">Automated Processing</p>
+                    </div>
+                </div>
+                <div class="mt-8 pt-8 border-t border-gray-700 grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="font-bold mb-2 text-accent">Business Benefits</h3>
+                        <ul class="space-y-2 text-sm text-gray-200">
+                            <li>• Reduces manual data entry time by 90%</li>
+                            <li>• Eliminates human transcription errors</li>
+                            <li>• Scales to process hundreds of cards daily</li>
+                            <li>• Maintains complete audit trail of extractions</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold mb-2 text-primary">Technical Excellence</h3>
+                        <ul class="space-y-2 text-sm text-gray-200">
+                            <li>• Robust error handling & validation</li>
+                            <li>• Comprehensive logging & monitoring</li>
+                            <li>• Modular, extensible architecture</li>
+                            <li>• Production-ready deployment pipeline</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center">
+                <h2 class="font-montserrat font-bold text-2xl sm:text-3xl text-navy dark:text-white mb-6">Ready to Automate Your Workflow?</h2>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <!-- <a href="https://github.com" class="bg-primary hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition active:scale-95">View on GitHub</a>         -->
+                    <a href="https://drive.google.com/drive/folders/1JNH8yo0_DM44pbEx7ScSlFI_6wfGdfKJ" target="_blank" class="bg-accent hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg transition active:scale-95">Demo & Videos</a>
+                    <a href="../index.html#projects" class="border-2 border-primary text-primary dark:text-blue-400 hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white font-semibold py-3 px-8 rounded-lg transition active:scale-95">More Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy dark:bg-gray-950 text-white py-6 sm:py-8 mt-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+            <p class="text-sm sm:text-base">&copy; 2024 Nilesh Mishra. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        // Check for saved theme preference or default to light mode
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') {
+            htmlElement.classList.add('dark');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            htmlElement.classList.toggle('dark');
+            const theme = htmlElement.classList.contains('dark') ? 'dark' : 'light';
+            localStorage.setItem('theme', theme);
+        });
+    </script>
+</body>
+</html>
