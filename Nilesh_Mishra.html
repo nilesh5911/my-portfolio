@@ -41,6 +41,7 @@
     </script>
     
     <title>Nilesh Mishra - AI Engineer | ML & NLP Innovator</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='grad' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%231E293B;stop-opacity:1'/><stop offset='100%' style='stop-color:%23F97316;stop-opacity:1'/></linearGradient></defs><rect fill='url(%23grad)' width='100' height='100' rx='12'/><text x='50' y='65' font-family='Montserrat,sans-serif' font-weight='800' font-size='50' fill='white' text-anchor='middle'>NM</text></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -61,8 +62,9 @@
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 </head>
-<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-inter" data-theme="light">
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-inter">
     <!-- Navigation Bar -->
     <nav class="sticky top-0 z-50 bg-white dark:bg-gray-900 shadow-md dark:shadow-lg">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
@@ -94,8 +96,9 @@
 
             <!-- Theme Toggle & Mobile Menu -->
             <div class="flex items-center space-x-4">
-                <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition" aria-label="Toggle theme">
-                    <i class="fas fa-moon text-navy dark:text-gray-300"></i>
+                <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon text-navy dark:hidden"></i>
+                    <i class="fas fa-sun text-yellow-400 hidden dark:block"></i>
                 </button>
                 <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition" aria-label="Toggle menu">
                     <i class="fas fa-bars text-navy dark:text-gray-300"></i>
@@ -139,6 +142,26 @@
                     <i class="fas fa-download"></i>
                     <span>Download Resume</span>
                 </a>
+            </div>
+
+            <!-- Statistics Bar -->
+            <div class="mt-16 sm:mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+                <div class="text-center bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md dark:shadow-lg">
+                    <div class="text-3xl sm:text-4xl font-bold text-primary mb-2">5+</div>
+                    <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300 font-medium">AI Projects</p>
+                </div>
+                <div class="text-center bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md dark:shadow-lg">
+                    <div class="text-3xl sm:text-4xl font-bold text-accent mb-2">10+</div>
+                    <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300 font-medium">Tech Skills</p>
+                </div>
+                <div class="text-center bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md dark:shadow-lg">
+                    <div class="text-3xl sm:text-4xl font-bold text-primary mb-2">4+</div>
+                    <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300 font-medium">Companies</p>
+                </div>
+                <div class="text-center bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md dark:shadow-lg">
+                    <div class="text-3xl sm:text-4xl font-bold text-accent mb-2">94%+</div>
+                    <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300 font-medium">Accuracy</p>
+                </div>
             </div>
         </div>
     </section>
@@ -238,8 +261,14 @@
                         </ul>
                     </div>
                     
+                    <div class="mb-6 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-primary dark:text-blue-300 text-xs sm:text-sm rounded-full font-semibold">Python</span>
+                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-primary dark:text-blue-300 text-xs sm:text-sm rounded-full font-semibold">CNN</span>
+                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-primary dark:text-blue-300 text-xs sm:text-sm rounded-full font-semibold">Deep Learning</span>
+                    </div>
+                    
                     <div class="flex gap-3 sm:gap-4">
-                        <a href="projects/project1.html" class="flex-1 bg-primary hover:bg-blue-700 text-white font-semibold py-2 sm:py-3 rounded-lg text-center transition active:scale-95 text-sm sm:text-base">View Project</a>
+                        <a href="projects/Healthcare_AI.html" class="flex-1 bg-primary hover:bg-blue-700 text-white font-semibold py-2 sm:py-3 rounded-lg text-center transition active:scale-95 text-sm sm:text-base">View Project</a>
                         <a href="https://breast-cancer-app-predict.streamlit.app/" class="flex-1 border-2 border-accent text-accent dark:text-orange-400 hover:bg-accent hover:text-white dark:hover:bg-accent dark:hover:text-white font-semibold py-2 sm:py-3 rounded-lg text-center transition active:scale-95 text-sm sm:text-base">Live Demo</a>
                     </div>
                 </div>
@@ -278,8 +307,14 @@
                         </ul>
                     </div>
                     
+                    <div class="mb-6 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-accent dark:text-orange-300 text-xs sm:text-sm rounded-full font-semibold">Python</span>
+                        <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-accent dark:text-orange-300 text-xs sm:text-sm rounded-full font-semibold">LSTM</span>
+                        <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-accent dark:text-orange-300 text-xs sm:text-sm rounded-full font-semibold">Time Series</span>
+                    </div>
+                    
                     <div class="flex gap-3 sm:gap-4">
-                        <a href="projects/project2.html" class="flex-1 bg-primary hover:bg-blue-700 text-white font-semibold py-2 sm:py-3 rounded-lg text-center transition active:scale-95 text-sm sm:text-base">View Project</a>
+                        <a href="projects/Time_Series_Forecasting.html" class="flex-1 bg-primary hover:bg-blue-700 text-white font-semibold py-2 sm:py-3 rounded-lg text-center transition active:scale-95 text-sm sm:text-base">View Project</a>
                         <!-- <a href="#" class="flex-1 border-2 border-accent text-accent dark:text-orange-400 hover:bg-accent hover:text-white dark:hover:bg-accent dark:hover:text-white font-semibold py-2 sm:py-3 rounded-lg text-center transition active:scale-95 text-sm sm:text-base">Live Demo</a> -->
                     </div>
                 </div>
@@ -318,8 +353,14 @@
                         </ul>
                     </div>
                     
+                    <div class="mb-6 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 text-xs sm:text-sm rounded-full font-semibold">LangChain</span>
+                        <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 text-xs sm:text-sm rounded-full font-semibold">RAG</span>
+                        <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 text-xs sm:text-sm rounded-full font-semibold">LLM</span>
+                    </div>
+                    
                     <div class="flex gap-3 sm:gap-4">
-                        <a href="projects/project3.html" class="flex-1 bg-primary hover:bg-blue-700 text-white font-semibold py-2 sm:py-3 rounded-lg text-center transition active:scale-95 text-sm sm:text-base">View Project</a>
+                        <a href="projects/Chatbot.html" class="flex-1 bg-primary hover:bg-blue-700 text-white font-semibold py-2 sm:py-3 rounded-lg text-center transition active:scale-95 text-sm sm:text-base">View Project</a>
                         <!-- <a href="#" class="flex-1 border-2 border-accent text-accent dark:text-orange-400 hover:bg-accent hover:text-white dark:hover:bg-accent dark:hover:text-white font-semibold py-2 sm:py-3 rounded-lg text-center transition active:scale-95 text-sm sm:text-base">Live Demo</a> -->
                     </div>
                 </div>
@@ -358,8 +399,14 @@
                         </ul>
                     </div>
                     
+                    <div class="mb-6 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 text-xs sm:text-sm rounded-full font-semibold">HTML/CSS</span>
+                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 text-xs sm:text-sm rounded-full font-semibold">JavaScript</span>
+                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 text-xs sm:text-sm rounded-full font-semibold">Vercel</span>
+                    </div>
+                    
                     <div class="flex gap-3 sm:gap-4">
-                        <a href="projects/project4.html" class="flex-1 bg-primary hover:bg-blue-700 text-white font-semibold py-2 sm:py-3 rounded-lg text-center transition active:scale-95 text-sm sm:text-base">View Project</a>
+                        <a href="projects/SYMM.html" class="flex-1 bg-primary hover:bg-blue-700 text-white font-semibold py-2 sm:py-3 rounded-lg text-center transition active:scale-95 text-sm sm:text-base">View Project</a>
                         <a href="https://shivyuvamitramandal.vercel.app/" class="flex-1 border-2 border-accent text-accent dark:text-orange-400 hover:bg-accent hover:text-white dark:hover:bg-accent dark:hover:text-white font-semibold py-2 sm:py-3 rounded-lg text-center transition active:scale-95 text-sm sm:text-base">Live Demo</a>
                     </div>
                 </div>
@@ -398,8 +445,14 @@
                         </ul>
                     </div>
                     
+                    <div class="mb-6 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300 text-xs sm:text-sm rounded-full font-semibold">FastAPI</span>
+                        <span class="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300 text-xs sm:text-sm rounded-full font-semibold">OCR</span>
+                        <span class="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300 text-xs sm:text-sm rounded-full font-semibold">MongoDB</span>
+                    </div>
+                    
                     <div class="flex gap-3 sm:gap-4">
-                        <a href="projects/project5.html" class="flex-1 bg-primary hover:bg-blue-700 text-white font-semibold py-2 sm:py-3 rounded-lg text-center transition active:scale-95 text-sm sm:text-base">View Project</a>
+                        <a href="projects/AI_Business_Card_Extractor.html" class="flex-1 bg-primary hover:bg-blue-700 text-white font-semibold py-2 sm:py-3 rounded-lg text-center transition active:scale-95 text-sm sm:text-base">View Project</a>
                         <!-- <a href="https://github.com" class="flex-1 border-2 border-primary text-primary dark:text-blue-400 hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white font-semibold py-2 sm:py-3 rounded-lg text-center transition active:scale-95 text-sm sm:text-base">GitHub</a>
                         <a href="#" class="flex-1 border-2 border-accent text-accent dark:text-orange-400 hover:bg-accent hover:text-white dark:hover:bg-accent dark:hover:text-white font-semibold py-2 sm:py-3 rounded-lg text-center transition active:scale-95 text-sm sm:text-base">Live Demo</a> -->
                     </div>
@@ -415,11 +468,27 @@
             
             <div class="space-y-6 sm:space-y-8">
                 <!-- Experience 1 -->
+                <div class="bg-white dark:bg-gray-900 rounded-lg sm:rounded-xl shadow-md sm:shadow-lg dark:shadow-xl dark:shadow-black/30 p-6 sm:p-8 hover:shadow-lg sm:hover:shadow-xl dark:hover:shadow-black/50 transition border-l-4 border-accent">
+                    <div class="flex items-start justify-between mb-4">
+                        <div>
+                            <h3 class="font-bold text-xl sm:text-2xl text-navy dark:text-white">AI Engineer</h3>
+                            <a href="https://www.bhatiabrothers.com" target="_blank" rel="noopener noreferrer" class="text-sm sm:text-base text-primary dark:text-blue-400 font-semibold hover:underline">Bhatia Brothers FZE</a>
+                        </div>
+                        <span class="text-xs sm:text-sm font-semibold text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-3 sm:px-4 py-1 sm:py-2 rounded-full">Current</span>
+                    </div>
+                    <ul class="space-y-3 text-sm sm:text-base text-gray-700 dark:text-gray-300">
+                        <li class="flex items-start"><span class="text-accent mr-3 mt-1">•</span> Designing and developing AI agents for inventory management and supply chain optimization.</li>
+                        <li class="flex items-start"><span class="text-accent mr-3 mt-1">•</span> Implementing machine learning solutions to improve supply chain efficiency and reduce operational costs.</li>
+                        <li class="flex items-start"><span class="text-accent mr-3 mt-1">•</span> Leveraging LLMs and RAG techniques for intelligent inventory forecasting and decision-making.</li>
+                    </ul>
+                </div>
+
+                <!-- Experience 2 -->
                 <div class="bg-white dark:bg-gray-900 rounded-lg sm:rounded-xl shadow-md sm:shadow-lg dark:shadow-xl dark:shadow-black/30 p-6 sm:p-8 hover:shadow-lg sm:hover:shadow-xl dark:hover:shadow-black/50 transition border-l-4 border-primary">
                     <div class="flex items-start justify-between mb-4">
                         <div>
                             <h3 class="font-bold text-xl sm:text-2xl text-navy dark:text-white">Junior Software Developer</h3>
-                            <p class="text-sm sm:text-base text-primary dark:text-blue-400 font-semibold">Enirmaan Techsolutions Pvt. Ltd., Maharashtra</p>
+                            <a href="https://enirmaan.com/" target="_blank" rel="noopener noreferrer" class="text-sm sm:text-base text-primary dark:text-blue-400 font-semibold hover:underline">Enirmaan Techsolutions Pvt. Ltd., Maharashtra</a>
                         </div>
                         <span class="text-xs sm:text-sm font-semibold text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-3 sm:px-4 py-1 sm:py-2 rounded-full">May 2025 – Sept 2025</span>
                     </div>
@@ -430,12 +499,12 @@
                     </ul>
                 </div>
 
-                <!-- Experience 2 -->
+                <!-- Experience 3 -->
                 <div class="bg-white dark:bg-gray-900 rounded-lg sm:rounded-xl shadow-md sm:shadow-lg dark:shadow-xl dark:shadow-black/30 p-6 sm:p-8 hover:shadow-lg sm:hover:shadow-xl dark:hover:shadow-black/50 transition border-l-4 border-accent">
                     <div class="flex items-start justify-between mb-4">
                         <div>
                             <h3 class="font-bold text-xl sm:text-2xl text-navy dark:text-white">Tech Support Intern</h3>
-                            <p class="text-sm sm:text-base text-primary dark:text-blue-400 font-semibold">Livingthings.ai (RBTIC, IIT Bombay)</p>
+                            <a href="https://livingthings.ai" target="_blank" rel="noopener noreferrer" class="text-sm sm:text-base text-primary dark:text-blue-400 font-semibold hover:underline">Livingthings.ai (RBTIC, IIT Bombay)</a>
                         </div>
                         <span class="text-xs sm:text-sm font-semibold text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-3 sm:px-4 py-1 sm:py-2 rounded-full">Oct 2024 – Feb 2025</span>
                     </div>
@@ -444,12 +513,12 @@
                     </ul>
                 </div>
 
-                <!-- Experience 3 -->
+                <!-- Experience 4 -->
                 <div class="bg-white dark:bg-gray-900 rounded-lg sm:rounded-xl shadow-md sm:shadow-lg dark:shadow-xl dark:shadow-black/30 p-6 sm:p-8 hover:shadow-lg sm:hover:shadow-xl dark:hover:shadow-black/50 transition border-l-4 border-primary">
                     <div class="flex items-start justify-between mb-4">
                         <div>
                             <h3 class="font-bold text-xl sm:text-2xl text-navy dark:text-white">Desktop Support Intern</h3>
-                            <p class="text-sm sm:text-base text-primary dark:text-blue-400 font-semibold">Policy Junction Marketing Pvt. Ltd.</p>
+                            <a href="https://policyjunction.in" target="_blank" rel="noopener noreferrer" class="text-sm sm:text-base text-primary dark:text-blue-400 font-semibold hover:underline">Policy Junction Marketing Pvt. Ltd.</a>
                         </div>
                         <span class="text-xs sm:text-sm font-semibold text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-3 sm:px-4 py-1 sm:py-2 rounded-full">Mar 2024 – Jun 2024</span>
                     </div>
@@ -469,120 +538,90 @@
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8">
                 <!-- Python -->
                 <div class="text-center">
-                    <svg class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 skill-icon" data-color="navy" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="45" class="skill-circle" data-theme="light" fill="#1E293B" opacity="0.15"/>
-                        <circle cx="50" cy="50" r="45" class="skill-circle dark-mode" style="display:none" fill="#FFFFFF" opacity="0.15"/>
-                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="40" font-weight="bold" text-anchor="middle" class="skill-text" data-theme="light" fill="#1E293B">Py</text>
-                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="40" font-weight="bold" text-anchor="middle" class="skill-text dark-mode" style="display:none" fill="#F3F4F6">Py</text>
-                    </svg>
+                    <div class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 flex items-center justify-center">
+                        <img src="https://img.icons8.com/color/96/000000/python.png" alt="Python" class="w-12 sm:w-16 md:w-20 h-12 sm:h-16 md:h-20 dark:invert"/>
+                    </div>
                     <h3 class="font-bold text-sm sm:text-base md:text-lg text-navy dark:text-white">Python</h3>
+                    <p class="text-xs sm:text-sm text-primary dark:text-blue-400 font-semibold">Expert</p>
+                </div>
+                
+                <!-- PyTorch -->
+                <div class="text-center">
+                    <div class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 flex items-center justify-center">
+                        <img src="https://img.icons8.com/?size=100&id=O6SWwpPIM0GB&format=png&color=000000" alt="PyTorch" class="w-12 sm:w-16 md:w-20 h-12 sm:h-16 md:h-20 dark:invert"/>
+                    </div>
+                    <h3 class="font-bold text-sm sm:text-base md:text-lg text-navy dark:text-white">PyTorch</h3>
                     <p class="text-xs sm:text-sm text-primary dark:text-blue-400 font-semibold">Expert</p>
                 </div>
                 
                 <!-- LangChain & RAG -->
                 <div class="text-center">
-                    <svg class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 skill-icon" data-color="accent" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="45" class="skill-circle" data-theme="light" fill="#F97316" opacity="0.15"/>
-                        <circle cx="50" cy="50" r="45" class="skill-circle dark-mode" style="display:none" fill="#FFFFFF" opacity="0.15"/>
-                        <text x="50" y="55" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" class="skill-text" data-theme="light" fill="#F97316">RAG</text>
-                        <text x="50" y="55" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" class="skill-text dark-mode" style="display:none" fill="#F3F4F6">RAG</text>
-                    </svg>
+                    <div class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 flex items-center justify-center">
+                        <img src="https://img.icons8.com/color/96/000000/link.png" alt="LangChain & RAG" class="w-12 sm:w-16 md:w-20 h-12 sm:h-16 md:h-20 dark:invert"/>
+                    </div>
                     <h3 class="font-bold text-sm sm:text-base md:text-lg text-navy dark:text-white">LangChain & RAG</h3>
                     <p class="text-xs sm:text-sm text-primary dark:text-blue-400 font-semibold">Advanced</p>
                 </div>
                 
-                <!-- PyTorch & Hugging Face -->
-                <div class="text-center">
-                    <svg class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 skill-icon" data-color="primary" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="45" class="skill-circle" data-theme="light" fill="#1A73E8" opacity="0.15"/>
-                        <circle cx="50" cy="50" r="45" class="skill-circle dark-mode" style="display:none" fill="#FFFFFF" opacity="0.15"/>
-                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" class="skill-text" data-theme="light" fill="#1A73E8">HF</text>
-                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" class="skill-text dark-mode" style="display:none" fill="#F3F4F6">HF</text>
-                    </svg>
-                    <h3 class="font-bold text-sm sm:text-base md:text-lg text-navy dark:text-white">PyTorch & HF</h3>
-                    <p class="text-xs sm:text-sm text-primary dark:text-blue-400 font-semibold">Expert</p>
-                </div>
-                
                 <!-- LLMs & Prompt Engineering -->
                 <div class="text-center">
-                    <svg class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 skill-icon" data-color="accent" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="45" class="skill-circle" data-theme="light" fill="#F97316" opacity="0.15"/>
-                        <circle cx="50" cy="50" r="45" class="skill-circle dark-mode" style="display:none" fill="#FFFFFF" opacity="0.15"/>
-                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" class="skill-text" data-theme="light" fill="#F97316">LLM</text>
-                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" class="skill-text dark-mode" style="display:none" fill="#F3F4F6">LLM</text>
-                    </svg>
+                    <div class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 flex items-center justify-center">
+                        <img src="https://img.icons8.com/color/96/000000/chat.png" alt="LLMs & Prompt Eng" class="w-12 sm:w-16 md:w-20 h-12 sm:h-16 md:h-20 dark:invert"/>
+                    </div>
                     <h3 class="font-bold text-sm sm:text-base md:text-lg text-navy dark:text-white">LLMs & Prompt Eng</h3>
                     <p class="text-xs sm:text-sm text-primary dark:text-blue-400 font-semibold">Advanced</p>
                 </div>
                 
                 <!-- GenAI & Fine-tuning -->
                 <div class="text-center">
-                    <svg class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 skill-icon" data-color="navy" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="45" class="skill-circle" data-theme="light" fill="#1E293B" opacity="0.15"/>
-                        <circle cx="50" cy="50" r="45" class="skill-circle dark-mode" style="display:none" fill="#FFFFFF" opacity="0.15"/>
-                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" class="skill-text" data-theme="light" fill="#1E293B">AI</text>
-                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" class="skill-text dark-mode" style="display:none" fill="#F3F4F6">AI</text>
-                    </svg>
+                    <div class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 flex items-center justify-center">
+                        <img src="https://img.icons8.com/color/96/000000/artificial-intelligence.png" alt="GenAI & Fine-tuning" class="w-12 sm:w-16 md:w-20 h-12 sm:h-16 md:h-20 dark:invert"/>
+                    </div>
                     <h3 class="font-bold text-sm sm:text-base md:text-lg text-navy dark:text-white">GenAI & Fine-tuning</h3>
                     <p class="text-xs sm:text-sm text-primary dark:text-blue-400 font-semibold">Advanced</p>
                 </div>
                 
                 <!-- Vector Databases -->
                 <div class="text-center">
-                    <svg class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 skill-icon" data-color="primary" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="45" class="skill-circle" data-theme="light" fill="#1A73E8" opacity="0.15"/>
-                        <circle cx="50" cy="50" r="45" class="skill-circle dark-mode" style="display:none" fill="#FFFFFF" opacity="0.15"/>
-                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" class="skill-text" data-theme="light" fill="#1A73E8">VDB</text>
-                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" class="skill-text dark-mode" style="display:none" fill="#F3F4F6">VDB</text>
-                    </svg>
+                    <div class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 flex items-center justify-center">
+                        <img src="https://img.icons8.com/color/96/000000/database.png" alt="Vector Databases" class="w-12 sm:w-16 md:w-20 h-12 sm:h-16 md:h-20 dark:invert"/>
+                    </div>
                     <h3 class="font-bold text-sm sm:text-base md:text-lg text-navy dark:text-white">Vector Databases</h3>
                     <p class="text-xs sm:text-sm text-primary dark:text-blue-400 font-semibold">Advanced</p>
                 </div>
                 
                 <!-- MLOps & Deployment -->
                 <div class="text-center">
-                    <svg class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 skill-icon" data-color="accent" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="45" class="skill-circle" data-theme="light" fill="#F97316" opacity="0.15"/>
-                        <circle cx="50" cy="50" r="45" class="skill-circle dark-mode" style="display:none" fill="#FFFFFF" opacity="0.15"/>
-                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="26" font-weight="bold" text-anchor="middle" class="skill-text" data-theme="light" fill="#F97316">OPS</text>
-                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="26" font-weight="bold" text-anchor="middle" class="skill-text dark-mode" style="display:none" fill="#F3F4F6">OPS</text>
-                    </svg>
+                    <div class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 flex items-center justify-center">
+                        <img src="https://img.icons8.com/color/96/000000/server.png" alt="MLOps & Deployment" class="w-12 sm:w-16 md:w-20 h-12 sm:h-16 md:h-20 dark:invert"/>
+                    </div>
                     <h3 class="font-bold text-sm sm:text-base md:text-lg text-navy dark:text-white">MLOps & Deployment</h3>
                     <p class="text-xs sm:text-sm text-primary dark:text-blue-400 font-semibold">Advanced</p>
                 </div>
                 
                 <!-- Computer Vision -->
                 <div class="text-center">
-                    <svg class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 skill-icon" data-color="navy" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="45" class="skill-circle" data-theme="light" fill="#1E293B" opacity="0.15"/>
-                        <circle cx="50" cy="50" r="45" class="skill-circle dark-mode" style="display:none" fill="#FFFFFF" opacity="0.15"/>
-                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="38" font-weight="bold" text-anchor="middle" class="skill-text" data-theme="light" fill="#1E293B">CV</text>
-                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="38" font-weight="bold" text-anchor="middle" class="skill-text dark-mode" style="display:none" fill="#F3F4F6">CV</text>
-                    </svg>
+                    <div class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 flex items-center justify-center">
+                        <img src="https://img.icons8.com/color/96/000000/camera-identification.png" alt="Computer Vision" class="w-12 sm:w-16 md:w-20 h-12 sm:h-16 md:h-20 dark:invert"/>
+                    </div>
                     <h3 class="font-bold text-sm sm:text-base md:text-lg text-navy dark:text-white">Computer Vision</h3>
                     <p class="text-xs sm:text-sm text-primary dark:text-blue-400 font-semibold">Expert</p>
                 </div>
                 
                 <!-- NLP & Time Series -->
                 <div class="text-center">
-                    <svg class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 skill-icon" data-color="primary" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="45" class="skill-circle" data-theme="light" fill="#1A73E8" opacity="0.15"/>
-                        <circle cx="50" cy="50" r="45" class="skill-circle dark-mode" style="display:none" fill="#FFFFFF" opacity="0.15"/>
-                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" class="skill-text" data-theme="light" fill="#1A73E8">TS</text>
-                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" class="skill-text dark-mode" style="display:none" fill="#F3F4F6">TS</text>
-                    </svg>
+                    <div class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 flex items-center justify-center">
+                        <img src="https://img.icons8.com/color/96/000000/timeline.png" alt="NLP & Time Series" class="w-12 sm:w-16 md:w-20 h-12 sm:h-16 md:h-20 dark:invert"/>
+                    </div>
                     <h3 class="font-bold text-sm sm:text-base md:text-lg text-navy dark:text-white">NLP & Time Series</h3>
                     <p class="text-xs sm:text-sm text-primary dark:text-blue-400 font-semibold">Expert</p>
                 </div>
                 
                 <!-- Deep Learning -->
                 <div class="text-center">
-                    <svg class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 skill-icon" data-color="primary" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="45" class="skill-circle" data-theme="light" fill="#1A73E8" opacity="0.15"/>
-                        <circle cx="50" cy="50" r="45" class="skill-circle dark-mode" style="display:none" fill="#FFFFFF" opacity="0.15"/>
-                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" class="skill-text" data-theme="light" fill="#1A73E8">DL</text>
-                        <text x="50" y="60" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" class="skill-text dark-mode" style="display:none" fill="#F3F4F6">DL</text>
-                    </svg>
+                    <div class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 flex items-center justify-center">
+                        <img src="https://img.icons8.com/color/96/000000/mind-map.png" alt="Deep Learning" class="w-12 sm:w-16 md:w-20 h-12 sm:h-16 md:h-20 dark:invert"/>
+                    </div>
                     <h3 class="font-bold text-sm sm:text-base md:text-lg text-navy dark:text-white">Deep Learning</h3>
                     <p class="text-xs sm:text-sm text-primary dark:text-blue-400 font-semibold">Expert</p>
                 </div>
@@ -624,26 +663,53 @@
             <h2 class="font-montserrat font-bold text-3xl sm:text-4xl md:text-5xl text-navy dark:text-white mb-3 sm:mb-4">Get In Touch</h2>
             <p class="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-8 sm:mb-12">Let's collaborate on innovative AI solutions. Reach out via any channel below.</p>
             
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-8 sm:gap-12">
-                <a href="https://github.com/nilesh5911" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center hover:scale-110 transition active:scale-95">
-                    <div class="text-5xl sm:text-6xl text-navy dark:text-gray-300 mb-2 sm:mb-3"><i class="fab fa-github"></i></div>
-                    <span class="font-semibold text-sm sm:text-base text-navy dark:text-gray-300">GitHub</span>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-8 sm:gap-10 flex-wrap">
+                <!-- GitHub -->
+                <a href="https://github.com/nilesh5911" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center group">
+                    <div class="w-16 sm:w-20 h-16 sm:h-20 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center mb-3 sm:mb-4 group-hover:shadow-lg group-hover:scale-110 transition-all duration-300">
+                        <img src="https://img.icons8.com/color/96/000000/github--v1.png" alt="GitHub" class="w-8 sm:w-10 h-8 sm:h-10 dark:invert"/>
+                    </div>
+                    <span class="font-semibold text-sm sm:text-base text-navy dark:text-gray-300 group-hover:text-primary dark:group-hover:text-blue-400 transition">GitHub</span>
                 </a>
-                <a href="https://www.linkedin.com/in/nilesh-mishra-064a861b3/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center hover:scale-110 transition active:scale-95">
-                    <div class="text-5xl sm:text-6xl text-primary dark:text-blue-400 mb-2 sm:mb-3"><i class="fab fa-linkedin"></i></div>
-                    <span class="font-semibold text-sm sm:text-base text-primary dark:text-blue-400">LinkedIn</span>
+                
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/nilesh-mishra-064a861b3/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center group">
+                    <div class="w-16 sm:w-20 h-16 sm:h-20 rounded-full bg-blue-50 dark:bg-gray-800 flex items-center justify-center mb-3 sm:mb-4 group-hover:shadow-lg group-hover:scale-110 transition-all duration-300">
+                        <img src="https://img.icons8.com/color/96/0077b5/linkedin.png" alt="LinkedIn" class="w-8 sm:w-10 h-8 sm:h-10"/>
+                    </div>
+                    <span class="font-semibold text-sm sm:text-base text-primary dark:text-blue-400 group-hover:text-navy dark:group-hover:text-gray-300 transition">LinkedIn</span>
                 </a>
-                <a href="mailto:mishranilesh968@gmail.com" class="flex flex-col items-center hover:scale-110 transition active:scale-95">
-                    <div class="text-5xl sm:text-6xl text-accent dark:text-orange-400 mb-2 sm:mb-3"><i class="fas fa-envelope"></i></div>
-                    <span class="font-semibold text-sm sm:text-base text-accent dark:text-orange-400">Email</span>
+                
+                <!-- Email -->
+                <a href="mailto:mishranilesh968@gmail.com" class="flex flex-col items-center group">
+                    <div class="w-16 sm:w-20 h-16 sm:h-20 rounded-full bg-orange-50 dark:bg-gray-800 flex items-center justify-center mb-3 sm:mb-4 group-hover:shadow-lg group-hover:scale-110 transition-all duration-300">
+                        <img src="https://img.icons8.com/color/96/000000/gmail-new.png" alt="Email" class="w-8 sm:w-10 h-8 sm:h-10"/>
+                    </div>
+                    <span class="font-semibold text-sm sm:text-base text-accent dark:text-orange-400 group-hover:text-navy dark:group-hover:text-gray-300 transition">Email</span>
                 </a>
-                <a href="https://whatsapp.com/channel/0029Vb6RowtGE56cnp58012p" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center hover:scale-110 transition active:scale-95">
-                    <div class="text-5xl sm:text-6xl text-green-500 dark:text-green-400 mb-2 sm:mb-3"><i class="fab fa-whatsapp"></i></div>
-                    <span class="font-semibold text-sm sm:text-base text-green-500 dark:text-green-400">WhatsApp</span>
+                
+                <!-- WhatsApp -->
+                <a href="https://whatsapp.com/channel/0029Vb6RowtGE56cnp58012p" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center group">
+                    <div class="w-16 sm:w-20 h-16 sm:h-20 rounded-full bg-green-50 dark:bg-gray-800 flex items-center justify-center mb-3 sm:mb-4 group-hover:shadow-lg group-hover:scale-110 transition-all duration-300">
+                        <img src="https://img.icons8.com/color/96/000000/whatsapp--v1.png" alt="WhatsApp" class="w-8 sm:w-10 h-8 sm:h-10"/>
+                    </div>
+                    <span class="font-semibold text-sm sm:text-base text-green-500 dark:text-green-400 group-hover:text-navy dark:group-hover:text-gray-300 transition">WhatsApp</span>
                 </a>
-                <a href="https://www.youtube.com/@PyPrepZone" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center hover:scale-110 transition active:scale-95">
-                    <div class="text-5xl sm:text-6xl text-red-600 dark:text-red-500 mb-2 sm:mb-3"><i class="fab fa-youtube"></i></div>
-                    <span class="font-semibold text-sm sm:text-base text-red-600 dark:text-red-500">YouTube</span>
+                
+                <!-- YouTube -->
+                <a href="https://www.youtube.com/@PyPrepZone" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center group">
+                    <div class="w-16 sm:w-20 h-16 sm:h-20 rounded-full bg-red-50 dark:bg-gray-800 flex items-center justify-center mb-3 sm:mb-4 group-hover:shadow-lg group-hover:scale-110 transition-all duration-300">
+                        <img src="https://img.icons8.com/color/96/000000/youtube-play.png" alt="YouTube" class="w-8 sm:w-10 h-8 sm:h-10"/>
+                    </div>
+                    <span class="font-semibold text-sm sm:text-base text-red-600 dark:text-red-500 group-hover:text-navy dark:group-hover:text-gray-300 transition">YouTube</span>
+                </a>
+                
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/pyprepzone" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center group">
+                    <div class="w-16 sm:w-20 h-16 sm:h-20 rounded-full bg-pink-50 dark:bg-gray-800 flex items-center justify-center mb-3 sm:mb-4 group-hover:shadow-lg group-hover:scale-110 transition-all duration-300">
+                        <img src="https://img.icons8.com/color/96/000000/instagram-new.png" alt="Instagram" class="w-8 sm:w-10 h-8 sm:h-10"/>
+                    </div>
+                    <span class="font-semibold text-sm sm:text-base text-pink-600 dark:text-pink-500 group-hover:text-navy dark:group-hover:text-gray-300 transition">Instagram</span>
                 </a>
             </div>
         </div>
@@ -652,10 +718,36 @@
     <!-- Footer -->
     <footer class="bg-navy dark:bg-gray-950 text-white py-6 sm:py-8">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-            <p class="text-sm sm:text-base">&copy; 2024 Nilesh Mishra. All rights reserved.</p>
+            <p class="text-sm sm:text-base">&copy; 2025 Nilesh Mishra. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- Floating Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-primary hover:bg-blue-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 opacity-0 invisible hover:scale-110 z-40" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <script src="assets/common.js"></script>
+    <script>
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+                backToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+                backToTopBtn.classList.remove('opacity-100', 'visible');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 </html>

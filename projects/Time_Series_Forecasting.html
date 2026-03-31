@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Healthcare AI - Breast Cancer Detection using CNN. Achieving 94.5% accuracy with deep learning.">
-    <meta name="keywords" content="Healthcare AI, Breast Cancer Detection, CNN, Deep Learning, Medical Imaging">
+    <meta name="description" content="Time Series Forecasting - LSTM model for stock price prediction with 18% MAPE">
+    <meta name="keywords" content="Time Series, Forecasting, LSTM, Stock Market, Deep Learning">
     <meta name="author" content="Nilesh Mishra">
     <meta name="theme-color" content="#1E293B">
     
-    <title>Healthcare AI - Breast Cancer Detection | Nilesh Mishra</title>
+    <title>Time Series Forecasting | Nilesh Mishra</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -34,7 +34,7 @@
     <!-- Navigation Bar -->
     <nav class="sticky top-0 z-50 bg-white dark:bg-gray-900 shadow-md dark:shadow-lg">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-            <a href="../index.html" class="flex items-center space-x-2 sm:space-x-3 font-montserrat font-bold text-sm sm:text-xl hover:opacity-80 transition">
+            <a href="../Nilesh_Mishra.html" class="flex items-center space-x-2 sm:space-x-3 font-montserrat font-bold text-sm sm:text-xl hover:opacity-80 transition">
                 <svg class="w-8 h-8 sm:w-10 sm:h-10 rounded" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                         <linearGradient id="gradientNM" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -48,9 +48,10 @@
                 <span class="text-navy dark:text-white hidden sm:inline">Nilesh Mishra</span>
             </a>
             <div class="flex items-center space-x-4">
-                <a href="../index.html" class="text-sm sm:text-base font-semibold text-navy dark:text-white hover:text-primary dark:hover:text-blue-400 transition">← Back</a>
-                <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition" aria-label="Toggle theme">
-                    <i class="fas fa-moon text-navy dark:text-gray-300"></i>
+                <a href="../Nilesh_Mishra.html" class="text-sm sm:text-base font-semibold text-navy dark:text-white hover:text-primary dark:hover:text-blue-400 transition">← Back</a>
+                <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon text-navy dark:hidden"></i>
+                    <i class="fas fa-sun text-yellow-400 hidden dark:block"></i>
                 </button>
             </div>
         </div>
@@ -64,10 +65,10 @@
         </svg>
         <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
             <div class="flex items-center gap-4 sm:gap-6 mb-6">
-                <div class="text-5xl sm:text-6xl md:text-7xl text-primary"><i class="fas fa-heartbeat"></i></div>
-                <h1 class="font-montserrat font-bold text-3xl sm:text-4xl md:text-5xl text-navy dark:text-white">Healthcare AI</h1>
+                <div class="text-5xl sm:text-6xl md:text-7xl text-accent"><i class="fa-solid fa-chart-area"></i></div>
+                <h1 class="font-montserrat font-bold text-3xl sm:text-4xl md:text-5xl text-navy dark:text-white">Time Series Forecasting</h1>
             </div>
-            <p class="text-base sm:text-lg text-gray-700 dark:text-gray-400 max-w-3xl">Advanced CNN-based breast cancer detection system achieving 94.5% accuracy with automated screening capabilities for early diagnosis.</p>
+            <p class="text-base sm:text-lg text-gray-700 dark:text-gray-400 max-w-3xl">LSTM neural network for predicting stock market trends with 18% MAPE, enabling data-driven investment strategies.</p>
         </div>
     </section>
 
@@ -79,27 +80,27 @@
                 <h2 class="font-montserrat font-bold text-3xl sm:text-4xl text-navy dark:text-white mb-6">Project Overview</h2>
                 <div class="grid md:grid-cols-2 gap-8 items-center">
                     <div class="bg-gray-50 dark:bg-gray-800 p-6 sm:p-8 rounded-lg">
-                        <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300 mb-4">The Healthcare AI project implements a state-of-the-art Convolutional Neural Network (CNN) for detecting breast cancer from medical imaging data. Trained on large-scale datasets, the model identifies malignant patterns with high precision and recall.</p>
-                        <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300">Deployed via Streamlit, it provides an intuitive interface for medical professionals to upload images and receive instant predictions, significantly reducing diagnostic time.</p>
+                        <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300 mb-4">This project uses Long Short-Term Memory (LSTM) networks to forecast stock prices and market trends. The model captures complex temporal dependencies and patterns in historical price data, enabling multi-step ahead predictions.</p>
+                        <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300">With careful feature engineering and hyperparameter tuning, the system achieves 18% Mean Absolute Percentage Error (MAPE), making it viable for real-world trading strategies and market analysis.</p>
                     </div>
-                    <div class="bg-gradient-to-br from-primary/20 to-accent/20 dark:from-primary/10 dark:to-accent/10 p-6 sm:p-8 rounded-lg border-2 border-primary/30">
+                    <div class="bg-gradient-to-br from-accent/20 to-primary/20 dark:from-accent/10 dark:to-primary/10 p-6 sm:p-8 rounded-lg border-2 border-accent/30">
                         <h3 class="font-bold text-lg sm:text-xl text-navy dark:text-white mb-4">Key Metrics</h3>
                         <div class="space-y-3">
                             <div class="flex justify-between items-center">
-                                <span class="text-gray-700 dark:text-gray-400">Detection Accuracy</span>
-                                <span class="font-bold text-primary">94.5%</span>
+                                <span class="text-gray-700 dark:text-gray-400">MAPE</span>
+                                <span class="font-bold text-accent">18%</span>
                             </div>
                             <div class="flex justify-between items-center">
-                                <span class="text-gray-700 dark:text-gray-400">Sensitivity Rate</span>
-                                <span class="font-bold text-accent">96%</span>
+                                <span class="text-gray-700 dark:text-gray-400">R² Score</span>
+                                <span class="font-bold text-primary">0.87</span>
                             </div>
                             <div class="flex justify-between items-center">
-                                <span class="text-gray-700 dark:text-gray-400">Specificity</span>
-                                <span class="font-bold text-primary">92%</span>
+                                <span class="text-gray-700 dark:text-gray-400">Prediction Window</span>
+                                <span class="font-bold text-accent">30 days</span>
                             </div>
                             <div class="flex justify-between items-center">
-                                <span class="text-gray-700 dark:text-gray-400">Processing Speed</span>
-                                <span class="font-bold text-accent">< 5 seconds</span>
+                                <span class="text-gray-700 dark:text-gray-400">Data Points</span>
+                                <span class="font-bold text-primary">5+ years</span>
                             </div>
                         </div>
                     </div>
@@ -115,22 +116,22 @@
                     <li class="flex gap-4 items-start">
                         <span class="text-accent text-lg flex-shrink-0"><i class="fas fa-check"></i></span>
                         <div>
-                            <h3 class="font-bold text-navy dark:text-white mb-1">Early Detection Challenges</h3>
-                            <p class="text-gray-700 dark:text-gray-300 text-sm sm:text-base">Early detection challenges in medical diagnosis requires expert radiologists to analyze thousands of images annually.</p>
+                            <h3 class="font-bold text-navy dark:text-white mb-1">Market Volatility</h3>
+                            <p class="text-gray-700 dark:text-gray-300 text-sm sm:text-base">Stock market predictions are complicated by high volatility and sudden price fluctuations driven by multiple factors.</p>
                         </div>
                     </li>
                     <li class="flex gap-4 items-start">
                         <span class="text-accent text-lg flex-shrink-0"><i class="fas fa-check"></i></span>
                         <div>
-                            <h3 class="font-bold text-navy dark:text-white mb-1">Limited Expert Availability</h3>
-                            <p class="text-gray-700 dark:text-gray-300 text-sm sm:text-base">Limited accessibility to expert pathologists in developing regions affects patient outcomes and healthcare equity.</p>
+                            <h3 class="font-bold text-navy dark:text-white mb-1">Complex Temporal Dependencies</h3>
+                            <p class="text-gray-700 dark:text-gray-300 text-sm sm:text-base">Traditional methods struggle to capture long-range dependencies and non-linear patterns in time series data.</p>
                         </div>
                     </li>
                     <li class="flex gap-4 items-start">
                         <span class="text-accent text-lg flex-shrink-0"><i class="fas fa-check"></i></span>
                         <div>
-                            <h3 class="font-bold text-navy dark:text-white mb-1">Time-Consuming Analysis</h3>
-                            <p class="text-gray-700 dark:text-gray-300 text-sm sm:text-base">Manual image analysis is time-consuming and prone to human error, leading to diagnostic delays.</p>
+                            <h3 class="font-bold text-navy dark:text-white mb-1">Noise and Outliers</h3>
+                            <p class="text-gray-700 dark:text-gray-300 text-sm sm:text-base">Market data contains significant noise and outliers that can distort predictions and reduce model reliability.</p>
                         </div>
                     </li>
                 </ul>
@@ -148,22 +149,22 @@
                             <li class="flex gap-3 items-start">
                                 <span class="text-accent font-bold">1.</span>
                                 <div>
-                                    <p class="font-semibold text-navy dark:text-white">CNN Architecture</p>
-                                    <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Deep convolutional neural network trained on large medical imaging datasets</p>
+                                    <p class="font-semibold text-navy dark:text-white">LSTM Architecture</p>
+                                    <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Multi-layer LSTM networks capturing temporal dependencies effectively</p>
                                 </div>
                             </li>
                             <li class="flex gap-3 items-start">
                                 <span class="text-accent font-bold">2.</span>
                                 <div>
-                                    <p class="font-semibold text-navy dark:text-white">Image Preprocessing</p>
-                                    <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Advanced normalization and augmentation techniques for robust predictions</p>
+                                    <p class="font-semibold text-navy dark:text-white">Feature Engineering</p>
+                                    <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Technical indicators, moving averages, and volatility measures</p>
                                 </div>
                             </li>
                             <li class="flex gap-3 items-start">
                                 <span class="text-accent font-bold">3.</span>
                                 <div>
-                                    <p class="font-semibold text-navy dark:text-white">Streamlit UI</p>
-                                    <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400">User-friendly interface for medical professionals</p>
+                                    <p class="font-semibold text-navy dark:text-white">Data Normalization</p>
+                                    <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Proper preprocessing and normalization to handle noise and outliers</p>
                                 </div>
                             </li>
                         </ul>
@@ -172,16 +173,16 @@
                         <h3 class="font-bold text-lg sm:text-xl text-navy dark:text-white mb-4">Tech Stack</h3>
                         <div class="space-y-2">
                             <div class="bg-white dark:bg-gray-900 p-3 rounded border-l-2 border-primary">
-                                <p class="font-semibold text-navy dark:text-white text-sm">Framework</p>
+                                <p class="font-semibold text-navy dark:text-white text-sm">Deep Learning</p>
                                 <p class="text-xs text-gray-600 dark:text-gray-400">TensorFlow, Keras, PyTorch</p>
                             </div>
                             <div class="bg-white dark:bg-gray-900 p-3 rounded border-l-2 border-accent">
-                                <p class="font-semibold text-navy dark:text-white text-sm">Frontend</p>
-                                <p class="text-xs text-gray-600 dark:text-gray-400">Streamlit, HTML5</p>
+                                <p class="font-semibold text-navy dark:text-white text-sm">Data Processing</p>
+                                <p class="text-xs text-gray-600 dark:text-gray-400">Pandas, NumPy, Scikit-learn</p>
                             </div>
                             <div class="bg-white dark:bg-gray-900 p-3 rounded border-l-2 border-primary">
-                                <p class="font-semibold text-navy dark:text-white text-sm">Languages</p>
-                                <p class="text-xs text-gray-600 dark:text-gray-400">Python 3.8+, NumPy, Pandas</p>
+                                <p class="font-semibold text-navy dark:text-white text-sm">Visualization</p>
+                                <p class="text-xs text-gray-600 dark:text-gray-400">Matplotlib, Plotly, Seaborn</p>
                             </div>
                         </div>
                     </div>
@@ -194,31 +195,31 @@
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 p-6 rounded-lg hover:border-primary transition">
                         <div class="flex items-center gap-3 mb-4">
-                            <span class="text-3xl text-primary"><i class="fas fa-image"></i></span>
-                            <h3 class="font-bold text-lg text-navy dark:text-white">Medical Image Upload</h3>
+                            <span class="text-3xl text-accent"><i class="fa-solid fa-chart-line"></i></span>
+                            <h3 class="font-bold text-lg text-navy dark:text-white">Multi-Step Prediction</h3>
                         </div>
-                        <p class="text-sm text-gray-600 dark:text-gray-400">Support for multiple medical imaging formats with instant preprocessing.</p>
-                    </div>
-                    <div class="bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 p-6 rounded-lg hover:border-accent transition">
-                        <div class="flex items-center gap-3 mb-4">
-                            <span class="text-3xl text-accent"><i class="fas fa-brain"></i></span>
-                            <h3 class="font-bold text-lg text-navy dark:text-white">CNN Analysis</h3>
-                        </div>
-                        <p class="text-sm text-gray-600 dark:text-gray-400">94.5% accuracy for malignant tumor detection and classification.</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Predicts up to 30 days ahead with sequence-to-sequence architecture.</p>
                     </div>
                     <div class="bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 p-6 rounded-lg hover:border-primary transition">
                         <div class="flex items-center gap-3 mb-4">
-                            <span class="text-3xl text-primary"><i class="fas fa-chart-bar"></i></span>
-                            <h3 class="font-bold text-lg text-navy dark:text-white">Risk Assessment</h3>
+                            <span class="text-3xl text-primary"><i class="fas fa-sliders-h"></i></span>
+                            <h3 class="font-bold text-lg text-navy dark:text-white">Optimization</h3>
                         </div>
-                        <p class="text-sm text-gray-600 dark:text-gray-400">Confidence scores and visual attention maps for detected anomalies.</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Hyperparameter tuning achieving 18% MAPE on test data.</p>
                     </div>
                     <div class="bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 p-6 rounded-lg hover:border-accent transition">
                         <div class="flex items-center gap-3 mb-4">
-                            <span class="text-3xl text-accent"><i class="fas fa-bolt"></i></span>
-                            <h3 class="font-bold text-lg text-navy dark:text-white">Real-Time Processing</h3>
+                            <span class="text-3xl text-accent"><i class="fas fa-fingerprint"></i></span>
+                            <h3 class="font-bold text-lg text-navy dark:text-white">Technical Indicators</h3>
                         </div>
-                        <p class="text-sm text-gray-600 dark:text-gray-400">GPU-accelerated inference delivering results in under 5 seconds.</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Integration of moving averages, RSI, MACD, and volatility measures.</p>
+                    </div>
+                    <div class="bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 p-6 rounded-lg hover:border-primary transition">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="text-3xl text-primary"><i class="fas fa-eye"></i></span>
+                            <h3 class="font-bold text-lg text-navy dark:text-white">Real-Time Monitoring</h3>
+                        </div>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Live market predictions and trend analysis dashboards.</p>
                     </div>
                 </div>
             </div>
@@ -230,16 +231,16 @@
                 </h2>
                 <div class="grid md:grid-cols-3 gap-6">
                     <div class="text-center">
-                        <div class="text-4xl font-bold text-accent mb-2">94.5%</div>
-                        <p class="text-gray-200">Detection Accuracy</p>
+                        <div class="text-4xl font-bold text-accent mb-2">18%</div>
+                        <p class="text-gray-200">MAPE Error Rate</p>
                     </div>
                     <div class="text-center">
-                        <div class="text-4xl font-bold text-primary mb-2">60%</div>
-                        <p class="text-gray-200">Faster Diagnosis</p>
+                        <div class="text-4xl font-bold text-primary mb-2">0.87</div>
+                        <p class="text-gray-200">R² Score</p>
                     </div>
                     <div class="text-center">
-                        <div class="text-4xl font-bold text-accent mb-2">24/7</div>
-                        <p class="text-gray-200">Availability</p>
+                        <div class="text-4xl font-bold text-accent mb-2">30</div>
+                        <p class="text-gray-200">Days Ahead</p>
                     </div>
                 </div>
             </div>
@@ -248,9 +249,8 @@
             <div class="text-center">
                 <h2 class="font-montserrat font-bold text-2xl sm:text-3xl text-navy dark:text-white mb-6">Explore the Project</h2>
                 <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="https://github.com/nilesh5911/breast-cancer-app" target="_blank" class="bg-primary hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition active:scale-95">View on GitHub</a>
-                    <a href="https://breast-cancer-app-predict.streamlit.app/" target="_blank" class="bg-accent hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg transition active:scale-95">Live Demo</a>
-                    <a href="../index.html#projects" class="border-2 border-primary text-primary dark:text-blue-400 hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white font-semibold py-3 px-8 rounded-lg transition active:scale-95">More Projects</a>
+                    <a href="https://github.com" target="_blank" class="bg-primary hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition active:scale-95">View on GitHub</a>
+                    <a href="../Nilesh_Mishra.html#projects" class="border-2 border-primary text-primary dark:text-blue-400 hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white font-semibold py-3 px-8 rounded-lg transition active:scale-95">More Projects</a>
                 </div>
             </div>
         </div>
@@ -259,7 +259,7 @@
     <!-- Footer -->
     <footer class="bg-navy dark:bg-gray-950 text-white py-6 sm:py-8 mt-16">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-            <p class="text-sm sm:text-base">&copy; 2024 Nilesh Mishra. All rights reserved.</p>
+            <p class="text-sm sm:text-base">&copy; 2025 Nilesh Mishra. All rights reserved.</p>
         </div>
     </footer>
 
