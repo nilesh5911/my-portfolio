@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nilesh Mishra - AI Engineer | Innovating with ML & NLP. Healthcare AI, Time Series Forecasting, Generative AI, and Full-Stack Development projects.">
+    <meta name="keywords" content="AI, Machine Learning, NLP, Data Science, Deep Learning, Neural Networks, LSTM, RAG, Generative AI">
+    <meta name="author" content="Nilesh Mishra">
+    <meta name="theme-color" content="#1E293B">
+    <meta name="robots" content="index, follow">
+    <meta name="canonical" content="https://nilesh-portfolio.com">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nilesh Mishra - AI Engineer Portfolio">
+    <meta property="og:description" content="Professional AI/ML Engineer portfolio showcasing innovative projects in Healthcare AI, Generative AI, and Time Series Forecasting.">
+    <meta property="og:url" content="https://nilesh-portfolio.com">
+    <meta property="og:image" content="https://nilesh-portfolio.com/og-image.png">
+    <meta property="og:site_name" content="Nilesh Mishra Portfolio">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nilesh Mishra - AI Engineer Portfolio">
+    <meta name="twitter:description" content="Professional AI/ML Engineer - Innovating with ML & NLP">
+    <meta name="twitter:image" content="https://nilesh-portfolio.com/og-image.png">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Nilesh Mishra",
+        "jobTitle": "AI Engineer",
+        "url": "https://nilesh-portfolio.com",
+        "sameAs": [
+            "https://github.com/nilesh",
+            "https://linkedin.com/in/nilesh-mishra",
+            "mailto:nilesh@example.com"
+        ]
+    }
+    </script>
+    
+    <title>Nilesh Mishra - AI Engineer | ML & NLP Innovator</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='grad' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%231E293B;stop-opacity:1'/><stop offset='100%' style='stop-color:%23F97316;stop-opacity:1'/></linearGradient></defs><rect fill='url(%23grad)' width='100' height='100' rx='12'/><text x='50' y='65' font-family='Montserrat,sans-serif' font-weight='800' font-size='50' fill='white' text-anchor='middle'>NM</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#1E293B',
+                        primary: '#1A73E8',
+                        accent: '#F97316',
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-inter">
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-white dark:bg-gray-900 shadow-md dark:shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2 sm:space-x-3 font-montserrat font-bold text-sm sm:text-xl">
+                <svg class="w-8 h-8 sm:w-10 sm:h-10 rounded" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="gradientNM" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#1E293B;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#F97316;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <rect class="logo-bg" fill="url(#gradientNM)" width="100" height="100" rx="12" />
+                    <text x="50" y="65" style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:50px;fill:white;text-anchor:middle;">NM</text>
+                </svg>
+                <span class="text-navy dark:text-white hidden sm:inline">Nilesh Mishra</span>
+            </div>
+
+            <!-- Desktop & Mobile Menu -->
+            <ul id="nav-menu" class="nav-menu hidden md:flex absolute md:relative top-16 md:top-0 left-0 right-0 md:space-x-8 flex-col md:flex-row bg-white dark:bg-gray-900 md:bg-transparent md:dark:bg-transparent px-6 md:px-0 py-4 md:py-0 space-y-4 md:space-y-0 font-medium text-gray-700 dark:text-gray-300 shadow-lg md:shadow-none">
+                <li><a href="#home" class="hover:text-primary dark:hover:text-blue-400 transition">Home</a></li>
+                <li><a href="#about" class="hover:text-primary dark:hover:text-blue-400 transition">About</a></li>
+                <li><a href="#projects" class="hover:text-primary dark:hover:text-blue-400 transition">Projects</a></li>
+                <li><a href="#experience" class="hover:text-primary dark:hover:text-blue-400 transition">Experience</a></li>
+                <li><a href="#skills" class="hover:text-primary dark:hover:text-blue-400 transition">Skills</a></li>
+                <li><a href="#future" class="hover:text-primary dark:hover:text-blue-400 transition">Future</a></li>
+                <li><a href="#contact" class="hover:text-primary dark:hover:text-blue-400 transition">Contact</a></li>
+            </ul>
+
+            <!-- Theme Toggle & Mobile Menu -->
+            <div class="flex items-center space-x-4">
+                <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon text-navy dark:hidden"></i>
+                    <i class="fas fa-sun text-yellow-400 hidden dark:block"></i>
+                </button>
+                <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition" aria-label="Toggle menu">
+                    <i class="fas fa-bars text-navy dark:text-gray-300"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-gray-100 dark:bg-gray-950 py-16 sm:py-24 md:py-32 overflow-hidden">
+        <!-- Tech Pattern Background -->
+        <div class="absolute inset-0 opacity-5 bg-pattern"></div>
+        <svg class="absolute top-0 right-0 w-64 sm:w-96 h-64 sm:h-96 text-gray-200 dark:text-gray-800 opacity-20" viewBox="0 0 200 200">
+            <circle cx="100" cy="100" r="80" fill="none" stroke="currentColor" stroke-width="1"/>
+            <circle cx="100" cy="100" r="60" fill="none" stroke="currentColor" stroke-width="1"/>
+            <circle cx="100" cy="100" r="40" fill="none" stroke="currentColor" stroke-width="1"/>
+        </svg>
+
+        <div class="relative max-w-6xl mx-auto px-4 sm:px-6 text-center">
+            <!-- Hero Logo -->
+            <div class="flex justify-center mb-6 sm:mb-8 animate-bounce">
+                <svg class="w-20 sm:w-24 md:w-32 h-20 sm:h-24 md:h-32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="gradientHero" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#1E293B;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#F97316;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <rect fill="url(#gradientHero)" width="100" height="100" rx="16" />
+                    <text x="50" y="65" style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:50px;fill:white;text-anchor:middle;">NM</text>
+                </svg>
+            </div>
+
+            <!-- Hero Content -->
+            <h1 class="font-montserrat font-bold text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-navy dark:text-white mb-4">Nilesh Mishra</h1>
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-400 font-medium mb-6 sm:mb-8 px-4">AI Engineer | Innovating with ML & NLP</p>
+            
+            <!-- Resume Download Button -->
+            <div class="flex justify-center">
+                <a href="assets/Resume.pdf" download="Resume_Nilesh_Mishra.pdf" class="inline-flex items-center gap-2 bg-primary hover:bg-blue-700 text-white font-semibold py-3 px-6 sm:px-8 rounded-lg transition active:scale-95">
+                    <i class="fas fa-download"></i>
+                    <span>Download Resume</span>
+                </a>
+            </div>
+
+            <!-- Statistics Bar -->
+            <div class="mt-16 sm:mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+                <div class="text-center bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md dark:shadow-lg">
+                    <div class="text-3xl sm:text-4xl font-bold text-primary mb-2">5+</div>
+                    <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300 font-medium">AI Projects</p>
+                </div>
+                <div class="text-center bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md dark:shadow-lg">
+                    <div class="text-3xl sm:text-4xl font-bold text-accent mb-2">10+</div>
+                    <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300 font-medium">Tech Skills</p>
+                </div>
+                <div class="text-center bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md dark:shadow-lg">
+                    <div class="text-3xl sm:text-4xl font-bold text-primary mb-2">4+</div>
+                    <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300 font-medium">Companies</p>
+                </div>
+                <div class="text-center bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md dark:shadow-lg">
+                    <div class="text-3xl sm:text-4xl font-bold text-accent mb-2">94%+</div>
+                    <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300 font-medium">Accuracy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 sm:py-20 md:py-28 bg-white dark:bg-gray-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="font-montserrat font-bold text-3xl sm:text-4xl md:text-5xl text-navy dark:text-white mb-4">About Me</h2>
+                <p class="text-sm sm:text-base text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">Transforming complex AI challenges into scalable, production-ready solutions</p>
+            </div>
+
+            <!-- About Content Grid -->
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                <!-- Text Content -->
+                <div class="space-y-6">
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 sm:p-8 hover:shadow-lg transition">
+                        <div class="flex items-start gap-4">
+                            <div class="text-3xl text-primary flex-shrink-0"><i class="fas fa-brain"></i></div>
+                            <div>
+                                <h3 class="font-bold text-lg sm:text-xl text-navy dark:text-white mb-2">AI/ML Expertise</h3>
+                                <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300">Specialized in deep learning, neural networks, and machine learning pipeline development with a focus on practical real-world applications.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 sm:p-8 hover:shadow-lg transition">
+                        <div class="flex items-start gap-4">
+                            <div class="text-3xl text-accent flex-shrink-0"><i class="fas fa-code"></i></div>
+                            <div>
+                                <h3 class="font-bold text-lg sm:text-xl text-navy dark:text-white mb-2">Technical Skills</h3>
+                                <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300">Proficient in Python, PyTorch, LangChain, and modern AI frameworks with expertise in generative AI, RAG, and MLOps.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 sm:p-8 hover:shadow-lg transition">
+                        <div class="flex items-start gap-4">
+                            <div class="text-3xl text-primary flex-shrink-0"><i class="fas fa-rocket"></i></div>
+                            <div>
+                                <h3 class="font-bold text-lg sm:text-xl text-navy dark:text-white mb-2">Innovation Focus</h3>
+                                <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300">Passionate about building intelligent systems that solve real-world problems in healthcare, finance, and enterprise applications.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Image -->
+                <div class="mt-8 md:mt-0 flex justify-center">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-2xl blur-lg opacity-20"></div>
+                        <img src="assets/nilesh.jpg" alt="Profile picture of Nilesh Mishra" class="relative w-full max-w-sm rounded-2xl shadow-2xl dark:shadow-2xl dark:shadow-black/50">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 sm:py-20 md:py-28 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <h2 class="font-montserrat font-bold text-3xl sm:text-4xl md:text-5xl text-navy dark:text-white mb-12 sm:mb-16 text-center">Featured Projects</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white dark:bg-gray-900 rounded-lg sm:rounded-xl shadow-md sm:shadow-lg dark:shadow-xl dark:shadow-black/30 p-6 sm:p-8 hover:shadow-lg sm:hover:shadow-xl dark:hover:shadow-black/50 transition">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="font-bold text-2xl text-navy dark:text-white">Healthcare AI</h3>
+                        <span class="text-4xl text-primary"><i class="fas fa-heartbeat"></i></span>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Problem</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Early detection challenges in medical diagnosis</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Limited accessibility to expert pathologists</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Time-consuming manual analysis</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Solution</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> CNN-based deep learning model</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Breast cancer detection system</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Automated screening pipeline</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Impact</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> 94.5% accuracy achieved</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Potential for clinical deployment</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Reduces diagnosis time by 60%</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-primary dark:text-blue-300 text-xs sm:text-sm rounded-full font-semibold">Python</span>
+                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-primary dark:text-blue-300 text-xs sm:text-sm rounded-full font-semibold">CNN</span>
+                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-primary dark:text-blue-300 text-xs sm:text-sm rounded-full font-semibold">Deep Learning</span>
+                    </div>
+                    
+                    <div class="flex gap-3 sm:gap-4">
+                        <a href="projects/Healthcare_AI.html" class="flex-1 bg-primary hover:bg-blue-700 text-white font-semibold py-2 sm:py-3 rounded-lg text-center transition active:scale-95 text-sm sm:text-base">View Project</a>
+                        <a href="https://breast-cancer-app-predict.streamlit.app/" class="flex-1 border-2 border-accent text-accent dark:text-orange-400 hover:bg-accent hover:text-white dark:hover:bg-accent dark:hover:text-white font-semibold py-2 sm:py-3 rounded-lg text-center transition active:scale-95 text-sm sm:text-base">Live Demo</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white dark:bg-gray-900 rounded-lg sm:rounded-xl shadow-md sm:shadow-lg dark:shadow-xl dark:shadow-black/30 p-6 sm:p-8 hover:shadow-lg sm:hover:shadow-xl dark:hover:shadow-black/50 transition">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="font-bold text-2xl text-navy dark:text-white">Time Series Forecasting</h3>
+                        <span class="text-4xl text-accent"><i class="fa-solid fa-chart-area"></i></span>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Problem</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Predicting stock market trends accurately</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Complex temporal dependencies</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> High volatility and noise in data</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Solution</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> LSTM neural network architecture</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Multi-step ahead prediction</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Feature engineering & optimization</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Impact</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> 18% MAPE (Mean Absolute Percentage Error)</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Viable for trading strategies</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Real-time market predictions</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-accent dark:text-orange-300 text-xs sm:text-sm rounded-full font-semibold">Python</span>
+                        <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-accent dark:text-orange-300 text-xs sm:text-sm rounded-full font-semibold">LSTM</span>
+                        <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-accent dark:text-orange-300 text-xs sm:text-sm rounded-full font-semibold">Time Series</span>
+                    </div>
+                    
+                    <div class="flex gap-3 sm:gap-4">
+                        <a href="projects/Time_Series_Forecasting.html" class="flex-1 bg-primary hover:bg-blue-700 text-white font-semibold py-2 sm:py-3 rounded-lg text-center transition active:scale-95 text-sm sm:text-base">View Project</a>
+                        <!-- <a href="#" class="flex-1 border-2 border-accent text-accent dark:text-orange-400 hover:bg-accent hover:text-white dark:hover:bg-accent dark:hover:text-white font-semibold py-2 sm:py-3 rounded-lg text-center transition active:scale-95 text-sm sm:text-base">Live Demo</a> -->
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white dark:bg-gray-900 rounded-lg sm:rounded-xl shadow-md sm:shadow-lg dark:shadow-xl dark:shadow-black/30 p-6 sm:p-8 hover:shadow-lg sm:hover:shadow-xl dark:hover:shadow-black/50 transition">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="font-bold text-2xl text-navy dark:text-white">Generative AI Chatbot</h3>
+                        <span class="text-4xl text-primary"><i class="fas fa-robot"></i></span>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Problem</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Providing medical consultation at scale</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Information accuracy & verification</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Hallucination in LLM responses</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Solution</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Medical Chatbot with RAG framework</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> LLM integration with fact-checking</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Knowledge base implementation</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Impact</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Real-time medical Q&A system</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Verified source attribution</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Improved response accuracy</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 text-xs sm:text-sm rounded-full font-semibold">LangChain</span>
+                        <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 text-xs sm:text-sm rounded-full font-semibold">RAG</span>
+                        <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 text-xs sm:text-sm rounded-full font-semibold">LLM</span>
+                    </div>
+                    
+                    <div class="flex gap-3 sm:gap-4">
+                        <a href="projects/Chatbot.html" class="flex-1 bg-primary hover:bg-blue-700 text-white font-semibold py-2 sm:py-3 rounded-lg text-center transition active:scale-95 text-sm sm:text-base">View Project</a>
+                        <!-- <a href="#" class="flex-1 border-2 border-accent text-accent dark:text-orange-400 hover:bg-accent hover:text-white dark:hover:bg-accent dark:hover:text-white font-semibold py-2 sm:py-3 rounded-lg text-center transition active:scale-95 text-sm sm:text-base">Live Demo</a> -->
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-white dark:bg-gray-900 rounded-lg sm:rounded-xl shadow-md sm:shadow-lg dark:shadow-xl dark:shadow-black/30 p-6 sm:p-8 hover:shadow-lg sm:hover:shadow-xl dark:hover:shadow-black/50 transition">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="font-bold text-2xl text-navy dark:text-white">शिव युवा मित्र मंडल</h3>
+                        <span class="text-4xl text-accent"><i class="fas fa-globe"></i></span>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Problem</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Community needed centralized engagement platform</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Limited digital presence for youth activities</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Information scattered across channels</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Solution</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Responsive website with HTML, CSS, JavaScript</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Community event listings and collaboration tools</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Deployed on Vercel for seamless performance</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Impact</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Central hub for community engagement</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Enhanced information accessibility</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Active youth participation & collaboration</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 text-xs sm:text-sm rounded-full font-semibold">HTML/CSS</span>
+                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 text-xs sm:text-sm rounded-full font-semibold">JavaScript</span>
+                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 text-xs sm:text-sm rounded-full font-semibold">Vercel</span>
+                    </div>
+                    
+                    <div class="flex gap-3 sm:gap-4">
+                        <a href="projects/SYMM.html" class="flex-1 bg-primary hover:bg-blue-700 text-white font-semibold py-2 sm:py-3 rounded-lg text-center transition active:scale-95 text-sm sm:text-base">View Project</a>
+                        <a href="https://shivyuvamitramandal.vercel.app/" class="flex-1 border-2 border-accent text-accent dark:text-orange-400 hover:bg-accent hover:text-white dark:hover:bg-accent dark:hover:text-white font-semibold py-2 sm:py-3 rounded-lg text-center transition active:scale-95 text-sm sm:text-base">Live Demo</a>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="bg-white dark:bg-gray-900 rounded-lg sm:rounded-xl shadow-md sm:shadow-lg dark:shadow-xl dark:shadow-black/30 p-6 sm:p-8 hover:shadow-lg sm:hover:shadow-xl dark:hover:shadow-black/50 transition">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="font-bold text-2xl text-navy dark:text-white">AI Business Card Extractor</h3>
+                        <span class="text-4xl text-accent"><i class="fas fa-id-card"></i></span>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Problem</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Manual business card data entry is time-consuming</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Inconsistent OCR text extraction quality</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Need for intelligent data structuring and validation</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Solution</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> FastAPI backend with Streamlit UI</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Tesseract OCR + Google Gemini AI integration</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> MongoDB for data persistence & user management</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Impact</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Automated extraction with CSV/JSON export</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> High accuracy structured data parsing</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Scalable multi-user system with logging</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300 text-xs sm:text-sm rounded-full font-semibold">FastAPI</span>
+                        <span class="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300 text-xs sm:text-sm rounded-full font-semibold">OCR</span>
+                        <span class="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300 text-xs sm:text-sm rounded-full font-semibold">MongoDB</span>
+                    </div>
+                    
+                    <div class="flex gap-3 sm:gap-4">
+                        <a href="projects/AI_Business_Card_Extractor.html" class="flex-1 bg-primary hover:bg-blue-700 text-white font-semibold py-2 sm:py-3 rounded-lg text-center transition active:scale-95 text-sm sm:text-base">View Project</a>
+                        <!-- <a href="https://github.com" class="flex-1 border-2 border-primary text-primary dark:text-blue-400 hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white font-semibold py-2 sm:py-3 rounded-lg text-center transition active:scale-95 text-sm sm:text-base">GitHub</a>
+                        <a href="#" class="flex-1 border-2 border-accent text-accent dark:text-orange-400 hover:bg-accent hover:text-white dark:hover:bg-accent dark:hover:text-white font-semibold py-2 sm:py-3 rounded-lg text-center transition active:scale-95 text-sm sm:text-base">Live Demo</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-16 sm:py-20 md:py-28 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <h2 class="font-montserrat font-bold text-3xl sm:text-4xl md:text-5xl text-navy dark:text-white mb-12 sm:mb-16 text-center">Professional Experience</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                <!-- Experience 1 -->
+                <div class="bg-white dark:bg-gray-900 rounded-lg sm:rounded-xl shadow-md sm:shadow-lg dark:shadow-xl dark:shadow-black/30 p-6 sm:p-8 hover:shadow-lg sm:hover:shadow-xl dark:hover:shadow-black/50 transition">
+                    <div class="flex items-start justify-between mb-6">
+                        <div>
+                            <h3 class="font-bold text-2xl text-navy dark:text-white">AI Engineer</h3>
+                            <a href="https://www.bhatiabrothers.com" target="_blank" rel="noopener noreferrer" class="text-sm sm:text-base text-primary dark:text-blue-400 font-semibold hover:underline">Bhatia Brothers FZE</a>
+                        </div>
+                        <span class="text-xs sm:text-sm font-semibold text-accent bg-orange-50 dark:bg-orange-900/30 px-3 sm:px-4 py-1 sm:py-2 rounded-full">Current</span>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Challenge</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Supply chain inefficiencies causing operational costs</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Manual inventory management at scale</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Lack of intelligent forecasting systems</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Solution</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Designing AI agents for inventory management automation</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Implementing LLMs and RAG for forecasting decisions</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Developing machine learning optimization pipelines</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Impact</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Reduce operational costs through automation</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Improved supply chain efficiency significantly</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Enable data-driven decision-making</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-accent dark:text-orange-300 text-xs sm:text-sm rounded-full font-semibold">Python</span>
+                        <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-accent dark:text-orange-300 text-xs sm:text-sm rounded-full font-semibold">LLMs</span>
+                        <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-accent dark:text-orange-300 text-xs sm:text-sm rounded-full font-semibold">RAG</span>
+                    </div>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="bg-white dark:bg-gray-900 rounded-lg sm:rounded-xl shadow-md sm:shadow-lg dark:shadow-xl dark:shadow-black/30 p-6 sm:p-8 hover:shadow-lg sm:hover:shadow-xl dark:hover:shadow-black/50 transition">
+                    <div class="flex items-start justify-between mb-6">
+                        <div>
+                            <h3 class="font-bold text-2xl text-navy dark:text-white">Junior Software Developer</h3>
+                            <a href="https://enirmaan.com/" target="_blank" rel="noopener noreferrer" class="text-sm sm:text-base text-primary dark:text-blue-400 font-semibold hover:underline">Enirmaan Techsolutions</a>
+                        </div>
+                        <span class="text-xs sm:text-sm font-semibold text-primary bg-blue-50 dark:bg-blue-900/30 px-3 sm:px-4 py-1 sm:py-2 rounded-full">May – Sept 2025</span>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Challenge</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Real-time health vitals detection from video streams</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Business card data extraction and validation</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Multi-platform integration for healthcare apps</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Solution</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Built FastAPI backend with Flutter mobile integration</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Implemented OCR pipeline with Tesseract & EasyOCR</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Developed face validation and multi-face rejection logic</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Impact</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Improved patient monitoring efficiency by 40%</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Automated business card processing at scale</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Enhanced system accuracy with validation logic</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-primary dark:text-blue-300 text-xs sm:text-sm rounded-full font-semibold">FastAPI</span>
+                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-primary dark:text-blue-300 text-xs sm:text-sm rounded-full font-semibold">Flutter</span>
+                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-primary dark:text-blue-300 text-xs sm:text-sm rounded-full font-semibold">OCR</span>
+                    </div>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="bg-white dark:bg-gray-900 rounded-lg sm:rounded-xl shadow-md sm:shadow-lg dark:shadow-xl dark:shadow-black/30 p-6 sm:p-8 hover:shadow-lg sm:hover:shadow-xl dark:hover:shadow-black/50 transition">
+                    <div class="flex items-start justify-between mb-6">
+                        <div>
+                            <h3 class="font-bold text-2xl text-navy dark:text-white">Tech Support Intern</h3>
+                            <a href="https://livingthings.ai" target="_blank" rel="noopener noreferrer" class="text-sm sm:text-base text-primary dark:text-blue-400 font-semibold hover:underline">Livingthings.ai (IIT Bombay)</a>
+                        </div>
+                        <span class="text-xs sm:text-sm font-semibold text-green-700 dark:text-green-400 bg-green-50 dark:bg-green-900/30 px-3 sm:px-4 py-1 sm:py-2 rounded-full">Oct 2024 – Feb 2025</span>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Challenge</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> High energy consumption in HVAC systems</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Lack of data-driven energy optimization</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Need for sustainability improvement metrics</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Solution</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Analyzed IoT-based AC monitoring data comprehensively</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Identified energy consumption patterns and inefficiencies</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Generated optimization recommendations</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Impact</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Supported campus-wide sustainability goals</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Provided actionable energy optimization insights</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Enabled data-driven facility management</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 text-xs sm:text-sm rounded-full font-semibold">IoT</span>
+                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 text-xs sm:text-sm rounded-full font-semibold">Data Analysis</span>
+                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 text-xs sm:text-sm rounded-full font-semibold">Python</span>
+                    </div>
+                </div>
+
+                <!-- Experience 4 -->
+                <div class="bg-white dark:bg-gray-900 rounded-lg sm:rounded-xl shadow-md sm:shadow-lg dark:shadow-xl dark:shadow-black/30 p-6 sm:p-8 hover:shadow-lg sm:hover:shadow-xl dark:hover:shadow-black/50 transition">
+                    <div class="flex items-start justify-between mb-6">
+                        <div>
+                            <h3 class="font-bold text-2xl text-navy dark:text-white">Desktop Support Intern</h3>
+                            <a href="https://policyjunction.in" target="_blank" rel="noopener noreferrer" class="text-sm sm:text-base text-primary dark:text-blue-400 font-semibold hover:underline">Policy Junction Marketing</a>
+                        </div>
+                        <span class="text-xs sm:text-sm font-semibold text-red-700 dark:text-red-400 bg-red-50 dark:bg-red-900/30 px-3 sm:px-4 py-1 sm:py-2 rounded-full">Mar – Jun 2024</span>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Challenge</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Frequent system downtime disrupting operations</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Software misconfiguration and compatibility issues</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Need for rapid troubleshooting support</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Solution</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Provided comprehensive system setup and configuration</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Implemented proactive troubleshooting procedures</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Maintained hardware and software documentation</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Impact</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Reduced internal downtime significantly</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Improved system stability and performance</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Enhanced team productivity and satisfaction</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300 text-xs sm:text-sm rounded-full font-semibold">Systems Admin</span>
+                        <span class="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300 text-xs sm:text-sm rounded-full font-semibold">Support</span>
+                        <span class="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300 text-xs sm:text-sm rounded-full font-semibold">Windows</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 sm:py-20 md:py-28 bg-white dark:bg-gray-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <h2 class="font-montserrat font-bold text-3xl sm:text-4xl md:text-5xl text-navy dark:text-white mb-12 sm:mb-16 text-center">Technical Skills</h2>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8">
+                <!-- Python -->
+                <div class="text-center">
+                    <div class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 flex items-center justify-center">
+                        <img src="https://img.icons8.com/color/96/000000/python.png" alt="Python" class="w-12 sm:w-16 md:w-20 h-12 sm:h-16 md:h-20 dark:invert"/>
+                    </div>
+                    <h3 class="font-bold text-sm sm:text-base md:text-lg text-navy dark:text-white">Python</h3>
+                    <p class="text-xs sm:text-sm text-primary dark:text-blue-400 font-semibold">Expert</p>
+                </div>
+                
+                <!-- PyTorch -->
+                <div class="text-center">
+                    <div class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 flex items-center justify-center">
+                        <img src="https://img.icons8.com/?size=100&id=O6SWwpPIM0GB&format=png&color=000000" alt="PyTorch" class="w-12 sm:w-16 md:w-20 h-12 sm:h-16 md:h-20 dark:invert"/>
+                    </div>
+                    <h3 class="font-bold text-sm sm:text-base md:text-lg text-navy dark:text-white">PyTorch</h3>
+                    <p class="text-xs sm:text-sm text-primary dark:text-blue-400 font-semibold">Expert</p>
+                </div>
+                
+                <!-- LangChain & RAG -->
+                <div class="text-center">
+                    <div class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 flex items-center justify-center">
+                        <img src="https://img.icons8.com/color/96/000000/link.png" alt="LangChain & RAG" class="w-12 sm:w-16 md:w-20 h-12 sm:h-16 md:h-20 dark:invert"/>
+                    </div>
+                    <h3 class="font-bold text-sm sm:text-base md:text-lg text-navy dark:text-white">LangChain & RAG</h3>
+                    <p class="text-xs sm:text-sm text-primary dark:text-blue-400 font-semibold">Advanced</p>
+                </div>
+                
+                <!-- LLMs & Prompt Engineering -->
+                <div class="text-center">
+                    <div class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 flex items-center justify-center">
+                        <img src="https://img.icons8.com/color/96/000000/chat.png" alt="LLMs & Prompt Eng" class="w-12 sm:w-16 md:w-20 h-12 sm:h-16 md:h-20 dark:invert"/>
+                    </div>
+                    <h3 class="font-bold text-sm sm:text-base md:text-lg text-navy dark:text-white">LLMs & Prompt Eng</h3>
+                    <p class="text-xs sm:text-sm text-primary dark:text-blue-400 font-semibold">Advanced</p>
+                </div>
+                
+                <!-- GenAI & Fine-tuning -->
+                <div class="text-center">
+                    <div class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 flex items-center justify-center">
+                        <img src="https://img.icons8.com/color/96/000000/artificial-intelligence.png" alt="GenAI & Fine-tuning" class="w-12 sm:w-16 md:w-20 h-12 sm:h-16 md:h-20 dark:invert"/>
+                    </div>
+                    <h3 class="font-bold text-sm sm:text-base md:text-lg text-navy dark:text-white">GenAI & Fine-tuning</h3>
+                    <p class="text-xs sm:text-sm text-primary dark:text-blue-400 font-semibold">Advanced</p>
+                </div>
+                
+                <!-- Vector Databases -->
+                <div class="text-center">
+                    <div class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 flex items-center justify-center">
+                        <img src="https://img.icons8.com/color/96/000000/database.png" alt="Vector Databases" class="w-12 sm:w-16 md:w-20 h-12 sm:h-16 md:h-20 dark:invert"/>
+                    </div>
+                    <h3 class="font-bold text-sm sm:text-base md:text-lg text-navy dark:text-white">Vector Databases</h3>
+                    <p class="text-xs sm:text-sm text-primary dark:text-blue-400 font-semibold">Advanced</p>
+                </div>
+                
+                <!-- MLOps & Deployment -->
+                <div class="text-center">
+                    <div class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 flex items-center justify-center">
+                        <img src="https://img.icons8.com/color/96/000000/server.png" alt="MLOps & Deployment" class="w-12 sm:w-16 md:w-20 h-12 sm:h-16 md:h-20 dark:invert"/>
+                    </div>
+                    <h3 class="font-bold text-sm sm:text-base md:text-lg text-navy dark:text-white">MLOps & Deployment</h3>
+                    <p class="text-xs sm:text-sm text-primary dark:text-blue-400 font-semibold">Advanced</p>
+                </div>
+                
+                <!-- Computer Vision -->
+                <div class="text-center">
+                    <div class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 flex items-center justify-center">
+                        <img src="https://img.icons8.com/color/96/000000/camera-identification.png" alt="Computer Vision" class="w-12 sm:w-16 md:w-20 h-12 sm:h-16 md:h-20 dark:invert"/>
+                    </div>
+                    <h3 class="font-bold text-sm sm:text-base md:text-lg text-navy dark:text-white">Computer Vision</h3>
+                    <p class="text-xs sm:text-sm text-primary dark:text-blue-400 font-semibold">Expert</p>
+                </div>
+                
+                <!-- NLP & Time Series -->
+                <div class="text-center">
+                    <div class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 flex items-center justify-center">
+                        <img src="https://img.icons8.com/color/96/000000/timeline.png" alt="NLP & Time Series" class="w-12 sm:w-16 md:w-20 h-12 sm:h-16 md:h-20 dark:invert"/>
+                    </div>
+                    <h3 class="font-bold text-sm sm:text-base md:text-lg text-navy dark:text-white">NLP & Time Series</h3>
+                    <p class="text-xs sm:text-sm text-primary dark:text-blue-400 font-semibold">Expert</p>
+                </div>
+                
+                <!-- Deep Learning -->
+                <div class="text-center">
+                    <div class="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto mb-2 sm:mb-4 flex items-center justify-center">
+                        <img src="https://img.icons8.com/color/96/000000/mind-map.png" alt="Deep Learning" class="w-12 sm:w-16 md:w-20 h-12 sm:h-16 md:h-20 dark:invert"/>
+                    </div>
+                    <h3 class="font-bold text-sm sm:text-base md:text-lg text-navy dark:text-white">Deep Learning</h3>
+                    <p class="text-xs sm:text-sm text-primary dark:text-blue-400 font-semibold">Expert</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Road Ahead Section -->
+    <section id="future" class="py-16 sm:py-20 md:py-28 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <h2 class="font-montserrat font-bold text-3xl sm:text-4xl md:text-5xl text-navy dark:text-white mb-12 sm:mb-16 text-center">The Road Ahead</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+                <!-- Generative AI -->
+                <div class="bg-white dark:bg-gray-900 rounded-lg sm:rounded-xl shadow-md sm:shadow-lg dark:shadow-xl dark:shadow-black/30 p-6 sm:p-8 hover:shadow-lg sm:hover:shadow-xl dark:hover:shadow-black/50 transition">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="font-bold text-2xl text-navy dark:text-white">Generative AI</h3>
+                        <span class="text-4xl text-primary"><i class="fas fa-brain"></i></span>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Current</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Building with LLMs and multimodal systems</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Implementing RAG for context-aware responses</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Working on prompt optimization</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Vision</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Create truly intelligent, context-aware AI agents</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Build human-like understanding and generation</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Deploy enterprise-grade GenAI solutions</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Impact</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Transform business processes with AI automation</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Enable personalized AI experiences at scale</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Reduce manual work by 80%+</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-primary dark:text-blue-300 text-xs sm:text-sm rounded-full font-semibold">LLMs</span>
+                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-primary dark:text-blue-300 text-xs sm:text-sm rounded-full font-semibold">RAG</span>
+                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-primary dark:text-blue-300 text-xs sm:text-sm rounded-full font-semibold">Transformers</span>
+                    </div>
+                </div>
+                
+                <!-- Inventory Automation -->
+                <div class="bg-white dark:bg-gray-900 rounded-lg sm:rounded-xl shadow-md sm:shadow-lg dark:shadow-xl dark:shadow-black/30 p-6 sm:p-8 hover:shadow-lg sm:hover:shadow-xl dark:hover:shadow-black/50 transition">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="font-bold text-2xl text-navy dark:text-white">Supply Chain</h3>
+                        <span class="text-4xl text-accent"><i class="fas fa-boxes"></i></span>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Current</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Developing AI agents for inventory management</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Building computer vision pipelines</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Implementing predictive forecasting</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Vision</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Fully autonomous inventory optimization</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Real-time supply chain visibility</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Predictive demand management</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Impact</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Reduce waste and improve efficiency</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Save millions in operational costs</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Enable sustainable business practices</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-accent dark:text-orange-300 text-xs sm:text-sm rounded-full font-semibold">CV</span>
+                        <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-accent dark:text-orange-300 text-xs sm:text-sm rounded-full font-semibold">Forecasting</span>
+                        <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-accent dark:text-orange-300 text-xs sm:text-sm rounded-full font-semibold">AI Agents</span>
+                    </div>
+                </div>
+                
+                <!-- Research & Innovation -->
+                <div class="bg-white dark:bg-gray-900 rounded-lg sm:rounded-xl shadow-md sm:shadow-lg dark:shadow-xl dark:shadow-black/30 p-6 sm:p-8 hover:shadow-lg sm:hover:shadow-xl dark:hover:shadow-black/50 transition">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="font-bold text-2xl text-navy dark:text-white">Research</h3>
+                        <span class="text-4xl text-primary"><i class="fas fa-graduation-cap"></i></span>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Current</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Exploring novel architectures and techniques</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Collaborating on cutting-edge AI research</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Contributing to open-source AI projects</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Vision</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Publish papers on novel AI architectures</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Mentor next-generation AI engineers</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Lead innovative research initiatives</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-primary dark:text-blue-400 mb-3">Impact</h4>
+                        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Advance AI field with breakthrough innovations</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Foster knowledge sharing in AI community</li>
+                            <li class="flex items-start"><span class="text-accent mr-2">•</span> Inspire and develop AI talent</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 text-xs sm:text-sm rounded-full font-semibold">Research</span>
+                        <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 text-xs sm:text-sm rounded-full font-semibold">Innovation</span>
+                        <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 text-xs sm:text-sm rounded-full font-semibold">Mentoring</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 sm:py-20 md:py-28 bg-white dark:bg-gray-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+            <h2 class="font-montserrat font-bold text-3xl sm:text-4xl md:text-5xl text-navy dark:text-white mb-3 sm:mb-4">Get In Touch</h2>
+            <p class="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-8 sm:mb-12">Let's collaborate on innovative AI solutions. Reach out via any channel below.</p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-8 sm:gap-10 flex-wrap">
+                <!-- GitHub -->
+                <a href="https://github.com/nilesh5911" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center group">
+                    <div class="w-16 sm:w-20 h-16 sm:h-20 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center mb-3 sm:mb-4 group-hover:shadow-lg group-hover:scale-110 transition-all duration-300">
+                        <img src="https://img.icons8.com/color/96/000000/github--v1.png" alt="GitHub" class="w-8 sm:w-10 h-8 sm:h-10 dark:invert"/>
+                    </div>
+                    <span class="font-semibold text-sm sm:text-base text-navy dark:text-gray-300 group-hover:text-primary dark:group-hover:text-blue-400 transition">GitHub</span>
+                </a>
+                
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/nilesh-mishra-064a861b3/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center group">
+                    <div class="w-16 sm:w-20 h-16 sm:h-20 rounded-full bg-blue-50 dark:bg-gray-800 flex items-center justify-center mb-3 sm:mb-4 group-hover:shadow-lg group-hover:scale-110 transition-all duration-300">
+                        <img src="https://img.icons8.com/color/96/0077b5/linkedin.png" alt="LinkedIn" class="w-8 sm:w-10 h-8 sm:h-10"/>
+                    </div>
+                    <span class="font-semibold text-sm sm:text-base text-primary dark:text-blue-400 group-hover:text-navy dark:group-hover:text-gray-300 transition">LinkedIn</span>
+                </a>
+                
+                <!-- Email -->
+                <a href="mailto:mishranilesh968@gmail.com" class="flex flex-col items-center group">
+                    <div class="w-16 sm:w-20 h-16 sm:h-20 rounded-full bg-orange-50 dark:bg-gray-800 flex items-center justify-center mb-3 sm:mb-4 group-hover:shadow-lg group-hover:scale-110 transition-all duration-300">
+                        <img src="https://img.icons8.com/color/96/000000/gmail-new.png" alt="Email" class="w-8 sm:w-10 h-8 sm:h-10"/>
+                    </div>
+                    <span class="font-semibold text-sm sm:text-base text-accent dark:text-orange-400 group-hover:text-navy dark:group-hover:text-gray-300 transition">Email</span>
+                </a>
+                
+                <!-- WhatsApp -->
+                <a href="https://whatsapp.com/channel/0029Vb6RowtGE56cnp58012p" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center group">
+                    <div class="w-16 sm:w-20 h-16 sm:h-20 rounded-full bg-green-50 dark:bg-gray-800 flex items-center justify-center mb-3 sm:mb-4 group-hover:shadow-lg group-hover:scale-110 transition-all duration-300">
+                        <img src="https://img.icons8.com/color/96/000000/whatsapp--v1.png" alt="WhatsApp" class="w-8 sm:w-10 h-8 sm:h-10"/>
+                    </div>
+                    <span class="font-semibold text-sm sm:text-base text-green-500 dark:text-green-400 group-hover:text-navy dark:group-hover:text-gray-300 transition">WhatsApp</span>
+                </a>
+                
+                <!-- YouTube -->
+                <a href="https://www.youtube.com/@PyPrepZone" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center group">
+                    <div class="w-16 sm:w-20 h-16 sm:h-20 rounded-full bg-red-50 dark:bg-gray-800 flex items-center justify-center mb-3 sm:mb-4 group-hover:shadow-lg group-hover:scale-110 transition-all duration-300">
+                        <img src="https://img.icons8.com/color/96/000000/youtube-play.png" alt="YouTube" class="w-8 sm:w-10 h-8 sm:h-10"/>
+                    </div>
+                    <span class="font-semibold text-sm sm:text-base text-red-600 dark:text-red-500 group-hover:text-navy dark:group-hover:text-gray-300 transition">YouTube</span>
+                </a>
+                
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/pyprepzone" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center group">
+                    <div class="w-16 sm:w-20 h-16 sm:h-20 rounded-full bg-pink-50 dark:bg-gray-800 flex items-center justify-center mb-3 sm:mb-4 group-hover:shadow-lg group-hover:scale-110 transition-all duration-300">
+                        <img src="https://img.icons8.com/color/96/000000/instagram-new.png" alt="Instagram" class="w-8 sm:w-10 h-8 sm:h-10"/>
+                    </div>
+                    <span class="font-semibold text-sm sm:text-base text-pink-600 dark:text-pink-500 group-hover:text-navy dark:group-hover:text-gray-300 transition">Instagram</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy dark:bg-gray-950 text-white py-6 sm:py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+            <p class="text-sm sm:text-base">&copy; 2025 Nilesh Mishra. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-primary hover:bg-blue-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 opacity-0 invisible hover:scale-110 z-40" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="assets/common.js"></script>
+    <script>
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+                backToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+                backToTopBtn.classList.remove('opacity-100', 'visible');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
