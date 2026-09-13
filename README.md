@@ -1,17 +1,17 @@
 # ML Portfolio – Nilesh Mishra
 
-A modern, professional portfolio built with **Tailwind CSS** and **JavaScript**, showcasing innovative AI/ML projects and technical expertise.
+A modern, responsive portfolio built with semantic HTML, CSS, and vanilla JavaScript, showcasing AI/ML projects and technical experience.
 
 ---
 
 ## ✨ Features
 
-- **Dark/Light Mode Toggle** – Seamless theme switching with localStorage persistence  
-- **Responsive Design** – Mobile-first approach with Tailwind CSS utilities  
+- **Editorial Portfolio Design** – Neo-brutalist visual system with warm paper, ink borders, and lime accents  
+- **Responsive Design** – Mobile-first layouts with touch-friendly navigation  
 - **Project Showcase** – Detailed project pages with Problem-Solution-Impact framework  
-- **Skill Visualization** – Interactive skill icons with theme support  
+- **Accessible Interactions** – Skip link, semantic landmarks, reveal states, and reduced-motion support  
 - **Multi-channel Contact** – GitHub, LinkedIn, Email, and WhatsApp integration  
-- **Professional Branding** – Custom color palette with Navy, Primary Blue, and Accent Orange
+- **Professional Branding** – Consistent typography, contrast, and case-study presentation
 
 ---
 
@@ -20,16 +20,17 @@ A modern, professional portfolio built with **Tailwind CSS** and **JavaScript**,
 1. **Healthcare AI** – CNN-based breast cancer detection with 94.5% accuracy  
 2. **Time Series Forecasting** – LSTM model for stock price prediction (18% MAPE)  
 3. **Generative AI Chatbot** – Medical Q&A system with RAG and fact-checking  
-4. **शिव युवा मित्र मंडल** – Community engagement website with event management
+4. **AI Business Card Extractor** – OCR and Gemini-powered structured contact extraction  
+5. **शिव युवा मित्र मंडल** – Community engagement website with event management
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** HTML5, Vanilla JavaScript, Tailwind CSS 3  
-- **Styling:** Custom utility classes, dark mode with `darkMode: 'class'`  
-- **Icons:** Font Awesome 6.4.0, custom SVG icons  
-- **Fonts:** Montserrat (headings), Inter (body)  
+- **Frontend:** Semantic HTML5 and Vanilla JavaScript  
+- **Styling:** Shared editorial CSS in `assets/style-minimal.css` and `assets/project-detail.css`  
+- **Icons:** Font Awesome 6.4.0 on project detail pages, custom CSS visual language on the homepage  
+- **Fonts:** Space Grotesk, DM Sans, and DM Mono  
 - **Deployment:** GitHub Pages, Vercel
 
 ---
@@ -40,21 +41,22 @@ A modern, professional portfolio built with **Tailwind CSS** and **JavaScript**,
 ML_Portfolio/
 ├── index.html              # Main landing page
 ├── assets/
-│   ├── common.js          # Shared JavaScript (theme toggle, mobile menu)
-│   └── nilesh.jpg         # Profile image
+│   ├── common.js          # Homepage navigation and reveal behavior
+│   ├── project-detail.css # Shared project-page styling
+│   ├── style-minimal.css  # Homepage styling
+│   ├── nilesh.jpg         # Profile image
+│   └── Nilesh_Mishra_CV.pdf
 ├── projects/
-│   ├── project1.html      # Healthcare AI details
-│   ├── project2.html      # Time Series Forecasting details
-│   ├── project3.html      # Generative AI Chatbot details
-│   └── project4.html      # Community Website details
+│   ├── Healthcare_AI.html
+│   ├── AI_Business_Card_Extractor.html
+│   ├── Chatbot.html
+│   ├── Time_Series_Forecasting.html
+│   └── SYMM.html
 └── README.md              # This file
 ```
 
 ---
 
-<<<<<<< HEAD
-## 🚀 Getting Started
-=======
 ## 🚀 Deployment
 
 - GitHub Pages  
@@ -63,7 +65,6 @@ ML_Portfolio/
 ---
 
 ## 📦 Usage
->>>>>>> f0ea97b4a15ebc6a03d7e5631fcb6a0e49ee8737
 
 ### Clone the Repository
 ```bash
@@ -87,10 +88,10 @@ python -m http.server 8000
 
 ## 🎨 Color Palette
 
-- **Navy:** `#1E293B` – Primary text and accents  
-- **Primary Blue:** `#1A73E8` – CTA buttons and highlights  
-- **Accent Orange:** `#F97316` – Secondary actions and borders  
-- **Dark Mode:** Gray-900 to Gray-950 backgrounds
+- **Warm paper:** `#F4F0E8` – Page background  
+- **Ink:** `#141A18` – Text, borders, and hero surfaces  
+- **Lime:** `#D9F542` – Accent and calls to action  
+- **Paper deep:** `#E6E0D5` – Project and section contrast
 
 ---
 
@@ -110,8 +111,8 @@ Update individual project pages in `projects/` folder with:
 - Impact metrics
 - Demo and GitHub links
 
-### Toggle Dark Mode
-Dark mode is automatically applied based on system preference and user selection. Toggle button in navbar controls the theme.
+### Update Styling
+Edit `assets/style-minimal.css` for the homepage or `assets/project-detail.css` for shared case-study pages.
 
 ---
 
